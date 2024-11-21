@@ -27,7 +27,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
@@ -52,3 +52,6 @@ plugins:
 #   - vendor/ruby/
 
 permalink: pretty
+
+include:
+  - assets

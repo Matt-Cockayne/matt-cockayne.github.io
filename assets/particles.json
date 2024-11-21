@@ -1,0 +1,28 @@
+{
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "size": {
+      "value": 5
+    },
+    "move": {
+      "speed": 3,
+      "direction": "none",
+      "out_mode": "bounce"
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  }
+}

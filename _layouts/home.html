@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+</head>
+<body>
+    <!-- Banner Section (Header + Navigation) -->
+    <div id="banner">
+        <div id="particles-js"></div>
+        <div class="banner-content">
+            <!-- Site Title (Logo or Text) -->
+            <h1><a href="/"><img src="/assets/images/logo.png" alt="{{ site.title }}"></a></h1>
+            <p>{{ site.description }}</p>
+        </div>
+
+        <!-- Navigation below banner content -->
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Content Section for homepage -->
+        <section id="content">
+            <h2>Latest Updates</h2>
+            <p>Check out my recent projects and research.</p>
+            {{ content }}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 {{ site.title }}</p>
+    </footer>
+
+    <!-- Particles.js and Configuration -->
+    <script src="{{ '/assets/js/particles.js-master/particles.js' | relative_url }}"></script>
+    <script>
+        particlesJS.load('particles-js', '/assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* Reset body margin and padding */
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%; /* Ensure html and body take full height */
+}
+/* Banner Section (Full viewport height) */
+#banner {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #333; /* Banner background color */
+}
+
+/* Particles container */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 1; /* Ensure particles are behind other content */
+}
+
+/* Banner content (site title and description) */
+.banner-content {
+    z-index: 10;
+    color: white;
+    margin-bottom: 20px; /* Space between content and nav */
+}
+
+/* Navigation styles */
+nav {
+    position: relative; /* Ensure it is above particles */
+    z-index: 20; /* Ensure navigation is above particles and banner content */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
