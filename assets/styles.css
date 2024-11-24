@@ -38,26 +38,55 @@ html, body {
     margin-bottom: 20px; /* Space between content and nav */
 }
 
-/* Navigation styles */
 nav {
-    position: relative; /* Ensure it is above particles */
-    z-index: 20; /* Ensure navigation is above particles and banner content */
+    position: sticky;
+    top: 0;
+    background-color: #232741;
+    background: transparent;
+    z-index: 10;
 }
 
+/* General CTA Button Styles */
+.cta-button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Additional styling for the navigation */
 nav ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-around; /* Spread out nav items */
+    padding: 10px 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    list-style: none;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
+nav a {
+    font-size: 16px; /* Adjust size if needed */
+    font-weight: bold;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
