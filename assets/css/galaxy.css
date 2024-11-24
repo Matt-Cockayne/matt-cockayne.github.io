@@ -1,32 +1,53 @@
-/* Basic reset for margin and padding */
-* {
+
+/* Ensure html and body fill the viewport and layout is flexible */
+html, body {
+    height: 100%; /* Take up the full height of the viewport */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
 }
 
-/* Galaxy container covering the entire viewport */
+/* Main content should take the available space */
+main {
+    flex: 1; /* This ensures the main content area expands to take up remaining space */
+}
+
+/* Footer should always be at the bottom */
+footer {
+    height: 60px; /* Adjust the height as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background for footer visibility */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Ensure footer stays above other content if needed */
+}
+
+/* Galaxy container */
 #galaxy-container {
-    position: absolute;
+    position: fixed; /* Ensure it is fixed in place */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1; /* Galaxy behind content */
+    background: radial-gradient(circle, rgba(0, 0, 50, 0.9), rgba(0, 0, 30, 1)); /* Deep space look */
     overflow: hidden;
-    background: radial-gradient(circle, rgba(0, 0, 50, 0.9), rgba(0, 0, 30, 1)); /* Deep blue space background */
 }
 
-/* Glowing core */
+/* Glowing Core */
 #glowing-core {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100px; /* Smaller core */
-    height: 100px; /* Smaller core */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(0, 0, 50, 0)); /* White to deep blue gradient */
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(0, 0, 50, 0));
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: pulse 2s infinite ease-in-out; /* Pulse effect for the core */
+    animation: pulse 2s infinite ease-in-out;
+    pointer-events: none;
 }
 
 /* Nebula clouds */
@@ -37,10 +58,11 @@
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    animation: nebulaAnimation 30s infinite linear; /* Slow nebula movement */
+    animation: nebulaAnimation 30s infinite linear; /* Nebula movement */
+    pointer-events: none;
 }
 
-/* Animation for the glowing core */
+/* Glowing Core Animation */
 @keyframes pulse {
     0% {
         transform: translate(-50%, -50%) scale(1);
@@ -56,7 +78,7 @@
     }
 }
 
-/* Nebula clouds animation */
+/* Nebula Clouds Animation */
 @keyframes nebulaAnimation {
     0% {
         background-position: 0 0;
@@ -66,21 +88,125 @@
     }
 }
 
-/* Styling for individual particles */
+/* Particles */
 .particle {
     position: absolute;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
-    background-color: #ffffff; /* Default to white */
+    background-color: rgba(255, 255, 255, 0.8); /* Bright white particles */
     pointer-events: none;
+    animation: particleAnimation linear infinite; /* Particle motion */
+    opacity: 0.8;
 }
 
-/* Gradient effect for particles */
-.particle-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Particle Animation */
+@keyframes particleAnimation {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px); /* Floating upwards */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Banner Section */
+#banner {
+    position: relative;
+    height: 100vh; /* Full viewport height */
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(0, 0, 50, 0)); /* White to deep blue */
-    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Ensure above galaxy */
+}
+
+/* Banner content */
+.banner-content {
+    z-index: 10;
+    color: white;
+    margin-bottom: 20px;
+}
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100px; /* Adjust height as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for visibility */
+    z-index: 20; /* Ensures header stays above other content */
+}
+
+/* Header h1 Styling */
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Header Link Styling */
+header h1 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #007bff; /* Change color on hover */
+}
+/* Navigation Styling */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10;
+    width: 100%;
+}
+
+/* Navigation Links */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for nav */
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Highlighted color on hover */
+}
+
+/* General CTA Button Styles */
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Ensure it's positioned above other elements */
+    z-index: 20;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
 }

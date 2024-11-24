@@ -13,12 +13,10 @@ function lerp(start, end, t) {
 
 // Create particles only once outside the animation loop
 function createParticles() {
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-
     // Get the glowing core's initial position
-    const centralStarX = viewportWidth / 2;
-    const centralStarY = viewportHeight / 2;
+    const coreRect = glowingCore.getBoundingClientRect();
+    const centralStarX = coreRect.left + coreRect.width / 2;
+    const centralStarY = coreRect.top + coreRect.height / 2;
 
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div');
@@ -69,9 +67,6 @@ function createParticles() {
 
 // Animate particles
 function animate() {
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-
     // Get the current position of the glowing core
     const coreRect = glowingCore.getBoundingClientRect();
     const centralStarX = coreRect.left + coreRect.width / 2;
@@ -86,7 +81,6 @@ function animate() {
         const y = Math.sin(particle.angle) * particle.radius + centralStarY;
 
         // Update position and apply scaling based on depth
-        // Use the core's center as the reference point (remove the viewport centering logic)
         particle.element.style.transform = `translate(${x - particle.element.offsetWidth / 2}px, ${y - particle.element.offsetHeight / 2}px) scale(${1 / particle.depth})`;
 
         // Dynamic opacity flickering
