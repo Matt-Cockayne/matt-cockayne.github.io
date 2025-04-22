@@ -137,7 +137,7 @@ header {
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
     height: 100px; /* Adjust height as needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for visibility */
+    /* background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for visibility */
     z-index: 20; /* Ensures header stays above other content */
 }
 
@@ -162,7 +162,7 @@ header h1 a:hover {
 nav {
     position: sticky;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    /* background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     z-index: 10;
     width: 100%;
 }
@@ -174,7 +174,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for nav */
+    /* background-color: rgba(0, 0, 0, 0.7); /* Darker background for nav */
 }
 
 nav li {

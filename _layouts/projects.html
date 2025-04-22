@@ -3,36 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Matthew J. Cockayne - AI Researcher. Discover projects, updates, and contact details.">
-    <title>{{ page.title }}</title>
-
-    <!-- <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon"> -->
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
-
+    <title>Projects</title>
+    <link rel="stylesheet" href="/assets/css/galaxy.css">
     <!-- Animsition Stylesheet -->
     <link rel="stylesheet" href="/assets/js/animsition/dist/css/animsition.min.css">
 
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <!-- Animsition JavaScript -->
     <script src="/assets/js/animsition/dist/js/animsition.min.js"></script>
-
 </head>
 <body>
     <!-- Animsition Wrapper -->
     <div class="animsition">
         <!-- Banner Section (Header + Navigation) -->
         <div id="banner">
-            <div id="particles-js"></div>
+            <div id="galaxy-container">
+                <div id="nebula-clouds"></div>
+                <div id="glowing-core"></div>
+            </div>
             <div class="banner-content">
-                <h1><a href="/">Matthew J. Cockayne</a></h1>
+                <h1><a href="/">Projects</a></h1>
                 <p>{{ site.description }}</p>
             </div>
-
             <!-- Navigation below banner content -->
             <nav>
-                <ul class="navbar">
+                <ul>
                     <li><a href="/" class="cta-button animsition-link">Home</a></li>
                     <li><a href="/about/" class="cta-button animsition-link">About</a></li>
                     <li><a href="/projects/" class="cta-button animsition-link">Projects</a></li>
@@ -40,28 +37,14 @@
                 </ul>
             </nav>
         </div>
-
-        <main>
-            <!-- Content Section for homepage -->
-            <section id="content">
-                <h2>Latest Updates</h2>
-                <p>Check out my recent projects and research.</p>
-                {{ content }}
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 {{ site.title }}</p>
-        </footer>
-    </div> <!-- End of Animsition Wrapper -->
-
-    <!-- Particles.js and Configuration -->
-    <script src="{{ '/assets/js/particles.js-master/particles.js' | relative_url }}"></script>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; 2024 {{ site.title }}</p>
+    </footer>
+    <script src="/assets/js/galaxy/galaxy.js"></script>
     <script>
-        particlesJS.load('particles-js', '/assets/particles.json', function() {
-            console.log('callback - particles.js config loaded');
-        });
-
         // Initialize Animsition
         $(document).ready(function() {
             $(".animsition").animsition({

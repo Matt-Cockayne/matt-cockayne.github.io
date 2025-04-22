@@ -7,6 +7,12 @@ html, body {
     overflow-x: hidden;
     height: 100%; /* Ensure html and body take full height */
 }
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 /* Banner Section (Full viewport height) */
 #banner {
     position: relative;
@@ -38,11 +44,14 @@ html, body {
     margin-bottom: 20px; /* Space between content and nav */
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #232741; /* Keep solid background */
-    z-index: 10;
+.navbar {
+    display: flex;
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
 }
 
 /* General CTA Button Styles */

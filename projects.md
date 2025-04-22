@@ -1,5 +1,5 @@
 ---
-layout: galaxy
+layout: projects
 title: Projects
 ---
 
