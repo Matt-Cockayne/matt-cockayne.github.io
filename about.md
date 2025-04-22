@@ -2,6 +2,4 @@
 layout: default
 title: About
 ---
-
-# About Me
-Welcome to my personal website! Here's some information about me.
+<p>I’m a PhD student in Computer Science passionate about explainable AI and building clean web experiences.</p>

@@ -1,67 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
-
-    <!-- Animsition Stylesheet -->
-    <link rel="stylesheet" href="/assets/js/animsition/dist/css/animsition.min.css">
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-    <!-- Animsition JavaScript -->
-    <script src="/assets/js/animsition/dist/js/animsition.min.js"></script>
-</head>
-<body>
-    <!-- Animsition Wrapper -->
-    <div class="animsition">
-        <header>
-            <h1><a href="/" class="animsition-link">{{ site.title }}</a></h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="/" class="animsition-link">Home</a></li>
-                <li><a href="/about/" class="animsition-link">About</a></li>
-                <li><a href="/projects/" class="animsition-link">Projects</a></li>
-                <li><a href="/contact/" class="animsition-link">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            {{ content }}
-        </main>
-        <footer>
-            <p>&copy; 2024 {{ site.title }}</p>
-        </footer>
-    </div> <!-- End of Animsition Wrapper -->
-
-    <!-- Initialize Animsition -->
-    <script>
-        $(document).ready(function() {
-            $(".animsition").animsition({
-                inClass: 'fade-in',
-                outClass: 'fade-out',
-                inDuration: 1500,
-                outDuration: 800,
-                linkElement: '.animsition-link',
-                loading: true,
-                loadingParentElement: 'body',
-                loadingClass: 'animsition-loading',
-                loadingInner: '', // e.g., '<img src="loading.svg" />'
-                timeout: false,
-                timeoutCountdown: 5000,
-                onLoadEvent: true,
-                browser: ['animation-duration', '-webkit-animation-duration'],
-                overlay: false,
-                overlayClass: 'animsition-overlay-slide',
-                overlayParentElement: 'body',
-                transition: function(url) { window.location.href = url; }
-            });
-        });
-    </script>
-</body>
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <main class="container">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
 </html>
