@@ -1398,6 +1398,27 @@ body.loaded {
     font-size: clamp(0.9rem, 4vw, 1.2rem);
   }
   
+  /* Mobile typewriter fixes */
+  .hero-title.typewriter {
+    min-width: unset;
+    max-width: 90vw;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle.typewriter {
+    min-width: unset;
+    max-width: 85vw;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  
+  .typewriter {
+    white-space: normal;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  
   .navbar-mobile {
     padding: var(--spacing-lg);
   }
@@ -1444,6 +1465,25 @@ body.loaded {
   
   .hero-title {
     font-size: clamp(1.8rem, 12vw, 2.5rem);
+  }
+  
+  /* Extra small screen typewriter fixes */
+  .hero-title.typewriter {
+    min-width: unset;
+    max-width: 95vw;
+    white-space: normal;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle.typewriter {
+    min-width: unset;
+    max-width: 92vw;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  .typewriter {
+    max-width: 95vw;
   }
   
   .navbar-toggle {
