@@ -20,7 +20,15 @@
     {% include nav.html %}
     
     <!-- Hero Section -->
-    <section class="hero" onclick="document.querySelector('.content-section').scrollIntoView({behavior: 'smooth'})">
+    <section class="hero" onclick="
+        const target = document.querySelector('.content-section');
+        const navbarHeight = 70;
+        const targetPosition = target.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    ">>
         <div class="hero-content">
             <!-- Animated Profile Photo -->
             <div class="profile-photo-container">
@@ -52,11 +60,6 @@
                     View Publications
                 </a>
             </div>
-        </div>
-        
-        <!-- Click to explore hint -->
-        <div class="hero-hint">
-            <p>Click anywhere to explore</p>
         </div>
     </section>
     

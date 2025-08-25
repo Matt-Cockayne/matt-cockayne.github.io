@@ -50,26 +50,77 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleBtnMobile.addEventListener('click', toggleTheme);
   }
   
-  // Mobile Menu Functions
+  // Enhanced Mobile Menu Functions
+  let isMenuOpen = false;
+  
   window.toggleMobileMenu = function() {
-    if (mobileMenu) {
-      mobileMenu.classList.toggle('active');
-      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    if (!mobileMenu || !mobileToggle) {
+      console.error('Mobile menu elements not found!');
+      return;
+    }
+    
+    isMenuOpen = !isMenuOpen;
+    
+    // Update menu state
+    if (isMenuOpen) {
+      mobileMenu.classList.add('active');
+      mobileToggle.classList.add('active');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileMenu.classList.remove('active');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  };
+  
+  window.closeMobileMenu = function() {
+    if (isMenuOpen) {
+      window.toggleMobileMenu();
     }
   };
   
   if (mobileToggle) {
-    mobileToggle.addEventListener('click', toggleMobileMenu);
+    mobileToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.toggleMobileMenu();
+    });
+    
+    // Touch events for better mobile support
+    mobileToggle.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.toggleMobileMenu();
+    });
   }
   
   // Close mobile menu when clicking outside
   if (mobileMenu) {
     mobileMenu.addEventListener('click', function(e) {
       if (e.target === mobileMenu) {
-        toggleMobileMenu();
+        window.closeMobileMenu();
       }
     });
   }
+  
+  // Close menu when clicking on navigation links
+  const mobileNavLinks = document.querySelectorAll('.navbar-mobile .navbar-nav a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      window.closeMobileMenu();
+    });
+  });
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    const width = window.innerWidth;
+    // Close mobile menu if switching to desktop
+    if (width > 900 && isMenuOpen) {
+      window.closeMobileMenu();
+    }
+  });
   
   // Navbar scroll effect
   let lastScrollTop = 0;
@@ -127,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     // Close mobile menu with Escape key
     if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
-      toggleMobileMenu();
+      window.closeMobileMenu();
     }
     
     // Theme toggle with Ctrl/Cmd + D

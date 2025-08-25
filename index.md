@@ -1,7 +1,7 @@
 ---
 layout: home
 title: "Home"
-description: "Academic website and portfolio of Matthew Cockayne, PhD candidate specializing in AI and machine learning research."
+description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher specializing in AI and machine learning research."
 ---
 
 ## Recent Highlights
