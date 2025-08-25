@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Test</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a href="/" class="navbar-brand">Matt Cockayne</a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/publications">Publications</a></li>
+                <li><a href="/cv">CV</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <span class="theme-icon">🌓</span>
+                    </button>
+                </li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="navbar-mobile" id="navbar-mobile">
+        <ul class="navbar-nav">
+            <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="/about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a href="/projects" onclick="toggleMobileMenu()">Projects</a></li>
+            <li><a href="/publications" onclick="toggleMobileMenu()">Publications</a></li>
+            <li><a href="/cv" onclick="toggleMobileMenu()">CV</a></li>
+            <li><a href="/contact" onclick="toggleMobileMenu()">Contact</a></li>
+            <li>
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-icon">🌓</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Matt Cockayne</h1>
+            <p class="hero-subtitle">PhD Researcher & Academic</p>
+            <p class="hero-tagline">Exploring the intersection of technology, society, and human experience through rigorous research and innovative thinking.</p>
+            
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/theme-toggle.js"></script>
+</body>
+</html>

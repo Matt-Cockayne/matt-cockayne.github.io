@@ -627,6 +627,17 @@ a:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero-specific button overrides - always white text on hero background */
+.hero .btn-primary,
+.hero .btn-secondary {
+  color: var(--white-smoke) !important;
+}
+
+.hero .btn-primary:hover,
+.hero .btn-secondary:hover {
+  color: var(--white-smoke) !important;
+}
+
 /* Content Sections */
 .content-section {
   padding: var(--spacing-3xl) 0;
@@ -974,7 +985,16 @@ body.loaded {
 .card:hover {
     transform: translateY(-8px) rotateX(5deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}/* Responsive Design */
+}
+
+/* Tablet and Mobile Overlap Fix */
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: var(--navbar-height);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar .container {
     padding: 0 var(--spacing-md);
