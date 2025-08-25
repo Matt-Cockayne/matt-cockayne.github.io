@@ -320,7 +320,6 @@ a:hover {
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -919,11 +918,6 @@ a:hover {
 }
 
 /* Page Loading Animation */
-body {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
 body.loaded {
     opacity: 1;
 }
