@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Navigation Test</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        /* Debug styles */
+        .debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            padding: 10px;
+            z-index: 9999;
+            font-size: 12px;
+        }
+        
+        /* Ensure mobile toggle is visible for testing */
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: block !important;
+                background: red !important;
+            }
+            .navbar-nav {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="debug" id="debug">
+        Screen: <span id="screen-size"></span><br>
+        Toggle visible: <span id="toggle-visible"></span><br>
+        Mobile menu active: <span id="mobile-active"></span>
+    </div>
+
     <nav class="navbar" id="navbar">
         <div class="container">
             <!-- Brand/Logo -->
@@ -28,7 +58,7 @@
             </ul>
             
             <!-- Mobile Menu Toggle -->
-            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" onclick="testToggle()">
                 <span>☰</span>
             </button>
         </div>
@@ -65,5 +95,33 @@
     </section>
 
     <script src="assets/theme-toggle.js"></script>
+    <script>
+        // Debug script
+        function updateDebugInfo() {
+            const debugScreen = document.getElementById('screen-size');
+            const debugToggle = document.getElementById('toggle-visible');
+            const debugMobile = document.getElementById('mobile-active');
+            const toggle = document.getElementById('navbar-toggle');
+            const mobileMenu = document.getElementById('navbar-mobile');
+            
+            if (debugScreen) debugScreen.textContent = window.innerWidth + 'x' + window.innerHeight;
+            if (debugToggle) debugToggle.textContent = toggle ? getComputedStyle(toggle).display : 'not found';
+            if (debugMobile) debugMobile.textContent = mobileMenu ? mobileMenu.classList.contains('active') : 'not found';
+        }
+        
+        function testToggle() {
+            console.log('Toggle clicked!');
+            const mobileMenu = document.getElementById('navbar-mobile');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('active');
+                console.log('Mobile menu active:', mobileMenu.classList.contains('active'));
+                updateDebugInfo();
+            }
+        }
+        
+        window.addEventListener('resize', updateDebugInfo);
+        document.addEventListener('DOMContentLoaded', updateDebugInfo);
+        setInterval(updateDebugInfo, 1000);
+    </script>
 </body>
 </html>

@@ -33,6 +33,7 @@
   --button-text: var(--jet);
   --tag-text: var(--white-smoke);
   --link-text: var(--white-smoke);
+  --mobile-bg: rgba(43, 45, 66, 0.98);
   
   /* Typography Variables */
   /* Headings: Palatino Linotype family */
@@ -94,6 +95,7 @@
   --button-text: var(--white-smoke);
   --tag-text: var(--white-smoke);
   --link-text: var(--white-smoke);
+  --mobile-bg: rgba(43, 45, 66, 0.98);
 }
 
 /* Font Imports - Work Sans as Brandon Grotesque alternative */
@@ -237,6 +239,23 @@ a:hover {
   background: rgba(43, 45, 66, 0.1);
 }
 
+/* Light mode mobile navigation */
+[data-theme="light"] .navbar-mobile .navbar-nav a {
+  color: var(--jet);
+}
+
+[data-theme="light"] .navbar-mobile .navbar-nav a:hover,
+[data-theme="light"] .navbar-mobile .navbar-nav a.active {
+  color: var(--marian-blue);
+  background: rgba(43, 45, 66, 0.1);
+}
+
+[data-theme="light"] .navbar-toggle {
+  color: var(--nav-text);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -317,6 +336,8 @@ a:hover {
   cursor: pointer;
   transition: all var(--transition-fast);
   backdrop-filter: blur(10px);
+  min-width: 44px; /* Ensure touch target size */
+  min-height: 44px;
 }
 
 .navbar-toggle:hover {
@@ -331,10 +352,13 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(43, 45, 66, 0.98);
+  background: var(--mobile-bg);
   backdrop-filter: blur(20px);
   z-index: var(--z-overlay);
   padding: var(--spacing-xl);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-medium);
 }
 
 .navbar-mobile.active {
@@ -342,6 +366,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
 }
 
 .navbar-mobile .navbar-nav {
@@ -349,6 +375,11 @@ a:hover {
   gap: var(--spacing-xl);
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.navbar-mobile .navbar-nav li {
+  text-align: center;
 }
 
 .navbar-mobile .navbar-nav a {
@@ -357,11 +388,16 @@ a:hover {
   padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   transition: all var(--transition-fast);
+  text-decoration: none;
+  display: block;
+  min-width: 200px;
 }
 
-.navbar-mobile .navbar-nav a:hover {
+.navbar-mobile .navbar-nav a:hover,
+.navbar-mobile .navbar-nav a.active {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+  color: var(--nav-text-hover);
 }
 
 /* Theme Toggle */
