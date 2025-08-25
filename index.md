@@ -1,19 +1,19 @@
 ---
-layout: index
-title: Home
+layout: home
+title: "Matthew Cockayne"
 ---
 
-<section>
-   <h2>About Me</h2>
-   <p>Welcome! I am a researcher and developer working on cutting-edge projects.</p>
-</section>
-
-<section>
-   <h2>Projects</h2>
-   <p>Explore my coding and research projects <a href="/projects/">here</a>.</p>
-</section>
-
-<section>
-   <h2>Contact</h2>
+<div class="profile-intro">
+   <img src="/assets/images/profile.jpg" alt="Matthew Cockayne" class="profile-photo" />
+   <h1>Matthew Cockayne</h1>
+   <p>PhD Candidate in [Your Field] at [Your Institution]. My research focuses on [short research summary].</p>
+   <div class="contact-links">
+      <a href="mailto:your.email@university.edu">Email</a> |
+      <a href="https://github.com/Matt-Cockayne">GitHub</a> |
+      <a href="https://www.linkedin.com/in/your-linkedin/">LinkedIn</a> |
+      <a href="https://scholar.google.com/citations?user=your-id">Google Scholar</a> |
+      <a href="https://orcid.org/your-orcid">ORCID</a>
+   </div>
+</div>
    <p>Feel free to <a href="/contact/">reach out</a>.</p>
 </section>

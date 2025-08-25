@@ -1,126 +1,120 @@
+/* Unified :root block */
 :root {
-    --bg: #f9f9f9;
-    --primary: #1e1e2f;
-    --accent: #5e81ac;
-    --text: #333;
-    --font-main: 'Montserrat', sans-serif;
-    --font-mono: 'Roboto Mono', monospace;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--font-main);
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--accent);
-  }
-  
+  --bg: #f8f9fa;
+  --text: #222;
+  --accent: #0055a5;
+  --card: #fff;
+  --border: #e0e0e0;
+  --primary: #1e1e2f;
+  --font-main: 'Montserrat', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+[data-theme="dark"] {
+  --bg: #181a1b;
+  --text: #eaeaea;
+  --accent: #7abaff;
+  --card: #232527;
+  --border: #333;
+}
   .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem 0;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
   }
-  
   .navbar {
-    background: white;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 1rem 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0;
+    margin-bottom: 2rem;
   }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo a {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--primary);
-  }
-  
   .navbar ul {
+    list-style: none;
     display: flex;
     gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: var(--accent);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  .profile-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+  }
+  .contact-links a {
+    color: var(--accent);
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+  }
+  .pub-list, .project-list {
+    padding-left: 0;
     list-style: none;
   }
-  
-  .hero {
-    background: linear-gradient(to right, #dfe9f3, #fff);
-    text-align: center;
-    padding: 4rem 0;
+  .pub-list li, .project-list li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--card);
+    border-radius: 6px;
+    border: 1px solid var(--border);
   }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero span {
+  .tags {
+    font-size: 0.9em;
     color: var(--accent);
+    margin-left: 0.5em;
   }
-  
-  .cta {
-    display: inline-block;
-    background: var(--accent);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
-    border-radius: 4px;
-    font-weight: 600;
+  @media (max-width: 600px) {
+    .container {
+      padding: 0.5rem;
+      margin: 1rem;
+    }
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
-  
-  .projects {
-    background: white;
-    padding: 3rem 0;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 1.5rem;
-  }
-  
-  .project-card {
-    background: #f2f2f2;
-    padding: 1.5rem;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-card h4 {
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-  }
-  
-  .project-card .link {
-    margin-top: 1rem;
-    display: inline-block;
-    font-family: var(--font-mono);
-  }
+/* Removed stray block: these lines were outside any selector */
   
   .about {
     background: #fafafa;
     padding: 3rem 0;
     text-align: center;
   }
-  
+
   footer {
     text-align: center;
     padding: 2rem 0;

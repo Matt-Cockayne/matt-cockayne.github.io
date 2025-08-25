@@ -1,0 +1,8 @@
+<nav class="navbar">
+  <ul>
+    {% for item in site.nav %}
+      <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+    {% endfor %}
+    <li><button id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button></li>
+  </ul>
+</nav>
