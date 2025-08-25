@@ -37,24 +37,16 @@ description: "Comprehensive CV of Matthew Cockayne including education, research
 - **Bachelor of Science in Computer Science** (2020)  
   *Undergraduate University* - Summa Cum Laude
 
-### Research Areas
-{% for interest in site.research_interests %}
-- {{ interest }}
-{% endfor %}
+### Experience
 
 ### Key Achievements
-- **Publications**: 15+ peer-reviewed papers
-- **Citations**: 250+ (Google Scholar)
-- **H-index**: 8
-- **Grants**: $150,000+ in research funding
-- **Awards**: 5+ academic and research honors
+
 
 ### Technical Skills
-- **Programming**: Python, R, Java, C++, JavaScript
+- **Programming**: Python, R, Java, JavaScript
 - **Machine Learning**: TensorFlow, PyTorch, Scikit-learn
 - **Data Analysis**: Pandas, NumPy, Matplotlib, Seaborn
-- **Databases**: SQL, MongoDB, PostgreSQL
-- **Tools**: Git, Docker, AWS, Google Cloud Platform
+- **Tools**: Git, AWS,
 
 ---
 

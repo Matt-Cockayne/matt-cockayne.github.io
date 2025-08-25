@@ -10,33 +10,6 @@ description: "Academic publications and research papers by Matthew Cockayne in a
   </p>
 </div>
 
-## Journal Articles
-
-<div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Advancing Multimodal Learning: A Comprehensive Study of Neural Network Architectures</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, J. Smith, A. Johnson</p>
-  <p class="publication-venue"><em>Journal of Artificial Intelligence Research</em>, Vol. 45, 2024</p>
-  <p>This paper presents a novel approach to multimodal learning that significantly improves performance on cross-modal tasks. We introduce a new architecture that effectively integrates visual, textual, and auditory information streams.</p>
-  <div class="publication-links">
-    <a href="#" target="_blank">PDF</a>
-    <a href="#" target="_blank">DOI</a>
-    <a href="#" target="_blank">BibTeX</a>
-    <a href="#" target="_blank">Code</a>
-  </div>
-</div>
-
-<div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Ethical Considerations in AI Decision-Making Systems: A Framework for Responsible Development</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, Dr. Sarah Wilson</p>
-  <p class="publication-venue"><em>AI & Society</em>, Vol. 38, No. 2, pp. 234-251, 2024</p>
-  <p>We propose a comprehensive framework for incorporating ethical considerations into AI system design, with particular focus on transparency, fairness, and accountability in automated decision-making.</p>
-  <div class="publication-links">
-    <a href="#" target="_blank">PDF</a>
-    <a href="#" target="_blank">DOI</a>
-    <a href="#" target="_blank">BibTeX</a>
-  </div>
-</div>
-
 ## Conference Papers
 
 <div class="publication-item animate-on-scroll">
@@ -53,44 +26,6 @@ description: "Academic publications and research papers by Matthew Cockayne in a
   </div>
 </div>
 
-<div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Human-AI Collaboration in Creative Tasks: Understanding Interaction Patterns</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, Dr. Emily Chen, R. Thompson</p>
-  <p class="publication-venue"><em>ACM Conference on Human Factors in Computing Systems (CHI)</em>, 2024</p>
-  <p>An empirical study examining how humans and AI systems can effectively collaborate in creative domains, with implications for interface design and user experience.</p>
-  <div class="publication-links">
-    <a href="#" target="_blank">PDF</a>
-    <a href="#" target="_blank">DOI</a>
-    <a href="#" target="_blank">Dataset</a>
-    <a href="#" target="_blank">Supplementary</a>
-  </div>
-</div>
-
-<div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Federated Learning for Privacy-Preserving Healthcare Analytics</h3>
-  <p class="publication-authors">A. Martinez, <strong>M. Cockayne</strong>, Dr. Robert Kim</p>
-  <p class="publication-venue"><em>IEEE International Conference on Healthcare Informatics (ICHI)</em>, 2023</p>
-  <p>We present a federated learning framework that enables collaborative machine learning on sensitive healthcare data while maintaining strict privacy guarantees.</p>
-  <div class="publication-links">
-    <a href="#" target="_blank">PDF</a>
-    <a href="#" target="_blank">DOI</a>
-    <a href="#" target="_blank">BibTeX</a>
-  </div>
-</div>
-
-## Workshop Papers & Extended Abstracts
-
-<div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Towards Explainable AI in Educational Technology</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, Dr. Lisa Park</p>
-  <p class="publication-venue"><em>Workshop on AI in Education, NeurIPS</em>, 2023</p>
-  <p>A position paper discussing the importance of explainable AI in educational contexts and proposing design principles for transparent learning systems.</p>
-  <div class="publication-links">
-    <a href="#" target="_blank">PDF</a>
-    <a href="#" target="_blank">Poster</a>
-  </div>
-</div>
-
 ## Preprints & Under Review
 
 <div class="publication-item animate-on-scroll">
@@ -101,33 +36,6 @@ description: "Academic publications and research papers by Matthew Cockayne in a
   <div class="publication-links">
     <a href="#" target="_blank">arXiv</a>
     <a href="#" target="_blank">Code</a>
-  </div>
-</div>
-
----
-
-## Publication Metrics
-
-<div class="grid grid-3" style="margin-top: 2rem;">
-  <div class="card">
-    <h3 class="card-title">Total Citations</h3>
-    <div class="card-content">
-      <p style="font-size: 2rem; font-weight: bold; color: var(--accent-primary); text-align: center;">285+</p>
-    </div>
-  </div>
-  
-  <div class="card">
-    <h3 class="card-title">H-Index</h3>
-    <div class="card-content">
-      <p style="font-size: 2rem; font-weight: bold; color: var(--accent-primary); text-align: center;">8</p>
-    </div>
-  </div>
-  
-  <div class="card">
-    <h3 class="card-title">Publications</h3>
-    <div class="card-content">
-      <p style="font-size: 2rem; font-weight: bold; color: var(--accent-primary); text-align: center;">15+</p>
-    </div>
   </div>
 </div>
 

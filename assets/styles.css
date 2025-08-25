@@ -593,9 +593,14 @@ a:hover {
   text-align: center;
   padding: 0;
   background: linear-gradient(135deg, 
-    var(--space-cadet) 0%, 
-    var(--marian-blue) 35%, 
-    var(--true-blue) 100%);
+    rgba(43, 45, 66, 0.8) 0%, 
+    rgba(30, 58, 138, 0.8) 35%, 
+    rgba(22, 102, 192, 0.8) 100%),
+    url('/assets/images/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -604,23 +609,14 @@ a:hover {
 
 .hero:hover {
   background: linear-gradient(135deg, 
-    var(--space-cadet) 10%, 
-    var(--marian-blue) 45%, 
-    var(--true-blue) 90%);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-  pointer-events: none;
+    rgba(43, 45, 66, 0.7) 10%, 
+    rgba(30, 58, 138, 0.7) 45%, 
+    rgba(22, 102, 192, 0.7) 90%),
+    url('/assets/images/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero-content {
@@ -630,6 +626,10 @@ a:hover {
   margin: 0 auto;
   padding: var(--spacing-2xl) var(--spacing-xl) 0 var(--spacing-xl);
   color: var(--hero-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Profile Photo with Animation */
@@ -723,6 +723,67 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+}
+
+/* Typewriter Animation */
+.typewriter {
+  overflow: hidden;
+  margin: 0 auto;
+  border-right: 3px solid rgba(255, 255, 255, 0.9);
+  animation: blink-caret 1s step-end infinite;
+  min-height: 1.2em;
+  display: block;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.typewriter.typing {
+  border-right: 3px solid rgba(255, 255, 255, 0.9);
+  animation: blink-caret 1s step-end infinite;
+}
+
+.typewriter.finished {
+  border-right: none;
+  animation: none;
+}
+
+/* Specific typewriter spacing for hero elements */
+.hero-title.typewriter {
+  width: auto;
+  min-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.hero-subtitle.typewriter {
+  width: auto;
+  min-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Ensure hero content container is stable */
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: rgba(255, 255, 255, 0.9); 
+  }
+  50% { 
+    border-color: transparent; 
+  }
+}
+
+@keyframes typewriter {
+  from { 
+    width: 0; 
+  }
+  to { 
+    width: 100%; 
+  }
 }
 
 /* Call-to-Action Buttons */

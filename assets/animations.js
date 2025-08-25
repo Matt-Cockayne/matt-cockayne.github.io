@@ -9,8 +9,42 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Apply staggered animations to hero elements
-  const heroElements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-tagline, .hero-cta');
+  const heroElements = document.querySelectorAll('.hero-title, .hero-cta');
   staggerElements(heroElements, 200);
+  
+  // Hero Typewriter Effect
+  function heroTypewriter(element, text, speed = 50) {
+    element.textContent = '';
+    element.classList.add('typing');
+    let i = 0;
+    
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Finished typing, remove cursor after a delay
+        setTimeout(() => {
+          element.classList.remove('typing');
+          element.classList.add('finished');
+        }, 1000);
+      }
+    }
+    
+    type();
+  }
+  
+  // Initialize hero typewriter animations
+  const heroTypewriterElements = document.querySelectorAll('.typewriter');
+  heroTypewriterElements.forEach((element, index) => {
+    const text = element.dataset.text;
+    const delay = index * 2500; // 2.5 second delay between elements
+    
+    setTimeout(() => {
+      heroTypewriter(element, text, 70);
+    }, delay + 500); // Start after 0.5 second
+  });
   
   // Enhanced scroll animations with different effects
   const scrollAnimations = {
