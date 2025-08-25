@@ -61,7 +61,7 @@
   --z-modal: 1020;
   
   /* Layout */
-  --navbar-height: 80px;
+  --navbar-height: 70px;
 }
 
 /* Dark Mode Variables */
@@ -188,9 +188,7 @@ a:hover {
   padding: var(--spacing-md) 0;
   z-index: var(--z-navbar);
   transition: all var(--transition-medium);
-  height: var(--navbar-height);
-  display: flex;
-  align-items: center;
+  min-height: var(--navbar-height);
 }
 
 .navbar.scrolled {
@@ -204,6 +202,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
 }
 
 .navbar-brand {
@@ -225,6 +227,8 @@ a:hover {
   list-style: none;
   gap: var(--spacing-lg);
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-nav a {
@@ -358,7 +362,7 @@ a:hover {
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
-  padding: var(--spacing-3xl) var(--spacing-xl) 0 var(--spacing-xl);
+  padding: var(--spacing-2xl) var(--spacing-xl) 0 var(--spacing-xl);
   color: white;
 }
 
@@ -870,57 +874,14 @@ a:hover {
     }
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
-    z-index: 10;
+/* Enhanced Button Animations */
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.scroll-indicator::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 1rem;
-    background: rgba(255, 255, 255, 0.7);
-    transform: translateX(-50%);
-    animation: scrollBounce 2s infinite;
-}
-
-.scroll-indicator::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid rgba(255, 255, 255, 0.7);
-    transform: translateX(-50%);
-    animation: scrollBounce 2s infinite;
-}
-
-@keyframes scrollBounce {
-    0%, 20% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        opacity: 0.7;
-        transform: translateX(-50%) translateY(10px);
-    }
-    80%, 100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Page Loading Animation */
@@ -1043,7 +1004,7 @@ body.loaded {
   }
   
   .hero-content {
-    padding: var(--spacing-3xl) var(--spacing-md) 0 var(--spacing-md);
+    padding: var(--spacing-2xl) var(--spacing-md) 0 var(--spacing-md);
   }
 }
 

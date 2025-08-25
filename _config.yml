@@ -7,22 +7,22 @@ url: "https://matt-cockayne.github.io"
 baseurl: ""
 
 # Personal Information
-email: "your.email@university.edu"
+email: "m.j.cockayne@keele.ac.uk"
 github_username: "Matt-Cockayne"
-linkedin: "https://www.linkedin.com/in/your-linkedin/"
-google_scholar: "https://scholar.google.com/citations?user=your-id"
-orcid: "https://orcid.org/your-orcid"
+linkedin: "www.linkedin.com/in/matthew-cockayne-193659199"
+google_scholar: "https://scholar.google.com/citations?hl=en&user=LcCOSxEAAAAJ&view_op=list_works&gmla=AH8HC4wM99adub_cubk1qp2npyXW2be388tKw0MkqF7skT68KX25ZnvlCCiL9onkOlzvKbumTFxhG82-H5Vnxj4F"
+orcid: "https://orcid.org/0009-0009-8918-3125"
 twitter_username: "your-twitter"
 
 # Academic Information
 institution: "Keele University"
-department: "Department of Computer Science"
+department: "School of Computer Science and Mathematics"
 position: "PhD Candidate"
 research_interests: 
   - "Artificial Intelligence"
-  - "Machine Learning"
-  - "Multimodal Neural Networks"
-  - "Human-Computer Interaction"
+  - "Computer Vision"
+  - "Responsible AI"
+  - "Medical Image Processing"
 
 # Site Assets
 photo: "/assets/images/profile.jpg"
