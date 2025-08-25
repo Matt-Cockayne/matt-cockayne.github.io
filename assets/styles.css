@@ -1,25 +1,32 @@
 /* Unified :root block */
 /* Custom color palette */
+/* Tailwind-inspired color palette */
 :root {
-  --bg: #E6B7B9;
-  --text: #1F3E22;
-  --accent: #C61B31;
+  --space-cadet: #1b264f;
+  --marian-blue: #274690;
+  --true-blue: #576ca8;
+  --jet: #302b27;
+  --white-smoke: #f5f3f5;
+  --bg: var(--white-smoke);
+  --text: var(--jet);
+  --accent: var(--space-cadet);
   --card: #fff;
-  --border: #AFD1C2;
-  --primary: #671201;
-  --secondary: #DB3A31;
-  --tertiary: #DF5C56;
-  --highlight: #709654;
-  --dark: #3B5D37;
+  --border: var(--true-blue);
+  --primary: var(--marian-blue);
+  --secondary: var(--true-blue);
   --font-main: 'Montserrat', 'Georgia', serif;
   --font-mono: 'Roboto Mono', monospace;
 }
+
+/* Complimentary dark mode */
 [data-theme="dark"] {
-  --bg: #1F3E22;
-  --text: #E6B7B9;
-  --accent: #DB3A31;
-  --card: #3B5D37;
-  --border: #709654;
+  --bg: var(--space-cadet);
+  --text: var(--white-smoke);
+  --accent: var(--true-blue);
+  --card: var(--jet);
+  --border: var(--marian-blue);
+  --primary: var(--true-blue);
+  --secondary: var(--marian-blue);
 }
 body {
   font-family: var(--font-main);
