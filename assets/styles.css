@@ -502,13 +502,14 @@ a:hover {
 .hero-hint {
   position: absolute;
   bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   animation: bounce 2s infinite;
   opacity: 0.8;
   z-index: 1;
+  text-align: center;
 }
 
 .hero-hint p {
