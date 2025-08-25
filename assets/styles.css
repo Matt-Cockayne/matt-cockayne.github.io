@@ -26,9 +26,12 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-heavy: rgba(0, 0, 0, 0.15);
   
-  /* Typography */
-  --font-serif: 'Crimson Text', 'Georgia', serif;
-  --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+  /* Typography Variables */
+  /* Headings: Palatino Linotype family */
+  --font-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  /* Body: Brandon Grotesque alternative (Work Sans) */
+  /* To use actual Brandon Grotesque, replace 'Work Sans' with 'Brandon Grotesque' and host the font files */
+  --font-sans: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Monaco', monospace;
   
   /* Spacing */
@@ -74,8 +77,10 @@
   --shadow-heavy: rgba(0, 0, 0, 0.4);
 }
 
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Font Imports - Work Sans as Brandon Grotesque alternative */
+/* Note: For Brandon Grotesque, you'll need to purchase and host the font files */
+/* or use Adobe Fonts/Typekit if you have a subscription */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* Reset and Base Styles */
 *,
@@ -92,7 +97,7 @@ html {
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   line-height: 1.7;
   color: var(--text-primary);
@@ -103,7 +108,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.3;
   color: var(--text-primary);
