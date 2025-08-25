@@ -59,6 +59,9 @@
   --z-navbar: 1000;
   --z-overlay: 1010;
   --z-modal: 1020;
+  
+  /* Layout */
+  --navbar-height: 80px;
 }
 
 /* Dark Mode Variables */
@@ -179,12 +182,15 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--spacing-md) 0;
   z-index: var(--z-navbar);
   transition: all var(--transition-medium);
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
 }
 
 .navbar.scrolled {
@@ -352,7 +358,7 @@ a:hover {
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 var(--spacing-xl);
+  padding: var(--spacing-3xl) var(--spacing-xl) 0 var(--spacing-xl);
   color: white;
 }
 
@@ -1037,7 +1043,7 @@ body.loaded {
   }
   
   .hero-content {
-    padding: 0 var(--spacing-md);
+    padding: var(--spacing-3xl) var(--spacing-md) 0 var(--spacing-md);
   }
 }
 
