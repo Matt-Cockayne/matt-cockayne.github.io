@@ -4,33 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    
+    <!-- SEO and Meta Tags -->
     {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ site.favicon }}" type="image/x-icon">
 </head>
-<body>
+<body data-theme="light">
+    <!-- Navigation -->
     {% include nav.html %}
-    <main class="container">
-        <section class="profile-intro">
-            <img src="{{ site.photo }}" alt="Matthew Cockayne" class="profile-photo" />
-            <h1>Matthew Cockayne</h1>
-            <h2>PhD Candidate in [Your Field] at [Your Institution]</h2>
-            <p class="bio">My research focuses on [short research summary].</p>
-            <div class="contact-links">
-                <a href="mailto:{{ site.email }}">Email</a>
-                <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-                <a href="{{ site.linkedin }}">LinkedIn</a>
-                <a href="{{ site.google_scholar }}">Google Scholar</a>
-                <a href="{{ site.orcid }}">ORCID</a>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Animated Profile Photo -->
+            <div class="profile-photo-container">
+                <img src="{{ site.photo }}" alt="{{ site.name }}" class="profile-photo" />
+            </div>
+            
+            <!-- Hero Text with Staggered Animation -->
+            <h1 class="hero-title">{{ site.name }}</h1>
+            <h2 class="hero-subtitle">{{ site.position }} at {{ site.institution }}</h2>
+            <p class="hero-tagline">{{ site.tagline }}</p>
+            
+            <!-- Call-to-Action Buttons -->
+            <div class="hero-cta">
+                <a href="{{ site.cv_pdf }}" class="btn btn-primary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                    </svg>
+                    Download CV
+                </a>
+                <a href="/publications" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    View Publications
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Research Interests Section -->
+        <section class="content-section animate-on-scroll">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Research Interests</h2>
+                        <p class="section-description">
+                            My research focuses on advancing human-AI interaction through innovative approaches in machine learning and neural networks.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-2">
+                        {% for interest in site.research_interests %}
+                        <div class="card">
+                            <h3 class="card-title">{{ interest }}</h3>
+                            <div class="card-content">
+                                <p>Exploring cutting-edge developments in {{ interest | downcase }} to create more intuitive and effective AI systems.</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="main-content">
-            {{ content }}
+        
+        <!-- Latest Updates Section -->
+        <section class="content-section animate-on-scroll">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Latest Updates</h2>
+                        <p class="section-description">
+                            Recent developments in my research and academic journey.
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quick Links Section -->
+        <section class="content-section animate-on-scroll">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Explore My Work</h2>
+                    </div>
+                    
+                    <div class="grid grid-3">
+                        <div class="card">
+                            <h3 class="card-title">Publications</h3>
+                            <div class="card-content">
+                                <p>Discover my latest research papers and academic contributions to the field.</p>
+                                <a href="/publications" class="btn btn-secondary" style="margin-top: 1rem;">View Publications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 class="card-title">Projects</h3>
+                            <div class="card-content">
+                                <p>Explore the innovative projects and applications I've developed.</p>
+                                <a href="/projects" class="btn btn-secondary" style="margin-top: 1rem;">View Projects</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 class="card-title">Contact</h3>
+                            <div class="card-content">
+                                <p>Get in touch to discuss research collaborations or opportunities.</p>
+                                <a href="/contact" class="btn btn-secondary" style="margin-top: 1rem;">Get in Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; {{ "now" | date: "%Y" }} {{ site.name }}. All rights reserved.</p>
+            <p>Built with Jekyll and hosted on GitHub Pages.</p>
+        </div>
     </footer>
+    
+    <!-- Scripts -->
     <script src="/assets/theme-toggle.js"></script>
+    <script src="/assets/animations.js"></script>
 </body>
 </html>
