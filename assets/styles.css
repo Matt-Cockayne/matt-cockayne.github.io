@@ -26,6 +26,14 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-heavy: rgba(0, 0, 0, 0.15);
   
+  /* Hero and Navigation Colors */
+  --hero-text: var(--white-smoke);
+  --nav-text: var(--white-smoke);
+  --nav-text-hover: rgba(255, 255, 255, 0.8);
+  --button-text: var(--jet);
+  --tag-text: var(--white-smoke);
+  --link-text: var(--white-smoke);
+  
   /* Typography Variables */
   /* Headings: Palatino Linotype family */
   --font-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -78,6 +86,14 @@
   --shadow-light: rgba(0, 0, 0, 0.2);
   --shadow-medium: rgba(0, 0, 0, 0.3);
   --shadow-heavy: rgba(0, 0, 0, 0.4);
+  
+  /* Hero and Navigation Colors */
+  --hero-text: var(--white-smoke);
+  --nav-text: var(--white-smoke);
+  --nav-text-hover: rgba(255, 255, 255, 0.8);
+  --button-text: var(--white-smoke);
+  --tag-text: var(--white-smoke);
+  --link-text: var(--white-smoke);
 }
 
 /* Font Imports - Work Sans as Brandon Grotesque alternative */
@@ -198,6 +214,29 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Light mode scrolled navbar */
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(245, 245, 245, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .navbar.scrolled .navbar-brand,
+[data-theme="light"] .navbar.scrolled .navbar-nav a {
+  color: var(--space-cadet);
+}
+
+[data-theme="light"] .navbar.scrolled .navbar-nav a:hover,
+[data-theme="light"] .navbar.scrolled .navbar-nav a.active {
+  color: var(--marian-blue);
+}
+
+[data-theme="light"] .navbar.scrolled .theme-toggle {
+  color: var(--space-cadet);
+  border-color: rgba(43, 45, 66, 0.2);
+  background: rgba(43, 45, 66, 0.1);
+}
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -212,13 +251,13 @@ a:hover {
   font-family: var(--font-sans);
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: var(--nav-text);
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
 .navbar-brand:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--nav-text-hover);
   text-decoration: none;
 }
 
@@ -234,7 +273,7 @@ a:hover {
 .navbar-nav a {
   font-family: var(--font-sans);
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--nav-text);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
@@ -261,7 +300,7 @@ a:hover {
 
 .navbar-nav a:hover,
 .navbar-nav a.active {
-  color: white;
+  color: var(--nav-text-hover);
   background: rgba(255, 255, 255, 0.1);
   text-decoration: none;
 }
@@ -274,7 +313,7 @@ a:hover {
   border-radius: var(--radius-md);
   padding: var(--spacing-sm);
   font-size: 1.2rem;
-  color: white;
+  color: var(--nav-text);
   cursor: pointer;
   transition: all var(--transition-fast);
   backdrop-filter: blur(10px);
@@ -314,7 +353,7 @@ a:hover {
 
 .navbar-mobile .navbar-nav a {
   font-size: 1.5rem;
-  color: white;
+  color: var(--nav-text);
   padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   transition: all var(--transition-fast);
@@ -338,7 +377,7 @@ a:hover {
   cursor: pointer;
   transition: all var(--transition-fast);
   font-size: 1.2rem;
-  color: white;
+  color: var(--nav-text);
   backdrop-filter: blur(10px);
 }
 
@@ -393,7 +432,7 @@ a:hover {
   max-width: 900px;
   margin: 0 auto;
   padding: var(--spacing-2xl) var(--spacing-xl) 0 var(--spacing-xl);
-  color: white;
+  color: var(--hero-text);
 }
 
 /* Profile Photo with Animation */
@@ -554,7 +593,7 @@ a:hover {
 
 .btn-primary {
   background: rgba(255, 255, 255, 0.15);
-  color: white;
+  color: var(--button-text);
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.3),
@@ -568,13 +607,13 @@ a:hover {
     0 12px 40px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-decoration: none;
-  color: white;
+  color: var(--button-text);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: var(--button-text);
   border: 2px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -583,7 +622,7 @@ a:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px) scale(1.02);
   text-decoration: none;
-  color: white;
+  color: var(--button-text);
   border-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
@@ -691,7 +730,7 @@ a:hover {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
   background: var(--accent-primary);
-  color: white;
+  color: var(--tag-text);
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -770,7 +809,7 @@ a:hover {
   font-weight: 500;
   padding: var(--spacing-xs) var(--spacing-sm);
   background: var(--accent-secondary);
-  color: white;
+  color: var(--link-text);
   border-radius: var(--radius-sm);
   text-decoration: none;
   transition: background-color var(--transition-fast);
