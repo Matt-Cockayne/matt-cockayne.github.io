@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   {% seo %}
 </head>
 <body>
   {% include nav.html %}
   <main class="container">
     <h1>{{ page.title }}</h1>
-    {{ content }}
+    <section class="main-content">
+      {{ content }}
+    </section>
   </main>
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+  </footer>
   <script src="/assets/theme-toggle.js"></script>
 </body>
 </html>
