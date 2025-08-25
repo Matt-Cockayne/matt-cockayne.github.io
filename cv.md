@@ -29,13 +29,13 @@ description: "Comprehensive CV of Matthew Cockayne including education, research
 
 ### Education
 - **PhD in Computer Science** (In Progress)  
-  *{{ site.institution }}* - Expected 2025
+  *{{ site.institution }}* - Expected March 2026
   
-- **Master of Science in Artificial Intelligence** (2022)  
-  *Previous University* - Magna Cum Laude
+- **Master of Science in Artificial Intelligence and Data Science** (2021)  
+  *{{ site.institution }}* - Distinction
   
-- **Bachelor of Science in Computer Science** (2020)  
-  *Undergraduate University* - Summa Cum Laude
+- **Bachelor of Science in Physics** (2020)  
+  *{{ site.institution }}* - First Class Honours
 
 ### Experience
 
