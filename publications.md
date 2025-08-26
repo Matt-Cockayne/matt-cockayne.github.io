@@ -1,12 +1,12 @@
 ---
 layout: default
 title: "Publications"
-description: "Academic publications and research papers by Matthew Cockayne in artificial intelligence, machine learning, and related fields."
+description: "Academic publications and research papers by Matthew Cockayne in artificial intelligence, computer vision, and related fields."
 ---
 
 <div class="section-header">
   <p class="section-description">
-    My research contributes to the fields of artificial intelligence, machine learning, and human-computer interaction through peer-reviewed publications and conference presentations.
+    My research contributes to the fields of artificial intelligence, computer vision, and medical image processing through peer-reviewed publications and conference presentations.
   </p>
 </div>
 
