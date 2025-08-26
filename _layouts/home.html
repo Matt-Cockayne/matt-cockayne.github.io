@@ -85,7 +85,7 @@
                         <div class="card">
                             <h3 class="card-title">{{ interest }}</h3>
                             <div class="card-content">
-                                <p>Exploring cutting-edge developments in {{ interest | downcase }} to create more intuitive and effective AI systems.</p>
+                                <p>{{ site.research_descriptions[forloop.index0] }}</p>
                             </div>
                         </div>
                         {% endfor %}

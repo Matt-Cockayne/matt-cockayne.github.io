@@ -1,28 +1,26 @@
 ---
 layout: home
 title: "Home"
-description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher specializing in AI and machine learning research."
+description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher specializing in Responsible AI research."
 ---
 
 ## Recent Highlights
 
 ### 🎓 PhD Research Progress
-Currently advancing my dissertation on multimodal neural networks and their applications in human-computer interaction. This work explores novel approaches to integrating visual, textual, and auditory data for more intuitive AI systems.
+Currently progressing in my third year of PhD research focused on building transparency and trust of AI systems in healthcare, with a focus on skin cancer detection. This work explores novel approaches to integrating visual, textual, and auditory data for more intuitive AI systems.
 
-### 📄 Latest Publications
-- **"Advancing Multimodal Learning: A Comprehensive Study"** - *Journal of AI Research* (2024)
-- **"Neural Network Architectures for Human-AI Interaction"** - *Conference on Machine Learning* (2024)
+### Latest Publications
+- **"Classification-to-Segmentation: Class Activation Mapping for Zero-Shot Skin Lesion Segmentation"** - *International Conference on AI in Healthcare* (2025)
 
-### 🔬 Current Projects
-Working on several exciting research initiatives:
-- **Project Alpha**: Developing next-generation computer vision models
-- **Project Beta**: Investigating ethical AI decision-making frameworks
-- **Project Gamma**: Building accessible AI tools for educational applications
+### Current Projects
+Working on several exciting research areas:
+- **Project Alpha**: Example
+- **Project Beta**: Example
+- **Project Gamma**: Example
 
-### 🏆 Recent Achievements
-- **Outstanding Graduate Student Award** - University Recognition (2024)
-- **Best Paper Award** - International AI Conference (2024)
-- **Research Grant** - National Science Foundation ($50,000)
+### Recent Achievements
+- **achievement** - (2025)
+
 
 ---
 

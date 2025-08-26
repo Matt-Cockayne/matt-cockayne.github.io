@@ -24,6 +24,13 @@ research_interests:
   - "Responsible AI"
   - "Medical Image Processing"
 
+# Research Interest Descriptions
+research_descriptions:
+  - "Developing advanced algorithms that can learn from complex, real-world data to solve real-world problems."
+  - "Exploring computer vision techniques for automated image analysis, object detection, and pattern recognition with a focus on healthcare."
+  - "Investigating responsible practices and methods to ensure AI development benefits society while minimizing potential risks and biases."
+  - "Researching innovative approaches to medical imaging analysis, focusing on diagnostic assistance and treatment planning through AI-powered image processing techniques."
+
 # Site Assets
 photo: "/assets/images/profile.jpg"
 cv_pdf: "/assets/cv.pdf"

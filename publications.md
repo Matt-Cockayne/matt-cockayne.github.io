@@ -13,10 +13,10 @@ description: "Academic publications and research papers by Matthew Cockayne in a
 ## Conference Papers
 
 <div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Real-time Object Detection in Complex Environments: A Deep Learning Approach</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, P. Anderson, K. Lee</p>
-  <p class="publication-venue"><em>Proceedings of the International Conference on Machine Learning (ICML)</em>, 2024</p>
-  <p>Best Paper Award. This work introduces an innovative real-time object detection system that maintains high accuracy even in challenging environmental conditions.</p>
+  <h3 class="publication-title">Classification-to-Segmentation: Class Activation Mapping for Zero-Shot Skin Lesion Segmentation</h3>
+  <p class="publication-authors"><strong>M.J. Cockayne</strong>, M. Ortolani, B. Al-Bander</p>
+  <p class="publication-venue"><em>Proceedings of the International Conference on AI in Healthcare (AIIH)</em>, 2025</p>
+  <p>This work introduces an innovative approach to automate the prompt generation of foundation models for zero-shot segmentation, using class activation mapping from binary skin lesion classifiers.</p>
   <div class="publication-links">
     <a href="#" target="_blank">PDF</a>
     <a href="#" target="_blank">DOI</a>
@@ -29,10 +29,21 @@ description: "Academic publications and research papers by Matthew Cockayne in a
 ## Preprints & Under Review
 
 <div class="publication-item animate-on-scroll">
-  <h3 class="publication-title">Neural Architecture Search for Sustainable AI: Optimizing Performance and Energy Efficiency</h3>
-  <p class="publication-authors"><strong>M. Cockayne</strong>, J. Williams, Dr. Michael Brown</p>
-  <p class="publication-venue"><em>Under review at Nature Machine Intelligence</em>, 2024</p>
-  <p>This work addresses the growing concern of AI's environmental impact by developing neural architecture search techniques that optimize for both performance and energy efficiency.</p>
+  <h3 class="publication-title">DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection</h3>
+  <p class="publication-authors"><strong>M.J. Cockayne</strong>, M. Ortolani, B. Al-Bander</p>
+  <p class="publication-venue"><em>Under review at Applied Intelligence</em>, 2025</p>
+  <p>This work .</p>
+  <div class="publication-links">
+    <a href="#" target="_blank">arXiv</a>
+    <a href="#" target="_blank">Code</a>
+  </div>
+</div>
+
+<div class="publication-item animate-on-scroll">
+  <h3 class="publication-title">Zero-Shot Crack Segmentation for Structural Health Monitoring Using Class Activation Map Guided Segment Anything Model</h3>
+  <p class="publication-authors"><strong>S. Guo, M.J. Cockayne</strong>, M. Ortolani, R. Al-Hamd, B. Al-Bander</p>
+  <p class="publication-venue"><em>Under review at Machine Vision and Applications</em>, 2024</p>
+  <p>This work .</p>
   <div class="publication-links">
     <a href="#" target="_blank">arXiv</a>
     <a href="#" target="_blank">Code</a>
