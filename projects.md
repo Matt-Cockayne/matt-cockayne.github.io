@@ -10,64 +10,100 @@ description: "Research projects, software applications, and innovative solutions
   </p>
 </div>
 
-## Current Research Projects
+## PhD Research Projects
 
 <div class="grid grid-2">
   <div class="card animate-on-scroll">
-    <h3 class="card-title"> Multimodal Neural Networks</h3>
-    <div class="card-meta">PhD Project • 2023 - Present</div>
+    <h3 class="card-title">🔬 DermFormer: Multi-modal Skin Cancer Detection</h3>
+    <div class="card-meta">Published • Pattern Analysis and Applications, 2025</div>
     <div class="card-content">
-      <p>Developing advanced neural network architectures that can seamlessly integrate and process multiple types of data (visual, textual, auditory) for enhanced AI decision-making capabilities.</p>
-      <p><strong>Key Innovations:</strong></p>
+      <p>State-of-the-art multi-modal transformer architecture for robust skin cancer detection achieving 0.779 diagnosis accuracy. Combines dermoscopic images, clinical images, and patient metadata through entropy-weighted ensemble learning.</p>
+      <p><strong>Key Achievements:</strong></p>
       <ul>
-        <li>Novel attention mechanisms for cross-modal learning</li>
-        <li>Efficient fusion strategies for heterogeneous data</li>
-        <li>Real-time processing optimization</li>
+        <li>Superior robustness to real-world corruptions (noise, blur, compression)</li>
+        <li>Entropy-weighted ensemble for dynamic modality fusion</li>
+        <li>Multi-task learning across 8 classification tasks</li>
+        <li>Interactive demos with real Derm7pt cases</li>
       </ul>
     </div>
     <div class="card-tags">
-      <span class="tag">Deep Learning</span>
-      <span class="tag">Computer Vision</span>
-      <span class="tag">NLP</span>
+      <span class="tag">Medical AI</span>
+      <span class="tag">Transformers</span>
+      <span class="tag">Multi-modal</span>
       <span class="tag">PyTorch</span>
+    </div>
+    <div style="margin-top: 1rem;">
+      <a href="/projects/dermformer" class="btn btn-primary">View Project →</a>
     </div>
   </div>
 
   <div class="card animate-on-scroll">
-    <h3 class="card-title">Ethical AI Framework</h3>
-    <div class="card-meta">Collaborative Research • 2023 - Present</div>
+    <h3 class="card-title">🎯 Classification-to-Segmentation</h3>
+    <div class="card-meta">Published • AIIH 2025 [Oral Presentation]</div>
     <div class="card-content">
-      <p>Creating a comprehensive framework for building ethical AI systems with a focus on transparency, fairness, and accountability in automated decision-making processes.</p>
-      <p><strong>Components:</strong></p>
+      <p>Novel zero-shot segmentation approach using Class Activation Maps to guide foundation models. Achieves segmentation without pixel-level annotations, dramatically reducing annotation costs.</p>
+      <p><strong>Key Innovations:</strong></p>
       <ul>
-        <li>Bias detection and mitigation tools</li>
-        <li>Explainable AI algorithms</li>
-        <li>Fairness metrics and evaluation</li>
+        <li>Zero-shot segmentation (IoU: 0.366) without pixel annotations</li>
+        <li>Dual-prompt strategy (bounding box + sampled points)</li>
+        <li>Adaptive CAM selection: 98.75% failure reduction</li>
+        <li>Interactive demo with truly zero-shot capability</li>
       </ul>
     </div>
     <div class="card-tags">
-      <span class="tag">Ethics</span>
       <span class="tag">Explainable AI</span>
-      <span class="tag">Fairness</span>
-      <span class="tag">Python</span>
+      <span class="tag">Foundation Models</span>
+      <span class="tag">Zero-Shot Learning</span>
+      <span class="tag">CAM</span>
+    </div>
+    <div style="margin-top: 1rem;">
+      <a href="/projects/classification-to-segmentation" class="btn btn-primary">View Project →</a>
     </div>
   </div>
 </div>
 
-## Completed Projects
+## Interactive Demonstrations
 
-<div class="grid grid-3">
+Both projects include comprehensive interactive demos showcasing the complete pipelines:
+
+<div class="grid grid-2" style="margin-top: 1rem;">
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🏥 HealthML Toolkit</h3>
-    <div class="card-meta">2022</div>
+    <h3 class="card-title">DermFormer Demos</h3>
     <div class="card-content">
-      <p>Machine learning toolkit for healthcare applications with privacy-preserving federated learning capabilities.</p>
+      <ul>
+        <li><strong>Interactive Inference</strong>: Multi-modal predictions with real Derm7pt cases</li>
+        <li><strong>Robustness Analysis</strong>: Performance under 18 corruption types</li>
+      </ul>
     </div>
-    <div class="card-tags">
-      <span class="tag">Healthcare</span>
-      <span class="tag">Federated Learning</span>
-    </div>
+    <a href="/projects/dermformer#interactive-demonstrations" class="btn btn-secondary">Launch Demos</a>
   </div>
+  
+  <div class="card animate-on-scroll">
+    <h3 class="card-title">Classification-to-Segmentation Demo</h3>
+    <div class="card-content">
+      <ul>
+        <li><strong>Zero-Shot Pipeline</strong>: Complete CAM-to-segmentation workflow</li>
+        <li><strong>5 ISIC Examples</strong>: Diverse lesion types with ground truth comparison</li>
+      </ul>
+    </div>
+    <a href="/projects/classification-to-segmentation#interactive-demonstration" class="btn btn-secondary">Launch Demo</a>
+  </div>
+</div>
+
+## Research Impact
+
+<div class="card animate-on-scroll" style="margin-top: 2rem;">
+  <div class="card-content">
+    <p><strong>Combined Contributions:</strong></p>
+    <ul>
+      <li>✅ <strong>2 Published Papers</strong> in high-impact venues (Springer)</li>
+      <li>✅ <strong>State-of-the-art Results</strong> on benchmark datasets</li>
+      <li>✅ <strong>Open Source</strong> implementations with comprehensive documentation</li>
+      <li>✅ <strong>Interactive Demos</strong> for reproducibility and exploration</li>
+      <li>✅ <strong>Clinical Relevance</strong> addressing real-world deployment challenges</li>
+    </ul>
+  </div>
+</div>
 
 ## Open Source & Reproducible Research
 
