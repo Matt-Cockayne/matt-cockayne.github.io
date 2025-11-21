@@ -107,13 +107,14 @@ DermFormer was systematically evaluated under 18 types of common corruptions acr
 ## Interactive Demonstrations
 
 ### Demo 1: Interactive Inference
-Explore DermFormer's multi-modal inference pipeline with real Derm7pt cases:
-- Process clinical + dermoscopic images + patient metadata
-- Visualize individual model branch predictions
-- Understand entropy-weighted ensemble decisions
-- Compare against ground truth diagnoses
+Explore DermFormer's multi-modal inference pipeline with real Derm7pt cases. Interact with the demo below or [open in full screen](/assets/projects/DermFormer_Interactive_Demo.html).
 
-[**Launch Interactive Demo →**](/assets/projects/DermFormer_Interactive_Demo.html)
+<div style="border: 2px solid #ddd; border-radius: 8px; padding: 10px; margin: 20px 0; background-color: #f9f9f9;">
+  <iframe src="/assets/projects/DermFormer_Interactive_Demo.html" 
+          style="width: 100%; height: 800px; border: none; border-radius: 4px;" 
+          title="DermFormer Interactive Demo">
+  </iframe>
+</div>
 
 **What You'll See:**
 - Multi-task prediction outputs for all 8 classification tasks
@@ -122,13 +123,14 @@ Explore DermFormer's multi-modal inference pipeline with real Derm7pt cases:
 - Confidence scores and uncertainty quantification
 
 ### Demo 2: Robustness Analysis
-Systematic evaluation of model resilience to real-world variations:
-- Test 18 corruption types across 5 severity levels
-- Compare DermFormer vs baseline architectures
-- Analyze performance degradation curves
-- Evaluate modality-specific robustness
+Systematic evaluation of model resilience to real-world variations. Interact with the demo below or [open in full screen](/assets/projects/DermFormer_Robustness_Demo.html).
 
-[**Launch Robustness Demo →**](/assets/projects/DermFormer_Robustness_Demo.html)
+<div style="border: 2px solid #ddd; border-radius: 8px; padding: 10px; margin: 20px 0; background-color: #f9f9f9;">
+  <iframe src="/assets/projects/DermFormer_Robustness_Demo.html" 
+          style="width: 100%; height: 800px; border: none; border-radius: 4px;" 
+          title="DermFormer Robustness Demo">
+  </iframe>
+</div>
 
 **Insights Demonstrated:**
 - Performance maintained under realistic clinical conditions

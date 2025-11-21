@@ -131,9 +131,14 @@ Individual CAM method results (Finetuned Swin):
 
 ## Interactive Demonstration
 
-Explore the complete zero-shot segmentation pipeline with real ISIC examples:
+Explore the complete zero-shot segmentation pipeline with real ISIC examples. Interact with the demo below or [open in full screen](/assets/projects/Zero_Shot_Segmentation_Demo.html).
 
-[**Launch Interactive Demo →**](/assets/projects/Zero_Shot_Segmentation_Demo.html)
+<div style="border: 2px solid #ddd; border-radius: 8px; padding: 10px; margin: 20px 0; background-color: #f9f9f9;">
+  <iframe src="/assets/projects/Zero_Shot_Segmentation_Demo.html" 
+          style="width: 100%; height: 800px; border: none; border-radius: 4px;" 
+          title="Zero-Shot Segmentation Demo">
+  </iframe>
+</div>
 
 **Demo Features:**
 - **Step-by-step Pipeline**: Visual walkthrough of all stages
