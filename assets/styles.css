@@ -1549,3 +1549,239 @@ textarea:focus {
     --shadow-heavy: rgba(0, 0, 0, 0.7);
   }
 }
+/* ===================================
+   Project Highlights Horizontal Slider
+   =================================== */
+
+.project-highlights-container {
+  position: relative;
+  margin: 2rem 0 3rem 0;
+  padding: 0 3rem;
+}
+
+.project-highlights-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-secondary);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep functionality */
+.project-highlights-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-highlights-scroll::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+}
+
+.project-highlights-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: var(--radius-full);
+}
+
+.project-highlights-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+.project-highlight-card {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: all var(--transition-medium);
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.project-highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px var(--shadow-medium);
+  border-color: var(--accent-primary);
+}
+
+.project-highlight-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.project-highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-highlight-card:hover .project-highlight-image img {
+  transform: scale(1.1);
+}
+
+.project-highlight-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.project-highlight-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.project-highlight-meta {
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.project-highlight-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.project-highlight-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tag-mini {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  background: var(--accent-primary);
+  color: var(--tag-text);
+  white-space: nowrap;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition-medium);
+  box-shadow: 0 2px 8px var(--shadow-medium);
+}
+
+.scroll-btn:hover {
+  background: var(--accent-primary);
+  color: var(--white-smoke);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-btn-left {
+  left: 0;
+}
+
+.scroll-btn-right {
+  right: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .project-highlights-container {
+    padding: 0 2.5rem;
+  }
+  
+  .project-highlight-card {
+    flex: 0 0 280px;
+  }
+  
+  .project-highlight-image {
+    height: 160px;
+  }
+  
+  .project-highlight-content h3 {
+    font-size: 1.125rem;
+  }
+  
+  .project-highlight-desc {
+    font-size: 0.875rem;
+  }
+  
+  .scroll-btn {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .scroll-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-highlights-container {
+    padding: 0 2rem;
+  }
+  
+  .project-highlight-card {
+    flex: 0 0 260px;
+  }
+  
+  .scroll-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Smooth fade at edges */
+.project-highlights-container::before,
+.project-highlights-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.project-highlights-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.project-highlights-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}

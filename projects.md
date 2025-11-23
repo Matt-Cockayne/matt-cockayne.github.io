@@ -38,6 +38,54 @@ description: "Research projects, software applications, and innovative solutions
   </div>
 
   <div class="card animate-on-scroll">
+    <h3 class="card-title">🧠 SkinCBM: Interpretable Diagnosis via Concept Bottlenecks</h3>
+    <div class="card-meta">Active Development • 2025</div>
+    <div class="card-content">
+      <p>Educational implementation of Concept Bottleneck Models for interpretable skin cancer diagnosis. Forces reasoning through human-understandable dermatological concepts, enabling clinician validation and correction of model predictions.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>7-point checklist: Clinically validated dermatological concepts</li>
+        <li>Concept intervention: Test-time correction by domain experts</li>
+        <li>Information-theoretic analysis: Completeness and synergy metrics</li>
+        <li>3 comprehensive tutorials with sample data included</li>
+      </ul>
+    </div>
+    <div class="card-tags">
+      <span class="tag">Interpretability</span>
+      <span class="tag">Medical AI</span>
+      <span class="tag">Concept Learning</span>
+      <span class="tag">PyTorch</span>
+    </div>
+    <div style="margin-top: 1rem;">
+      <a href="/projects/skincbm" class="btn btn-primary">View Project →</a>
+    </div>
+  </div>
+
+  <div class="card animate-on-scroll">
+    <h3 class="card-title">🔍 MedXAI: Medical Image Explainability Toolkit</h3>
+    <div class="card-meta">Active Development • 2024-2025</div>
+    <div class="card-content">
+      <p>Comprehensive PyTorch framework for explainable AI in medical imaging. Provides unified implementations of 6 XAI methods with quantitative evaluation metrics, bridging the gap between model predictions and clinical interpretability.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>6 XAI methods: GradCAM, GradCAM++, Integrated Gradients, RISE, LIME, SHAP</li>
+        <li>Quantitative evaluation: Deletion/Insertion AUC, faithfulness metrics</li>
+        <li>Interactive Gradio interface with live demonstrations</li>
+        <li>6 comprehensive tutorial notebooks with medical datasets</li>
+      </ul>
+    </div>
+    <div class="card-tags">
+      <span class="tag">Explainable AI</span>
+      <span class="tag">Medical Imaging</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">Gradio</span>
+    </div>
+    <div style="margin-top: 1rem;">
+      <a href="/projects/medxai" class="btn btn-primary">View Project →</a>
+    </div>
+  </div>
+
+  <div class="card animate-on-scroll">
     <h3 class="card-title">🎯 Classification-to-Segmentation</h3>
     <div class="card-meta">Published • AIIH 2025 [Oral Presentation]</div>
     <div class="card-content">
@@ -64,7 +112,7 @@ description: "Research projects, software applications, and innovative solutions
 
 ## Interactive Demonstrations
 
-Both projects include comprehensive interactive demos showcasing the complete pipelines:
+All projects include comprehensive interactive demos showcasing the complete pipelines:
 
 <div class="grid grid-2" style="margin-top: 1rem;">
   <div class="card animate-on-scroll">
@@ -76,6 +124,28 @@ Both projects include comprehensive interactive demos showcasing the complete pi
       </ul>
     </div>
     <a href="/projects/dermformer#interactive-demonstrations" class="btn btn-secondary">Launch Demos</a>
+  </div>
+  
+  <div class="card animate-on-scroll">
+    <h3 class="card-title">SkinCBM Tutorials</h3>
+    <div class="card-content">
+      <ul>
+        <li><strong>Quick Demo</strong>: Try CBMs on sample dermoscopy images (no dataset!)</li>
+        <li><strong>Concept Intervention</strong>: Correct predictions by modifying concepts</li>
+      </ul>
+    </div>
+    <a href="/projects/skincbm#interactive-tutorials" class="btn btn-secondary">View Tutorials</a>
+  </div>
+  
+  <div class="card animate-on-scroll">
+    <h3 class="card-title">MedXAI Interface</h3>
+    <div class="card-content">
+      <ul>
+        <li><strong>Tutorial Mode</strong>: Train CNN on MNIST with LIME, SHAP, GradCAM</li>
+        <li><strong>Medical Datasets</strong>: Interactive XAI on DermaMNIST, PneumoniaMNIST, ChestMNIST</li>
+      </ul>
+    </div>
+    <a href="/projects/medxai#interactive-web-interface" class="btn btn-secondary">View Details</a>
   </div>
   
   <div class="card animate-on-scroll">
@@ -97,10 +167,12 @@ Both projects include comprehensive interactive demos showcasing the complete pi
     <p><strong>Combined Contributions:</strong></p>
     <ul>
       <li>✅ <strong>2 Published Papers</strong> in high-impact venues (Springer)</li>
+      <li>✅ <strong>2 Open-Source Toolkits</strong> enabling reproducible research (MedXAI, SkinCBM)</li>
       <li>✅ <strong>State-of-the-art Results</strong> on benchmark datasets</li>
       <li>✅ <strong>Open Source</strong> implementations with comprehensive documentation</li>
       <li>✅ <strong>Interactive Demos</strong> for reproducibility and exploration</li>
       <li>✅ <strong>Clinical Relevance</strong> addressing real-world deployment challenges</li>
+      <li>✅ <strong>Educational Resources</strong> with 9+ comprehensive tutorial notebooks</li>
     </ul>
   </div>
 </div>
