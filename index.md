@@ -4,8 +4,6 @@ title: "Home"
 description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher specializing in Responsible AI research."
 ---
 
-## Featured Research Projects
-
 <div class="project-highlights-container">
   <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -16,7 +14,7 @@ description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher
   <div class="project-highlights-scroll">
     <a href="/projects/dermformer" class="project-highlight-card">
       <div class="project-highlight-image">
-        <img src="/assets/projects/dermformer/architecture_diagram.png" alt="DermFormer Architecture">
+        <img src="/assets/projects/Dermformer.png" alt="DermFormer Architecture">
       </div>
       <div class="project-highlight-content">
         <h3>DermFormer</h3>
@@ -61,7 +59,7 @@ description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher
     
     <a href="/projects/classification-to-segmentation" class="project-highlight-card">
       <div class="project-highlight-image">
-        <img src="/assets/projects/classification-to-segmentation/adaptive_cam_comparison.png" alt="Zero-shot Segmentation">
+        <img src="/assets/projects/classification-to-segmentation.png" alt="Zero-shot Segmentation">
       </div>
       <div class="project-highlight-content">
         <h3>Classification-to-Segmentation</h3>
@@ -90,17 +88,28 @@ description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher
 
 ## Recent Highlights
 
-### 🎓 PhD Research Progress
-Currently progressing in my third year of PhD research focused on building transparency and trust of AI systems in healthcare, with a focus on skin cancer detection. This work explores novel approaches to integrating visual, textual, and auditory data for more intuitive AI systems.
+### 📰 Latest Publications (2025)
 
-### Latest Publications
-- **"Classification-to-Segmentation: Class Activation Mapping for Zero-Shot Skin Lesion Segmentation"** - *International Conference on AI in Healthcare* (2025)
+**"DermFormer: Multi-lesion integrated Transformer-based architecture for robust skin lesion diagnosis"**  
+*Pattern Analysis and Applications (Springer), 2025* | DOI: [10.1007/s10044-025-01572-0](https://doi.org/10.1007/s10044-025-01572-0)  
+State-of-the-art multi-modal transformer achieving 0.779 diagnosis accuracy with superior robustness to real-world image corruptions.
 
-### Recent Achievements
-- **Published 2 papers** in high-impact venues (Springer, AIIH 2025)
-- **Developed 2 open-source toolkits** for reproducible AI research
-- **Created 9+ tutorial notebooks** for educational purposes
+**"Classification-to-Segmentation: Class Activation Mapping for Zero-Shot Skin Lesion Segmentation"**  
+*International Conference on AI in Healthcare (AIIH 2025), University of Cambridge* - **Oral Presentation**  
+Novel zero-shot approach without pixel-level annotations, reducing annotation costs.
 
+### 🎓 PhD Research Milestones
+- **Published 2 papers** in high-impact venues (Pattern Analysis and Applications, AIIH 2025)
+- **Developed DermFormer**: State-of-the-art multi-modal transformer achieving 0.779 diagnosis accuracy with superior robustness to real-world corruptions
+- **Created 2 open-source toolkits**: MedXAI (6 explainability methods) and SkinCBM (concept bottleneck models)
+- **Educational Impact**: 9+ comprehensive tutorial notebooks with 18+ visualization examples
+- **Clinical Focus**: Addressing real-world deployment challenges including interpretability, robustness, and human-AI collaboration
+
+### 🔬 Current Research Focus (Year 3)
+Developing interpretable AI systems for skin cancer diagnosis through:
+- Concept bottleneck models with human-in-the-loop intervention
+- Information-theoretic analysis of model completeness and concept synergy
+- Systematic evaluation of explainability methods in clinical settings
 
 ---
 

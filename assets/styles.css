@@ -1785,3 +1785,91 @@ textarea:focus {
   right: 0;
   background: linear-gradient(to left, var(--bg-primary), transparent);
 }
+
+/* ===================================
+   Featured Projects Section
+   =================================== */
+
+.featured-projects-section {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  padding: 4rem 0;
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-projects-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.featured-projects-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-projects-section .section-title {
+  color: var(--white-smoke);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-projects-section .section-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Override project highlights container for featured section */
+.featured-projects-section .project-highlights-container::before,
+.featured-projects-section .project-highlights-container::after {
+  background: none;
+}
+
+.featured-projects-section .scroll-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--accent-primary);
+}
+
+.featured-projects-section .scroll-btn:hover {
+  background: var(--white-smoke);
+  color: var(--accent-secondary);
+  border-color: var(--white-smoke);
+}
+
+.featured-projects-section .btn-primary {
+  background: var(--white-smoke);
+  color: var(--accent-primary);
+  border: 2px solid transparent;
+}
+
+.featured-projects-section .btn-primary:hover {
+  background: transparent;
+  color: var(--white-smoke);
+  border-color: var(--white-smoke);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .featured-projects-section {
+    padding: 3rem 0;
+  }
+  
+  .featured-projects-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .featured-projects-section .section-description {
+    font-size: 1rem;
+  }
+}
