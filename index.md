@@ -1,7 +1,9 @@
 ---
 layout: home
-title: "Home"
-description: "Academic website and portfolio of Matthew Cockayne, PhD Researcher specializing in Responsible AI research."
+title: "Matthew J. Cockayne - Medical AI & Explainable Deep Learning Researcher"
+description: "PhD researcher developing interpretable AI for skin cancer detection. Published work on DermFormer transformers, zero-shot segmentation, and explainable medical imaging at Keele University."
+keywords: "Matthew Cockayne, DermFormer, medical AI, explainable AI, skin cancer detection, deep learning, transformer models, concept bottleneck models, XAI, interpretable machine learning, dermatology, medical image analysis"
+author: "Matthew J. Cockayne"
 ---
 
 <div class="project-highlights-container">

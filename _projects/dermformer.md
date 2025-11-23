@@ -1,8 +1,12 @@
 ---
-title: "DermFormer: Multi-modal Skin Cancer Detection"
+title: "DermFormer: Multi-modal Skin Cancer Detection with Transformers"
 duration: "2023 - 2025"
 role: "Lead Researcher & Developer"
 status: "Published - Pattern Analysis and Applications"
+description: "State-of-the-art multi-modal transformer architecture for robust skin lesion diagnosis achieving 0.779 accuracy. Published in Pattern Analysis and Applications, Springer 2025."
+keywords: "DermFormer, skin cancer detection, multi-modal transformers, medical AI, dermatology, deep learning, robust diagnosis, image classification, entropy-weighted ensemble, medical imaging"
+author: "Matthew J. Cockayne"
+og_image: "/assets/projects/Dermformer.png"
 technologies:
   - "PyTorch"
   - "Computer Vision"

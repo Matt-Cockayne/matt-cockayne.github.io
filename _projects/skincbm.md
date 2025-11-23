@@ -7,8 +7,11 @@ status: "active"
 github: "https://github.com/Matt-Cockayne/SynergyCBM/tree/main/SkinCBM"
 tags: ["Explainable AI", "Medical Imaging", "Interpretability", "Deep Learning", "Dermatology"]
 technologies: ["PyTorch", "Python", "Jupyter", "ResNet"]
-description: "Educational implementation of Concept Bottleneck Models for interpretable skin cancer diagnosis through human-understandable concepts."
+description: "Educational implementation of Concept Bottleneck Models for interpretable skin cancer diagnosis through human-understandable concepts with clinical intervention capabilities."
+keywords: "concept bottleneck models, interpretable AI, explainable medical imaging, skin cancer, CBM, human-in-the-loop, dermatology, 7-point checklist, melanoma detection, clinical decision support"
+author: "Matthew J. Cockayne"
 thumbnail: "/assets/projects/skincbm/demo_case_578.png"
+og_image: "/assets/projects/skincbm/demo_case_578.png"
 featured: true
 ---
 

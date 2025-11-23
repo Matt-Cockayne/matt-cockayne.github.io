@@ -1,10 +1,31 @@
 # Site Configuration
-title: "Matthew J. Cockayne"
+title: "Matthew J. Cockayne - PhD Researcher in Medical AI"
 name: "Matthew J. Cockayne"
-description: "PhD Researcher | AI & Computer Vision Researcher | Shaping Responsible AI for Healthcare and Beyond"
+description: "PhD Researcher specializing in explainable AI, medical image analysis, and deep learning for healthcare. Developing interpretable transformer models for skin cancer detection at Keele University."
 tagline: "Developing Responsible AI for Safer, Smarter, and More Inclusive Technologies"
 url: "https://matt-cockayne.github.io"
 baseurl: ""
+
+# SEO & Social Media
+author: "Matthew J. Cockayne"
+keywords: "Matthew Cockayne, medical AI, explainable AI, skin cancer detection, DermFormer, concept bottleneck models, deep learning healthcare, transformer models, medical image analysis, XAI, interpretable AI, Keele University, computer vision, dermatology AI, zero-shot segmentation, responsible AI"
+locale: "en_GB"
+lang: "en"
+logo: "/assets/images/profile.jpg"
+social:
+  name: "Matthew J. Cockayne"
+  links:
+    - "https://github.com/Matt-Cockayne"
+    - "https://www.linkedin.com/in/matthew-cockayne-193659199"
+    - "https://scholar.google.com/citations?user=LcCOSxEAAAAJ"
+    - "https://orcid.org/0009-0009-8918-3125"
+
+# Twitter Card / Open Graph
+twitter:
+  card: summary_large_image
+  username: your-twitter
+  
+og_image: "/assets/images/profile.jpg"
 
 # Personal Information
 email: "m.j.cockayne@keele.ac.uk"
