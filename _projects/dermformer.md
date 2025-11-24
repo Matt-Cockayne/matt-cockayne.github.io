@@ -1,5 +1,5 @@
 ---
-title: "DermFormer: Multi-modal Skin Cancer Detection with Transformers"
+title: "DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection."
 duration: "2023 - 2025"
 role: "Lead Researcher & Developer"
 status: "Published - Pattern Analysis and Applications"

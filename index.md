@@ -8,7 +8,7 @@ author: "Matthew J. Cockayne"
 
 ### 📰 Latest Publications (2025)
 
-**"DermFormer: Multi-lesion integrated Transformer-based architecture for robust skin lesion diagnosis"**  
+**"DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection."**  
 *Pattern Analysis and Applications (Springer), 2025* | DOI: [10.1007/s10044-025-01572-0](https://doi.org/10.1007/s10044-025-01572-0)  
 State-of-the-art multi-modal transformer achieving 0.779 diagnosis accuracy with superior robustness to real-world image corruptions.
 

@@ -14,7 +14,7 @@ description: "Research projects, software applications, and innovative solutions
 
 <div class="grid grid-2">
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🔬 DermFormer: Multi-modal Skin Cancer Detection</h3>
+    <h3 class="card-title">🔬 DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection.</h3>
     <div class="card-meta">Published • Pattern Analysis and Applications, 2025</div>
     <div class="card-content">
       <p>State-of-the-art multi-modal transformer architecture for robust skin cancer detection achieving 0.779 diagnosis accuracy. Combines dermoscopic images, clinical images, and patient metadata through entropy-weighted ensemble learning.</p>
