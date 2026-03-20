@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<a href="/#publications" class="page-breadcrumb">All Publications</a>
+
 <article class="publication-detail">
   <header class="publication-header">
     <h1 class="publication-title">{{ page.title }}</h1>
@@ -12,29 +14,30 @@ layout: default
     <p class="publication-venue"><em>{{ page.venue }}</em>{% if page.year %}, {{ page.year }}{% endif %}</p>
     {% endif %}
   </header>
-  
+
   <div class="publication-content">
     {{ content }}
   </div>
-  
+
   {% if page.links %}
   <div class="publication-links">
     <h3>Links</h3>
     {% for link in page.links %}
-      <a href="{{ link.url }}" class="btn btn-secondary" target="_blank">{{ link.name }}</a>
+      <a href="{{ link.url }}" class="btn btn--ghost" target="_blank">{{ link.name }}</a>
     {% endfor %}
   </div>
   {% endif %}
-  
+
   {% if page.tags %}
   <div class="publication-tags">
-    <h3>Tags</h3>
-    {% for tag in page.tags %}
-      <span class="tag">{{ tag }}</span>
-    {% endfor %}
+    <div class="card-tags">
+      {% for tag in page.tags %}
+        <span class="tag tag--pill">{{ tag }}</span>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
-  
+
   {% if page.citation %}
   <div class="publication-citation">
     <h3>Citation</h3>

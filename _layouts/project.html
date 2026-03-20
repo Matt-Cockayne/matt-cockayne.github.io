@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<a href="/#projects" class="page-breadcrumb">All Projects</a>
+
 <article class="project-detail">
   <header class="project-header">
     <h1 class="project-title">{{ page.title }}</h1>
@@ -15,31 +17,30 @@ layout: default
     <p class="project-meta"><strong>Status:</strong> {{ page.status }}</p>
     {% endif %}
   </header>
-  
-  <div class="project-content">
-    {{ content }}
-  </div>
-  
+
   {% if page.technologies %}
   <div class="project-technologies">
-    <h3>Technologies Used</h3>
     <div class="card-tags">
       {% for tech in page.technologies %}
-        <span class="tag">{{ tech }}</span>
+        <span class="tag tag--pill">{{ tech }}</span>
       {% endfor %}
     </div>
   </div>
   {% endif %}
-  
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
   {% if page.links %}
   <div class="project-links">
     <h3>Project Links</h3>
     {% for link in page.links %}
-      <a href="{{ link.url }}" class="btn btn-secondary" target="_blank">{{ link.name }}</a>
+      <a href="{{ link.url }}" class="btn btn--ghost" target="_blank">{{ link.name }}</a>
     {% endfor %}
   </div>
   {% endif %}
-  
+
   {% if page.collaborators %}
   <div class="project-collaborators">
     <h3>Collaborators</h3>
