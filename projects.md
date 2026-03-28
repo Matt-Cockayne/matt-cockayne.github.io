@@ -14,7 +14,7 @@ description: "Research projects, software applications, and innovative solutions
 
 <div class="grid grid-2">
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🔬 DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection.</h3>
+    <h3 class="card-title">DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection.</h3>
     <div class="card-meta">Published • Pattern Analysis and Applications, 2025</div>
     <div class="card-content">
       <p>State-of-the-art multi-modal transformer architecture for robust skin cancer detection achieving 0.779 diagnosis accuracy. Combines dermoscopic images, clinical images, and patient metadata through entropy-weighted ensemble learning.</p>
@@ -38,7 +38,7 @@ description: "Research projects, software applications, and innovative solutions
   </div>
 
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🧠 SkinCBM: Interpretable Diagnosis via Concept Bottlenecks</h3>
+    <h3 class="card-title">SkinCBM: Interpretable Diagnosis via Concept Bottlenecks</h3>
     <div class="card-meta">Active Development • 2025</div>
     <div class="card-content">
       <p>Educational implementation of Concept Bottleneck Models for interpretable skin cancer diagnosis. Forces reasoning through human-understandable dermatological concepts, enabling clinician validation and correction of model predictions.</p>
@@ -62,7 +62,7 @@ description: "Research projects, software applications, and innovative solutions
   </div>
 
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🔍 MedXAI: Medical Image Explainability Toolkit</h3>
+    <h3 class="card-title">MedXAI: Medical Image Explainability Toolkit</h3>
     <div class="card-meta">Active Development • 2024-2025</div>
     <div class="card-content">
       <p>Comprehensive PyTorch framework for explainable AI in medical imaging. Provides unified implementations of 6 XAI methods with quantitative evaluation metrics, bridging the gap between model predictions and clinical interpretability.</p>
@@ -86,7 +86,7 @@ description: "Research projects, software applications, and innovative solutions
   </div>
 
   <div class="card animate-on-scroll">
-    <h3 class="card-title">🎯 Classification-to-Segmentation</h3>
+    <h3 class="card-title">Classification-to-Segmentation</h3>
     <div class="card-meta">Published • AIIH 2025 [Oral Presentation]</div>
     <div class="card-content">
       <p>Novel zero-shot segmentation approach using Class Activation Maps to guide foundation models. Achieves segmentation without pixel-level annotations, dramatically reducing annotation costs.</p>
@@ -166,13 +166,13 @@ All projects include comprehensive interactive demos showcasing the complete pip
   <div class="card-content">
     <p><strong>Combined Contributions:</strong></p>
     <ul>
-      <li>✅ <strong>2 Published Papers</strong> in high-impact venues (Springer)</li>
-      <li>✅ <strong>2 Open-Source Toolkits</strong> enabling reproducible research (MedXAI, SkinCBM)</li>
-      <li>✅ <strong>State-of-the-art Results</strong> on benchmark datasets</li>
-      <li>✅ <strong>Open Source</strong> implementations with comprehensive documentation</li>
-      <li>✅ <strong>Interactive Demos</strong> for reproducibility and exploration</li>
-      <li>✅ <strong>Clinical Relevance</strong> addressing real-world deployment challenges</li>
-      <li>✅ <strong>Educational Resources</strong> with 9+ comprehensive tutorial notebooks</li>
+      <li><strong>2 Published Papers</strong> in high-impact venues (Springer)</li>
+      <li><strong>2 Open-Source Toolkits</strong> enabling reproducible research (MedXAI, SkinCBM)</li>
+      <li><strong>State-of-the-art Results</strong> on benchmark datasets</li>
+      <li><strong>Open Source</strong> implementations with comprehensive documentation</li>
+      <li><strong>Interactive Demos</strong> for reproducibility and exploration</li>
+      <li><strong>Clinical Relevance</strong> addressing real-world deployment challenges</li>
+      <li><strong>Educational Resources</strong> with 9+ comprehensive tutorial notebooks</li>
     </ul>
   </div>
 </div>

@@ -2,7 +2,7 @@
 title: "DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection."
 duration: "2023 - 2025"
 role: "Lead Researcher & Developer"
-status: "Published - Pattern Analysis and Applications"
+status: "Published - Pattern Analysis and Applications, Springer Nature"
 description: "State-of-the-art multi-modal transformer architecture for robust skin lesion diagnosis achieving 0.779 accuracy. Published in Pattern Analysis and Applications, Springer 2025."
 keywords: "DermFormer, skin cancer detection, multi-modal transformers, medical AI, dermatology, deep learning, robust diagnosis, image classification, entropy-weighted ensemble, medical imaging"
 author: "Matthew J. Cockayne"
@@ -20,8 +20,6 @@ collaborators:
 links:
   - name: "Published Paper (Open Access)"
     url: "https://doi.org/10.1007/s10044-025-01572-0"
-  - name: "Free Read-Only Access"
-    url: "https://rdcu.be/eQT3s"
   - name: "GitHub Repository"
     url: "https://github.com/xraikeele/DermFormer"
   - name: "Interactive Demo"
@@ -178,11 +176,11 @@ By maintaining performance under realistic clinical conditions, DermFormer addre
 
 All components of this research are publicly available:
 
-- ✅ **Complete Source Code**: Training, inference, evaluation scripts
-- ✅ **Trained Models**: Best checkpoint (211MB) available for download
-- ✅ **Interactive Demos**: Jupyter notebooks with example cases
-- ✅ **Documentation**: Comprehensive README, API docs, tutorials
-- ✅ **Experimental Protocol**: Hyperparameters, data splits, evaluation metrics
+- **Complete Source Code**: Training, inference, evaluation scripts
+- **Trained Models**: Best checkpoint (211MB) available for download
+- **Interactive Demos**: Jupyter notebooks with example cases
+- **Documentation**: Comprehensive README, API docs, tutorials
+- **Experimental Protocol**: Hyperparameters, data splits, evaluation metrics
 
 **Reproducibility Standards Met:**
 - Fixed random seeds for deterministic results
@@ -210,10 +208,10 @@ All components of this research are publicly available:
 
 ## Recognition
 
-- ✅ Published in *Pattern Analysis and Applications* (Springer Nature)
-- ✅ State-of-the-art results on Derm7pt benchmark
-- ✅ Featured in Keele University PhD research showcase
-- ✅ Open access publication for maximum research impact
+- Published in *Pattern Analysis and Applications* (Springer Nature)
+- State-of-the-art results on Derm7pt benchmark
+- Featured in Keele University PhD research showcase
+- Open access publication for maximum research impact
 
 ---
 

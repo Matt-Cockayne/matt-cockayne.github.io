@@ -14,7 +14,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
 
 <div class="contact-grid">
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">📧</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">Email</h3>
     <p class="contact-value">
       <a href="mailto:{{ site.email }}">{{ site.email }}</a>
@@ -23,7 +23,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   </div>
 
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">🏫</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">Institution</h3>
     <p class="contact-value">{{ site.institution }}</p>
     <p class="contact-value">{{ site.department }}</p>
@@ -31,7 +31,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   </div>
 
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">💼</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">LinkedIn</h3>
     <p class="contact-value">
       <a href="{{ site.linkedin }}" target="_blank">Professional Profile</a>
@@ -40,7 +40,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   </div>
 
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">🔬</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">Google Scholar</h3>
     <p class="contact-value">
       <a href="{{ site.google_scholar }}" target="_blank">Research Profile</a>
@@ -49,7 +49,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   </div>
 
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">💻</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">GitHub</h3>
     <p class="contact-value">
       <a href="https://github.com/{{ site.github_username }}" target="_blank">@{{ site.github_username }}</a>
@@ -58,7 +58,7 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   </div>
 
   <div class="contact-item animate-on-scroll">
-    <div class="contact-icon">🆔</div>
+    <div class="contact-icon"></div>
     <h3 class="contact-label">ORCID</h3>
     <p class="contact-value">
       <a href="{{ site.orcid }}" target="_blank">Academic ID</a>
@@ -73,6 +73,6 @@ description: "Get in touch with Matthew Cockayne for research collaborations, ac
   <h3>Ready to Connect?</h3>
   <p style="margin-bottom: 1.5rem;">Whether you're interested in research collaboration, have questions about my work, or want to explore new opportunities, I'd love to hear from you.</p>
   <a href="mailto:{{ site.email }}" class="btn btn-primary">
-    ✉️ Send Me an Email
+    Send Me an Email
   </a>
 </div>

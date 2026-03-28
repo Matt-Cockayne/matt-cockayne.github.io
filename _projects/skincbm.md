@@ -46,22 +46,22 @@ Then uses these concepts to make the final diagnosis.
 
 ## Key Features
 
-### 🎯 Interpretable Architecture
+### Interpretable Architecture
 - **Two-stage reasoning**: Explicit concept prediction followed by diagnosis
 - **7-point checklist**: Clinically validated dermatological concepts
 - **Linear predictor**: Direct visualization of concept importance
 
-### 🔧 Concept Intervention
+### Concept Intervention
 - **Test-time correction**: Modify incorrect concept predictions
 - **Human-in-the-loop**: Incorporate expert knowledge
 - **Systematic analysis**: Study impact of each concept on diagnosis
 
-### 📊 Information-Theoretic Analysis
+### Information-Theoretic Analysis
 - **Concept completeness**: Measure information sufficiency
 - **Synergy analysis**: Identify concept interactions
 - **Mutual information**: Quantify concept-task relationships
 
-### 🎓 Educational Implementation
+### Educational Implementation
 - **Clean codebase**: Well-documented, modular architecture
 - **Interactive tutorials**: 3 comprehensive Jupyter notebooks
 - **Sample data included**: No dataset required for quick demos
@@ -124,10 +124,10 @@ Our comprehensive intervention analysis reveals how concept corrections impact m
 </div>
 
 **Key Findings from Systematic Analysis**:
-- 📈 **Performance Gain**: Concept intervention improves accuracy by ~15-20% on misclassified cases
-- 🎯 **Critical Concepts**: Blue-whitish veil and atypical vascular pattern show highest impact
-- ⚖️ **Intervention Asymmetry**: Correcting false negatives (0→1) has larger impact than false positives (1→0)
-- 🔍 **Clinical Validation**: Results align with dermatological literature on melanoma indicators
+- **Performance Gain**: Concept intervention improves accuracy by ~15-20% on misclassified cases
+- **Critical Concepts**: Blue-whitish veil and atypical vascular pattern show highest impact
+- **Intervention Asymmetry**: Correcting false negatives (0→1) has larger impact than false positives (1→0)
+- **Clinical Validation**: Results align with dermatological literature on melanoma indicators
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "MedXAI: Medical Image Explainability Toolkit"
 duration: "2024 - 2025"
-role: "Research Engineer & Developer"
+role: "Researcher & Developer"
 status: "Active Development"
 description: "Comprehensive PyTorch framework for explainable AI in medical imaging with 6 XAI methods, quantitative evaluation metrics, and interactive tutorials for clinical interpretability."
 keywords: "MedXAI, explainable AI, XAI, medical imaging, GradCAM, SHAP, LIME, interpretability, deep learning, medical AI, attention visualization, saliency maps, clinical AI"
@@ -177,10 +177,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 1. LIME Tutorial
 **Perturbation-based local explanations**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/01_LIME_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/01_LIME_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/01_LIME_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/01_LIME_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/01_LIME_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -190,10 +190,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 2. SHAP Tutorial
 **Game-theoretic feature attribution**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/02_SHAP_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/02_SHAP_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/02_SHAP_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/02_SHAP_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/02_SHAP_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -203,10 +203,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 3. GradCAM Tutorial
 **Gradient-based visualization fundamentals**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/03_GradCAM_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/03_GradCAM_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/03_GradCAM_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/03_GradCAM_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/03_GradCAM_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -216,10 +216,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 4. DermaMNIST Tutorial
 **Skin lesion classification (7 classes)**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/04_DermaMNIST_Explainability_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/04_DermaMNIST_Explainability_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/04_DermaMNIST_Explainability_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/04_DermaMNIST_Explainability_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/04_DermaMNIST_Explainability_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -229,10 +229,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 5. PneumoniaMNIST Tutorial
 **Pneumonia detection (binary classification)**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/05_PneumoniaMNIST_Explainability_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/05_PneumoniaMNIST_Explainability_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/05_PneumoniaMNIST_Explainability_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/05_PneumoniaMNIST_Explainability_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/05_PneumoniaMNIST_Explainability_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -242,10 +242,10 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 
 #### 6. ChestMNIST Tutorial
 **Multi-disease classification (14 classes)**  
-[📖 View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/06_ChestMNIST_Explainability_Tutorial.ipynb) | [🌐 View HTML](/assets/notebooks/medxai/06_ChestMNIST_Explainability_Tutorial.html)
+[View on GitHub](https://github.com/Matt-Cockayne/MedXAI/blob/main/notebooks/06_ChestMNIST_Explainability_Tutorial.ipynb) | [View HTML](/assets/notebooks/medxai/06_ChestMNIST_Explainability_Tutorial.html)
 
 <details>
-<summary>📺 Preview Notebook</summary>
+<summary>Preview Notebook</summary>
 <iframe src="/assets/notebooks/medxai/06_ChestMNIST_Explainability_Tutorial.html" 
         style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
 </iframe>
@@ -261,11 +261,11 @@ Interactive Jupyter notebooks with complete implementations and explanations:
 - Clinical context and best practices
 
 **Try Them Yourself:**
-- 📖 View on GitHub (rendered with outputs)
-- 🌐 Open full HTML version in new tab
-- 📺 Preview inline with collapsible sections
-- 💻 Clone repo and run locally with Jupyter
-- 🚀 Upload to [Google Colab](https://colab.research.google.com/) to run in browser
+- View on GitHub (rendered with outputs)
+- Open full HTML version in new tab
+- Preview inline with collapsible sections
+- Clone repo and run locally with Jupyter
+- Upload to [Google Colab](https://colab.research.google.com/) to run in browser
 
 ## Technical Skills Demonstrated
 
@@ -312,11 +312,11 @@ Standardized framework for XAI method comparison in academic studies.
 
 MedXAI is designed for research reproducibility and clinical translation:
 
-- ✅ **MIT License**: Permissive for academic and commercial use
-- ✅ **Comprehensive Documentation**: README, API docs, tutorials
-- ✅ **Modular Design**: Easy to extend with new methods
-- ✅ **Educational Focus**: Learn-by-example approach
-- ✅ **Active Development**: Regular updates and improvements
+- **MIT License**: Permissive for academic and commercial use
+- **Comprehensive Documentation**: README, API docs, tutorials
+- **Modular Design**: Easy to extend with new methods
+- **Educational Focus**: Learn-by-example approach
+- **Active Development**: Regular updates and improvements
 
 ## Related Publications
 

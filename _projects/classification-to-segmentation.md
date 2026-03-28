@@ -20,8 +20,6 @@ links:
     url: "https://github.com/xraikeele/Classification-to-Segmentation"
   - name: "Interactive Demo"
     url: "/assets/projects/Zero_Shot_Segmentation_Demo.html"
-  - name: "Presentation Slides"
-    url: "#"
 ---
 
 ## Project Overview
@@ -104,7 +102,7 @@ Key innovation: Instead of using one CAM method for all images, dynamically sele
 |--------|-----|------|---------------------|
 | SAM (manual prompts) | 0.672 | 0.805 | Ground-truth boxes |
 | MedSAM (manual prompts) | 0.671 | 0.782 | Ground-truth boxes |
-| **Ours (automated)** | **0.366** | **0.510** | **None** ✓ |
+| **Ours (automated)** | **0.366** | **0.510** | **None** |
 
 **Key Insight**: Our automated method achieves ~54% of manual prompting performance while requiring **zero pixel-level annotations**.
 
@@ -212,13 +210,13 @@ Open-source implementation with trained models, demo data, and comprehensive doc
 
 Complete research package available on GitHub:
 
-- ✅ **Training Code**: All classification model implementations
-- ✅ **CAM Methods**: Multiple explainability techniques
-- ✅ **Segmentation Pipeline**: End-to-end inference code
-- ✅ **Demo Notebook**: Interactive exploration tool
-- ✅ **Trained Models**: Best checkpoints for all architectures
-- ✅ **Sample Data**: 5 ISIC examples with masks
-- ✅ **Documentation**: Comprehensive README and setup guide
+- **Training Code**: All classification model implementations
+- **CAM Methods**: Multiple explainability techniques
+- **Segmentation Pipeline**: End-to-end inference code
+- **Demo Notebook**: Interactive exploration tool
+- **Trained Models**: Best checkpoints for all architectures
+- **Sample Data**: 5 ISIC examples with masks
+- **Documentation**: Comprehensive README and setup guide
 
 **Environment**: `requirements.txt` provided for easy reproduction
 
@@ -230,10 +228,10 @@ https://doi.org/10.1007/978-3-032-00656-1_24
 
 ## Recognition
 
-- ✅ Accepted as **Oral Presentation** at AIIH 2025 (Cambridge)
-- ✅ Published in Springer Conference Proceedings
-- ✅ Featured in PhD research portfolio
-- ✅ Complete open-source release
+- Accepted as **Oral Presentation** at AIIH 2025 (Cambridge)
+- Published in Springer Conference Proceedings
+- Featured in PhD research portfolio
+- Complete open-source release
 
 ## Impact & Significance
 
