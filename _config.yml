@@ -1,14 +1,14 @@
 # Site Configuration
-title: "Matthew J. Cockayne - PhD Researcher in Medical AI"
+title: "Matthew J. Cockayne - PhD Researcher in Safe & Responsible AI"
 name: "Matthew J. Cockayne"
-description: "PhD Researcher specializing in explainable AI, medical image analysis, and deep learning for healthcare. Developing interpretable transformer models for skin cancer detection at Keele University."
-tagline: "Developing Responsible AI for Safer, Smarter, and More Inclusive Technologies"
+description: "PhD Researcher specialising in safe and responsible AI. Developing interpretable, robust, and fair deep learning systems applied through medical imaging, where deployment failures carry direct real-world harm."
+tagline: "Safe and Responsible AI for High-Stakes Domains"
 url: "https://matt-cockayne.github.io"
 baseurl: ""
 
 # SEO & Social Media
 author: "Matthew J. Cockayne"
-keywords: "Matthew Cockayne, medical AI, explainable AI, skin cancer detection, DermFormer, concept bottleneck models, deep learning healthcare, transformer models, medical image analysis, XAI, interpretable AI, Keele University, computer vision, dermatology AI, zero-shot segmentation, responsible AI"
+keywords: "Matthew Cockayne, safe AI, responsible AI, AI fairness, interpretable AI, explainable AI, robustness evaluation, concept bottleneck models, bias mitigation, deep learning, medical imaging, DermFormer, transformer models, human oversight, Keele University, computer vision, trustworthy AI"
 locale: "en_GB"
 lang: "en"
 logo: "/assets/images/profile.jpg"
@@ -47,10 +47,10 @@ research_interests:
 
 # Research Interest Descriptions
 research_descriptions:
-  - "Developing transformer-based architectures and deep neural networks for multi-modal medical data fusion, with emphasis on robust and reliable diagnostic systems."
-  - "Advancing automated medical image analysis through novel attention mechanisms and feature extraction techniques for skin lesion detection, classification, and segmentation."
-  - "Building interpretable and explainable AI systems through concept bottleneck models, attention visualization, and human-in-the-loop intervention mechanisms for clinical decision support."
-  - "Creating zero-shot and weakly-supervised learning methods for medical imaging that reduce annotation costs while maintaining clinical accuracy and reliability."
+  - "Developing deep learning architectures with systematic robustness evaluation under distribution shift, uncertainty quantification, and failure mode analysis for safe deployment in high-stakes settings."
+  - "Advancing automated medical image analysis through novel attention mechanisms, with emphasis on characterising and mitigating model failures under real-world conditions."
+  - "Building interpretable-by-design architectures (concept bottleneck models) enabling human oversight and intervention, with fairness-aware training that reduces demographic disparities without constraining performance."
+  - "Evaluating foundation model reliability in zero-shot transfer settings, developing adaptive methods that reduce catastrophic failures and ensure safe deployment across domains."
 
 # Site Assets
 photo: "/assets/images/profile.jpg"
