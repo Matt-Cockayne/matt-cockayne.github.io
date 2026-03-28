@@ -30,8 +30,8 @@
   --color-link:         #7eb8f7;
   --color-link-hover:   #a8d0ff;
 
-  --font-display:    'Syne', sans-serif;
-  --font-body:       'Instrument Sans', sans-serif;
+  --font-display:    'Playfair Display', Georgia, serif;
+  --font-body:       'Source Sans 3', 'Source Sans Pro', sans-serif;
 
   --section-pad:     120px;
   --max-w:           1100px;
