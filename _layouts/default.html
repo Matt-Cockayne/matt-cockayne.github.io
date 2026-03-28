@@ -28,9 +28,11 @@
     <div class="nav__inner">
       <a href="/" class="nav__logo" aria-label="Home">Matthew J. Cockayne</a>
       <ul class="nav__links" id="nav-links">
-        {% for item in site.nav %}
-        <li><a href="{{ item.link }}" class="nav__link{% if page.url == item.link %} nav__link--active{% endif %}">{{ item.name }}</a></li>
-        {% endfor %}
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#research" class="nav__link">Research</a></li>
+        <li><a href="/#publications" class="nav__link">Publications</a></li>
+        <li><a href="/#projects" class="nav__link">Projects</a></li>
+        <li><a href="/#contact" class="nav__link">Contact</a></li>
       </ul>
       <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>

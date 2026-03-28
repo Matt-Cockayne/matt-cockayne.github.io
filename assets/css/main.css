@@ -344,6 +344,46 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 
+/* Hero Social Buttons */
+.hero__social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.65s forwards;
+}
+
+.hero__social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.hero__social-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.1);
+}
+
+.hero__social-btn svg {
+  flex-shrink: 0;
+}
+
+.hero__social-btn span {
+  line-height: 1;
+}
+
 /* ═══════════════════════ SECTIONS ═══════════════════════ */
 .section {
   padding: var(--section-pad) 24px;
@@ -686,6 +726,37 @@ ul { list-style: none; }
   color: var(--color-accent);
 }
 .project-card__links a:hover { color: var(--color-accent-hover); }
+
+/* Clickable project cards */
+.project-card--clickable {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card__overlay-link {
+  color: inherit;
+  text-decoration: none;
+}
+.project-card__overlay-link:hover {
+  color: inherit;
+}
+
+.project-card__overlay-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-card--clickable .project-card__links {
+  position: relative;
+  z-index: 2;
+}
+
+.project-card--clickable .project-card__links a {
+  position: relative;
+  z-index: 2;
+}
 
 /* ═══════════════════════ CONTACT ═══════════════════════ */
 .contact-links {
@@ -1114,6 +1185,9 @@ ul { list-style: none; }
   .hero__cta {
     justify-content: center;
   }
+  .hero__social {
+    justify-content: center;
+  }
   .hero__tagline {
     margin-left: auto;
     margin-right: auto;
@@ -1147,6 +1221,17 @@ ul { list-style: none; }
   .hero__cta {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero__social {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__social-btn {
+    width: 100%;
+    max-width: 220px;
+    justify-content: center;
   }
 
   .section {

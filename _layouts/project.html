@@ -1,54 +1,144 @@
 ---
-layout: default
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="author" content="{{ page.author | default: site.name }}">
+  <meta name="keywords" content="{{ page.keywords }}">
+  <meta name="theme-color" content="#0b1120">
 
-<a href="/#projects" class="page-breadcrumb">All Projects</a>
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  {% if page.og_image %}<meta property="og:image" content="{{ site.url }}{{ page.og_image }}">{% endif %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="article">
 
-<article class="project-detail">
-  <header class="project-header">
-    <h1 class="project-title">{{ page.title }}</h1>
-    {% if page.duration %}
-    <p class="project-meta">{{ page.duration }}</p>
-    {% endif %}
-    {% if page.role %}
-    <p class="project-meta"><strong>Role:</strong> {{ page.role }}</p>
-    {% endif %}
-    {% if page.status %}
-    <p class="project-meta"><strong>Status:</strong> {{ page.status }}</p>
-    {% endif %}
-  </header>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 
-  {% if page.technologies %}
-  <div class="project-technologies">
-    <div class="card-tags">
-      {% for tech in page.technologies %}
-        <span class="tag tag--pill">{{ tech }}</span>
-      {% endfor %}
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/project-page.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.favicon }}" type="image/png">
+
+  {% seo %}
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">Matthew J. Cockayne</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#research" class="nav__link">Research</a></li>
+        <li><a href="/#publications" class="nav__link">Publications</a></li>
+        <li><a href="/#projects" class="nav__link nav__link--active">Projects</a></li>
+        <li><a href="/#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </div>
-  {% endif %}
+  </nav>
 
-  <div class="project-content">
-    {{ content }}
-  </div>
+  <main>
 
-  {% if page.links %}
-  <div class="project-links">
-    <h3>Project Links</h3>
-    {% for link in page.links %}
-      <a href="{{ link.url }}" class="btn btn--ghost" target="_blank">{{ link.name }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
+    <!-- ═══════════════════════ PROJECT HERO ═══════════════════════ -->
+    <section class="proj-hero">
+      <div class="proj-hero__glow" aria-hidden="true"></div>
+      <div class="proj-hero__inner">
 
-  {% if page.collaborators %}
-  <div class="project-collaborators">
-    <h3>Collaborators</h3>
-    <ul>
-      {% for collaborator in page.collaborators %}
-        <li>{{ collaborator }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-</article>
+        <a href="/#projects" class="proj-hero__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          All Projects
+        </a>
+
+        <h1 class="proj-hero__title">{{ page.title }}</h1>
+
+        {% if page.description %}
+        <p class="proj-hero__subtitle">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="proj-hero__meta">
+          {% if page.author %}<span class="proj-hero__author">{{ page.author }}</span>{% endif %}
+          {% if page.collaborators %}
+            {% for collab in page.collaborators %}
+              <span class="proj-hero__author proj-hero__author--collab">{{ collab }}</span>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="proj-hero__info">
+          {% if page.duration %}<span class="proj-hero__info-item">{{ page.duration }}</span>{% endif %}
+          {% if page.role %}<span class="proj-hero__info-item">{{ page.role }}</span>{% endif %}
+          {% if page.status %}<span class="proj-hero__info-item proj-hero__info-item--status">{{ page.status }}</span>{% endif %}
+        </div>
+
+        {% if page.technologies %}
+        <div class="proj-hero__tags">
+          {% for tech in page.technologies %}
+            <span class="tag tag--pill">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.links %}
+        <div class="proj-hero__actions">
+          {% for link in page.links %}
+            {% if link.url and link.url != "#" %}
+            <a href="{{ link.url }}" class="btn {% if forloop.first %}btn--solid{% else %}btn--ghost{% endif %}" target="_blank" rel="noopener">
+              {% if link.name contains "Paper" or link.name contains "DOI" or link.name contains "Access" %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              {% elsif link.name contains "GitHub" or link.name contains "Code" or link.name contains "Repository" %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              {% elsif link.name contains "Demo" %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              {% elsif link.name contains "Documentation" or link.name contains "Docs" %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              {% else %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              {% endif %}
+              {{ link.name }}
+            </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ PROJECT CONTENT ═══════════════════════ -->
+    <section class="proj-content">
+      <div class="proj-content__inner">
+        {{ content }}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.name }}. All rights reserved.</p>
+      <p class="footer__note">Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
