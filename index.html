@@ -103,13 +103,13 @@ layout: null
       <div class="section__inner">
         <span class="section__label">About</span>
         <h2 class="section__heading">About Me</h2>
-        <p class="section__subtitle">PhD Researcher specialising in explainable AI, medical image analysis, and deep learning for healthcare.</p>
+        <p class="section__subtitle">PhD Researcher specialising in responsible AI, medical image analysis, and deep learning for healthcare.</p>
 
         <div class="about">
           <div class="about__text">
             <p>I am a final-year PhD researcher in the {{ site.department }} at {{ site.institution }}, working on responsible AI methodologies for healthcare with applications in medical image analysis. My research focuses on interpretable and fair deep learning through concept bottleneck models, fairness evaluation, bias mitigation, and uncertainty quantification, with expertise in robustness evaluation, clinical validation, and translational research for dermatological and cardiovascular diagnosis.</p>
 
-            <p>My thesis, <em>Responsible AI for Dermatological Prediction</em>, has produced 2 first-author publications in high-impact venues including Pattern Analysis and Applications (Springer) and the International Conference on AI in Healthcare at the University of Cambridge, with an additional co-authored paper in minor revisions at AI &amp; Ethics. I have developed open-source toolkits — MedXAI (6 explainability methods) and SkinCBM (concept bottleneck models) — enabling reproducible research in explainable medical AI, accompanied by 9+ comprehensive tutorial notebooks.</p>
+            <p>My thesis, <em>Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition</em>, has produced 2 first-author publications in high-impact venues including Pattern Analysis and Applications (Springer Nature) and the International Conference on AI in Healthcare at the University of Cambridge, with two additional papers submitted to MICCAI 2026 and Image and Vision Computing (Elsevier). I have developed open-source toolkits — MedXAI (6 explainability methods) and SkinCBM (concept bottleneck models) — enabling reproducible research in explainable medical AI, accompanied by 9+ comprehensive tutorial notebooks.</p>
 
             <h3>Education</h3>
             <div class="education">
@@ -229,6 +229,31 @@ layout: null
         <span class="section__label">Publications</span>
         <h2 class="section__heading">Publications</h2>
         <p class="section__subtitle">Contributing to the fields of AI, computer vision, and medical image processing through peer-reviewed publications and conference presentations.</p>
+
+        <!-- Year 2026 -->
+        <div class="pub-year">2026</div>
+
+        <article class="pub reveal">
+          <h3 class="pub__title">Fair Curriculum Learning for Concept Bottleneck Models in Dermatology</h3>
+          <p class="pub__authors"><span class="pub__highlight">M.J. Cockayne</span>, M. Ortolani, B. Al-Bander</p>
+          <p class="pub__venue"><em>MICCAI 2026</em> — <strong>Submitted</strong></p>
+          <p class="pub__abstract">A four-phase curriculum learning approach for in-training bias mitigation in Concept Bottleneck Models. Orders training by fairness objectives rather than concept difficulty, improving lowest-group F1 by 63% and reducing performance gaps by 44% on SkinCon across 6 Fitzpatrick skin types, with simultaneous 5.3% overall F1 gain.</p>
+          <div class="pub__links">
+            <span class="pub__status">Submitted</span>
+            <span class="pub__status">Code to Follow</span>
+          </div>
+        </article>
+
+        <article class="pub reveal">
+          <h3 class="pub__title">Sparse Concept Absence Network for Concept Bottleneck Models</h3>
+          <p class="pub__authors"><span class="pub__highlight">M.J. Cockayne</span>, M. Ortolani, B. Al-Bander</p>
+          <p class="pub__venue"><em>Image and Vision Computing</em>, Elsevier — <strong>Submitted</strong></p>
+          <p class="pub__abstract">A sparse pairwise polynomial classifier (SCAN-CBM) that replaces standard linear heads in Concept Bottleneck Models, capturing concept absence patterns central to diagnostic reasoning. Explicit asymmetric terms model differential patterns, improving binary prediction F1 (0.597 vs 0.566) and concept learning macro F1 (0.759 vs 0.697) over linear baselines.</p>
+          <div class="pub__links">
+            <span class="pub__status">Submitted</span>
+            <span class="pub__status">Code to Follow</span>
+          </div>
+        </article>
 
         <!-- Year 2025 -->
         <div class="pub-year">2025</div>
@@ -362,6 +387,38 @@ layout: null
             </div>
             <div class="project-card__links">
               <a href="https://github.com/Matt-Cockayne/MedXAI" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Fair Curriculum CBM -->
+          <div class="project-card project-card--clickable reveal">
+            <h3 class="project-card__title"><a href="/projects/fair-curriculum-cbm" class="project-card__overlay-link">Fair Curriculum CBM: Fairness-Aware Curriculum Learning</a></h3>
+            <p class="project-card__meta">Submitted · MICCAI 2026</p>
+            <p class="project-card__desc">Four-phase curriculum learning approach for bias mitigation in Concept Bottleneck Models. Orders training by fairness objectives to reduce performance disparities across skin types, improving lowest-group F1 by 63% without constraining overall performance.</p>
+            <div class="project-card__tags">
+              <span class="tag">Fairness</span>
+              <span class="tag">Concept Learning</span>
+              <span class="tag">Medical AI</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <div class="project-card__links">
+              <span class="pub__status">Code to Follow</span>
+            </div>
+          </div>
+
+          <!-- SCAN-CBM -->
+          <div class="project-card project-card--clickable reveal">
+            <h3 class="project-card__title"><a href="/projects/scan-cbm" class="project-card__overlay-link">SCAN-CBM: Sparse Concept Absence Network</a></h3>
+            <p class="project-card__meta">Submitted · Image and Vision Computing, 2026</p>
+            <p class="project-card__desc">Sparse pairwise polynomial classifier replacing standard linear heads in Concept Bottleneck Models. Captures concept absence patterns central to diagnostic reasoning through explicit asymmetric interaction terms with hierarchical regularisation.</p>
+            <div class="project-card__tags">
+              <span class="tag">Interpretability</span>
+              <span class="tag">Concept Learning</span>
+              <span class="tag">Medical AI</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <div class="project-card__links">
+              <span class="pub__status">Code to Follow</span>
             </div>
           </div>
 
