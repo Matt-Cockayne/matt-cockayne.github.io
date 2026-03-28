@@ -234,6 +234,8 @@ ul { list-style: none; }
   min-height: 100vh;
   padding: 120px 24px 80px;
   overflow: hidden;
+  background-image: radial-gradient(circle, rgba(99, 143, 217, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .hero__glow {
