@@ -57,6 +57,11 @@ Preserves uni-modal representations while capturing inter-modality relationships
 
 ## Technical Architecture
 
+<div style="margin: 2rem 0; text-align: center;">
+  <img src="/assets/images/projects/Dermformer.png" alt="DermFormer architecture diagram showing four parallel branches (Dermoscopic, Joint Representation, Clinical, Meta) with cross-attention fusion and entropy-weighted ensemble classification heads." style="width: 100%; max-width: 1200px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.9rem; color: #666; margin-top: 0.75rem;"><strong>Figure 1.</strong> DermFormer architecture. Four parallel branches process dermoscopic images, clinical images, a joint context representation, and patient metadata through NeST/TabTransformer encoders with cross-attention fusion. Branch-level predictions are combined via entropy-weighted ensemble classification heads (EECH), applied to both diagnosis and 7-point checklist tasks.</p>
+</div>
+
 ### Multi-modal Input Processing
 - **Dermoscopic Images**: High-resolution skin lesion images (1024×1024)
 - **Clinical Images**: Standard camera photos showing broader context

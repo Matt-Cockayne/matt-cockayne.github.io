@@ -1,13 +1,13 @@
 ---
 layout: project
-title: "SkinCBM: Concept Bottleneck Models for Interpretable Medical Diagnosis"
+title: "SkinCBM: Concept Bottleneck Models for Interpretable Skin Lesion Diagnosis"
 short_title: "SkinCBM"
 date: 2025-11-23
 status: "active"
 github: "https://github.com/Matt-Cockayne/SynergyCBM/tree/main/SkinCBM"
 tags: ["Explainable AI", "Medical Imaging", "Interpretability", "Deep Learning", "Dermatology"]
 technologies: ["PyTorch", "Python", "Jupyter", "ResNet"]
-description: "Educational implementation of Concept Bottleneck Models for interpretable skin cancer diagnosis through human-understandable concepts with clinical intervention capabilities."
+description: "Implementation of Concept Bottleneck Models for interpretable skin lesion diagnosis, enabling clinician-guided concept intervention at inference time using the 7-point checklist protocol."
 keywords: "concept bottleneck models, interpretable AI, explainable medical imaging, skin cancer, CBM, human-in-the-loop, dermatology, 7-point checklist, melanoma detection, clinical decision support"
 author: "Matthew J. Cockayne"
 thumbnail: "/assets/projects/skincbm/demo_case_578.png"
@@ -17,55 +17,30 @@ featured: true
 
 ## Overview
 
-**SkinCBM** is a clean, educational implementation of **Concept Bottleneck Models (CBMs)** for skin cancer diagnosis. Unlike traditional black-box neural networks, CBMs force all reasoning through human-interpretable concepts, enabling clinicians to understand, validate, and even correct model predictions.
+**SkinCBM** implements Concept Bottleneck Models (CBMs) for dermoscopic image classification, building on [Koh et al. (2020)](https://arxiv.org/abs/2007.04612). Unlike conventional black-box classifiers, CBMs enforce an interpretable intermediate representation — predicted clinical concepts — through which all diagnostic reasoning must pass.
 
-### What Makes CBMs Different?
+### Architecture
 
-Traditional models directly map images to predictions, making their reasoning opaque:
-```
-Image → [Black Box] → Diagnosis
-```
+A CBM decomposes classification into two stages:
 
-CBMs introduce an interpretable bottleneck of human-understandable concepts:
 ```
-Image → Concepts → Diagnosis
-         ↓
-    Interpretable!
-    (can intervene)
+Image --> Concept Encoder --> Concept Predictions --> Task Predictor --> Diagnosis
+          (ResNet-50)         (7-point checklist)     (Linear layer)
 ```
 
-**Example workflow**: Instead of directly predicting "Melanoma", the model first identifies dermatological features:
-- ✓ Irregular border: 92%
-- ✓ Asymmetric shape: 78%
-- ✗ Blue-white veil: 15% ← **Clinician can correct this!**
-- ✓ Multiple colors: 88%
-
-Then uses these concepts to make the final diagnosis.
+The concept encoder predicts clinically meaningful attributes (e.g. pigment network, blue-whitish veil), and a linear task predictor maps these to a binary melanoma diagnosis. Because reasoning is constrained to pass through the concept bottleneck, clinicians can inspect predicted concepts and override incorrect values at inference time.
 
 ---
 
-## Key Features
+## Capabilities
 
-### Interpretable Architecture
-- **Two-stage reasoning**: Explicit concept prediction followed by diagnosis
-- **7-point checklist**: Clinically validated dermatological concepts
-- **Linear predictor**: Direct visualization of concept importance
+**Interpretable classification** -- Two-stage architecture with per-concept prediction heads and a linear task predictor whose weights directly indicate concept importance.
 
-### Concept Intervention
-- **Test-time correction**: Modify incorrect concept predictions
-- **Human-in-the-loop**: Incorporate expert knowledge
-- **Systematic analysis**: Study impact of each concept on diagnosis
+**Concept intervention** -- At inference time, individual concept predictions can be overridden to correct errors and observe the effect on the diagnosis. This enables systematic analysis of which concepts are most influential.
 
-### Information-Theoretic Analysis
-- **Concept completeness**: Measure information sufficiency
-- **Synergy analysis**: Identify concept interactions
-- **Mutual information**: Quantify concept-task relationships
+**Multiple training strategies** -- Joint, sequential, and independent training modes, each offering different trade-offs between concept accuracy and task performance.
 
-### Educational Implementation
-- **Clean codebase**: Well-documented, modular architecture
-- **Interactive tutorials**: 3 comprehensive Jupyter notebooks
-- **Sample data included**: No dataset required for quick demos
-- **HPC-ready**: SLURM scripts for cluster deployment
+**Reproducible demos** -- Four sample dermoscopy cases are included in the repository, allowing the full pipeline to be exercised without access to the complete dataset. Three Jupyter notebooks provide worked examples.
 
 ---
 
@@ -97,37 +72,36 @@ Then uses these concepts to make the final diagnosis.
   </div>
 </div>
 
-### Systematic Intervention Analysis Across Dataset
+### Systematic Intervention Analysis
 
-Our comprehensive intervention analysis reveals how concept corrections impact model predictions across the entire test set. These visualizations demonstrate the reliability and clinical utility of the CBM approach.
+Intervention analysis across the full test set, showing how concept corrections affect predictions.
 
 <div class="image-grid">
   <div class="image-item">
     <img src="/assets/projects/skincbm/1_performance_comparison.png" alt="Performance comparison: Original vs Corrected predictions">
-    <p><strong>Performance Improvement</strong>: Original model accuracy vs. performance after concept intervention. Shows significant improvement when concepts are corrected by domain experts.</p>
+    <p><strong>Performance Comparison</strong>: Original model accuracy vs. accuracy after concept intervention.</p>
   </div>
   <div class="image-item">
     <img src="/assets/projects/skincbm/2_concept_impact_analysis.png" alt="Concept impact analysis showing relative importance">
-    <p><strong>Concept Importance</strong>: Relative impact of each dermatological concept on diagnosis accuracy. Reveals which features are most critical for melanoma detection.</p>
+    <p><strong>Concept Importance</strong>: Relative impact of each dermatological concept on diagnosis accuracy.</p>
   </div>
 </div>
 
 <div class="image-grid">
   <div class="image-item">
     <img src="/assets/projects/skincbm/3_intervention_direction_analysis.png" alt="Intervention direction analysis">
-    <p><strong>Intervention Direction</strong>: Analysis of how correcting concepts from 0→1 vs 1→0 affects predictions. Asymmetric patterns reveal model biases and concept reliability.</p>
+    <p><strong>Intervention Direction</strong>: Asymmetric effects of correcting false negatives (0 to 1) vs. false positives (1 to 0).</p>
   </div>
   <div class="image-item">
     <img src="/assets/projects/skincbm/4_confusion_matrices.png" alt="Confusion matrices before and after intervention">
-    <p><strong>Confusion Matrix Comparison</strong>: Model predictions before (left) and after (right) systematic concept correction. Demonstrates reduced misclassification rates.</p>
+    <p><strong>Confusion Matrices</strong>: Predictions before (left) and after (right) systematic concept correction.</p>
   </div>
 </div>
 
-**Key Findings from Systematic Analysis**:
-- **Performance Gain**: Concept intervention improves accuracy by ~15-20% on misclassified cases
-- **Critical Concepts**: Blue-whitish veil and atypical vascular pattern show highest impact
-- **Intervention Asymmetry**: Correcting false negatives (0→1) has larger impact than false positives (1→0)
-- **Clinical Validation**: Results align with dermatological literature on melanoma indicators
+**Key findings**:
+- Concept intervention improves accuracy by approximately 15--20% on previously misclassified cases.
+- Blue-whitish veil and atypical vascular pattern show the highest individual impact on diagnosis.
+- Correcting false negatives (absent to present) has a larger effect than correcting false positives, consistent with clinical literature on melanoma indicators.
 
 ---
 
@@ -216,13 +190,7 @@ On Derm7pt dataset (~2,000 dermoscopy images):
 | **Task F1 Score** | 68-72% | 70-75% |
 | **Training Time (V100)** | ~10 min | ~20 min |
 
-**Trade-off**: ~5% accuracy vs black-box models, but gain full interpretability + intervention capability.
-
-### Information-Theoretic Metrics
-
-- **Concept Completeness**: Measures if concepts contain sufficient information for task
-- **Synergy**: Quantifies concept interactions and redundancy
-- **Mutual Information**: Concept-task relationship strength
+**Trade-off**: Approximately 5% accuracy reduction compared to black-box models, in exchange for full interpretability and intervention capability.
 
 ---
 
@@ -235,7 +203,7 @@ cd SynergyCBM/SkinCBM
 pip install -r requirements.txt
 ```
 
-### Quick Demo (No Dataset Required!)
+### Quick Demo
 ```bash
 python3 examples/demo_sample_data.py
 ```
@@ -278,11 +246,11 @@ SkinCBM/
 │   ├── training/
 │   │   └── trainer.py                # Training utilities
 │   └── utils/
-│       └── information_theory.py     # MI, synergy, completeness
+│       └── visualization.py          # Plotting and visualisation
 │
 ├── examples/
 │   ├── train_basic_cbm.py            # Full training script
-│   ├── demo_sample_data.py           # Quick demo (3 samples)
+│   ├── demo_sample_data.py           # Quick demo (4 samples)
 │   ├── demo_intervention.py          # Intervention examples
 │   └── intervention_analysis.py      # Systematic analysis
 │
@@ -292,7 +260,7 @@ SkinCBM/
 │   ├── 03_demo_intervention.ipynb
 │   └── sample_data_derm7pt/          # 4 sample cases
 │
-└── docs/                             # Comprehensive documentation
+└── docs/
     ├── ARCHITECTURE.md
     ├── QUICKSTART.md
     └── DATASETS.md
@@ -328,7 +296,7 @@ The model uses the clinically validated 7-point checklist for melanoma diagnosis
 
 ## Documentation
 
-Comprehensive guides available in the repository:
+Guides available in the repository:
 
 - **[INSTALLATION.md](https://github.com/Matt-Cockayne/SynergyCBM/blob/main/SkinCBM/docs/INSTALLATION.md)** - Setup and dependencies
 - **[QUICKSTART.md](https://github.com/Matt-Cockayne/SynergyCBM/blob/main/SkinCBM/docs/QUICKSTART.md)** - 5-minute tutorial
@@ -344,15 +312,7 @@ Comprehensive guides available in the repository:
 This implementation builds on foundational CBM research:
 
 - **Koh et al. (2020)**: [Concept Bottleneck Models](https://arxiv.org/abs/2007.04612) - Original CBM paper
-- **Sawicki et al. (2023)**: Information-theoretic analysis of concept completeness
 - **Argaw et al. (2022)**: Clinical validation of 7-point checklist in melanoma diagnosis
-
-### Novel Contributions
-
-- **Educational focus**: Clear documentation of design decisions and trade-offs
-- **Information theory integration**: Novel completeness and synergy metrics
-- **Production-ready code**: Clean, modular implementation suitable for extension
-- **Sample data**: Enables exploration without full dataset access
 
 ---
 
@@ -368,10 +328,9 @@ This implementation builds on foundational CBM research:
 
 ### Research Questions
 
-- Can CBMs match black-box performance with better concept quality?
+- Can CBMs match black-box performance with higher-quality concept supervision?
 - What is the optimal number of concepts for completeness vs. redundancy?
-- How does concept intervention impact model trust in clinical settings?
-- Can information-theoretic metrics predict model reliability?
+- How does concept intervention affect model trust in clinical settings?
 
 ---
 
@@ -381,7 +340,7 @@ If you use SkinCBM in your research, please cite:
 
 ```bibtex
 @software{skincbm2025,
-  title={SkinCBM: Concept Bottleneck Models for Medical Diagnosis},
+  title={SkinCBM: Concept Bottleneck Models for Interpretable Skin Lesion Diagnosis},
   author={Cockayne, Matthew J.},
   year={2025},
   url={https://github.com/Matt-Cockayne/SynergyCBM/tree/main/SkinCBM}
@@ -393,16 +352,9 @@ If you use SkinCBM in your research, please cite:
 ## Resources
 
 - **GitHub Repository**: [SkinCBM on GitHub](https://github.com/Matt-Cockayne/SynergyCBM/tree/main/SkinCBM)
-- **Interactive Tutorials**: 3 comprehensive Jupyter notebooks (see above)
+- **Interactive Tutorials**: 3 Jupyter notebooks (see above)
 - **Sample Data**: 4 dermoscopy cases included in repository
-- **Documentation**: Complete guides in `docs/` folder
-
----
-
-<div class="project-meta">
-  <p><strong>Status</strong>: Active Development | <strong>License</strong>: MIT</p>
-  <p><strong>Last Updated</strong>: November 2025</p>
-</div>
+- **Documentation**: Guides in `docs/` folder
 
 <style>
 .image-grid {
