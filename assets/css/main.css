@@ -234,7 +234,7 @@ ul { list-style: none; }
   min-height: 100vh;
   padding: 120px 24px 80px;
   overflow: hidden;
-  background-image: radial-gradient(circle, rgba(99, 143, 217, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(224, 190, 112, 0.12) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -564,6 +564,7 @@ ul { list-style: none; }
 .research-statement {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
   border-radius: var(--radius);
   padding: 32px;
 }
@@ -582,7 +583,7 @@ ul { list-style: none; }
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.6rem;
-  color: var(--color-text-faint);
+  color: var(--color-accent);
   margin-bottom: 20px;
   margin-top: 16px;
 }
