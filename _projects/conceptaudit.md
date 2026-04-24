@@ -159,19 +159,11 @@ Linear Task Predictor ← Species Cross-Entropy (Phase 2, backbone frozen)
 
 **Leakage formula**:
 
-$$\ell = \frac{\text{Acc}_{\text{residual}} - 1/K}{\text{Acc}_{\text{full}} - 1/K + \varepsilon}$$
+<p style="text-align:center; font-size:1.05em; margin: 1em 0;">
+  <em>ℓ</em> = ( Acc<sub>residual</sub> − 1/<em>K</em> ) / ( Acc<sub>full</sub> − 1/<em>K</em> + <em>ε</em> )
+</p>
 
-where K = 200 species classes. ℓ = 0 indicates the non-concept pathway is at chance; ℓ = 1 indicates it retains the full representation's accuracy.
-
----
-
-## Paper
-
-A full NeurIPS-format write-up of these results is available in the repository as `paper/birdcbm_paper.tex`.
-
-**Authors**: M.J. Cockayne, M. Ortolani, B. Al-Bander  
-**Affiliation**: School of Computer Science and Mathematics, Keele University  
-**Status**: Pre-print / In preparation
+where *K* = 200 species classes. *ℓ* = 0 indicates the non-concept pathway is at chance; *ℓ* = 1 indicates it retains the full representation's accuracy.
 
 ---
 
