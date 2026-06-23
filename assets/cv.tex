@@ -1,0 +1,153 @@
+% ATS-Friendly Academic CV - Compact Format
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+% Compact spacing
+\setlist{nosep, leftmargin=*, itemsep=0pt, topsep=0pt}
+\setlist[itemize]{label=-}
+\titlespacing{\section}{0pt}{5pt}{2pt}
+\titlespacing{\subsection}{0pt}{3pt}{1pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.93}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\begin{document}
+
+% Header
+{\centering
+{\LARGE\textbf{Matthew J. Cockayne}}\\[2pt]
+matthewcockayne2@gmail.com $\mid$ \href{https://matt-cockayne.github.io}{matt-cockayne.github.io}\\
+\href{https://www.linkedin.com/in/matthew-cockayne-193659199}{LinkedIn: matthew-cockayne-193659199} $\mid$ \href{https://orcid.org/0009-0009-8918-3125}{ORCID: 0009-0009-8918-3125} $\mid$ \href{https://scholar.google.co.uk/citations?user=LcCOSxEAAAAJ&hl=en}{Google Scholar}\\[6pt]
+}
+
+\section{About Me}
+PhD researcher in safe and responsible AI, working on making AI systems interpretable, robust, and equitable. My work includes detecting and mitigating bias, stress-testing models under real-world distribution shift, and building interpretable-by-design architectures that are human-in-the-loop. Applied primarily to skin cancer detection, my methods have delivered state-of-the-art, fairness-improved, and clinically auditable models, published across journals and conferences including an early-accepted (top 9\%) MICCAI 2026 paper. I am currently extending this work to cardiac vision-language models and validating clinically. I bring hands-on experience translating research into reproducible, well-documented tools and training materials for interdisciplinary researchers.
+
+\section{Skills}
+
+\subsection{Technical Skills}
+\textbf{Programming:} Python, R, SQL, LaTeX \\
+\textbf{ML Frameworks:} PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face\\
+\textbf{Frontier Models:} Segment Anything Model (SAM/MedSAM), vision-language models (VLMs), zero-shot transfer evaluation, failure mode analysis\\
+\textbf{Computer Vision:} OpenCV, torchvision, TIMM\\
+\textbf{Data Analysis:} Pandas, NumPy, SciPy, statistical modelling\\
+\textbf{Safe \& Responsible AI:} Fairlearn, Aequitas, adversarial debiasing, fairness benchmarking, robustness benchmarking, uncertainty quantification\\
+\textbf{Explainable AI:} CAM-methods, SHAP, LIME, LRP, attention visualisation, concept bottleneck models\\
+\textbf{Development:} Git/GitHub, Weights \& Biases, TensorBoard\\
+\textbf{High Performance Computing:} HPC cluster management, SLURM job scheduling, batch script optimisation, distributed LLM/VLM training and inference\\
+\textbf{Certifications:} BlueDot Technical AI Safety Course
+
+\subsection{Research Skills}
+Systematic literature review and evidence synthesis. Scientific writing, dissemination, and peer review. Technical development and documentation for AI. Bias and fairness auditing. Robustness and uncertainty evaluation. Model interpretability assessment.
+
+\section{Experience}
+
+\textbf{Research Assistant - Cardiac Vision-Language Models} \hfill Jan 2026-Present\\
+Keele University, School of Computer Science and Mathematics
+\begin{itemize}
+\item Investigating whether cardiac vision-language models learn clinically valid internal representations or instead exploit spurious correlations (scanner artefacts, demographics)
+\item Validation model representations in collaboration with a practising cardiologist
+\end{itemize}
+
+\textbf{PhD Researcher - Safe \& Responsible AI for Medical Imaging} \hfill 2023-Present\\
+Keele University, School of Computer Science and Mathematics
+\begin{itemize}
+\item Built a robustness evaluation framework benchmarking transformer architectures under real-world corruptions. Applied to multi-modal skin cancer detection, achieving state-of-the-art performance while quantifying deployment risk via uncertainty estimation.\\Code: \href{https://github.com/xraikeele/DermFormer}{github.com/xraikeele/DermFormer}
+\item Developed SkinCBM, an interpretable-by-design concept bottleneck model aligned to the 7-point checklist for melanoma, enabling clinicians to inspect and correct intermediate reasoning steps.\\Code: \href{https://github.com/Matt-Cockayne/SkinCBM}{github.com/Matt-Cockayne/SkinCBM}
+\item Conducted information analysis of learnt skin lesion concepts, revealing reliance on spurious correlations, and designed sparse polynomial classifiers that preserve full interpretability of decision boundaries (under-review, Image and Vision Computing).
+\item Built FairCBM, a fairness-aware curriculum learning scheme for concept bottleneck models in dermatology, reducing demographic performance disparities by 44\% and improving lowest-group outcomes by 63\%. Early accepted (top 9\%) at MICCAI 2026.\\Code: \href{https://github.com/Matt-Cockayne/FairCBM}{github.com/Matt-Cockayne/FairCBM}
+\item Evaluated frontier model reliability for skin lesion segmentation under zero-shot transfer, characterising failure modes and developing adaptive selection methods that reduce catastrophic failures.\\Code: \href{https://github.com/xraikeele/Classification-to-Segmentation}{github.com/xraikeele/Classification-to-Segmentation}
+\item Authored and delivered tutorials on distributed VLM/LLM training and inference on Keele's GreenHPC cluster, supporting large-scale experimentation across research groups.\\Code: \href{https://github.com/Matt-Cockayne/keele-greenhpc-llm}{github.com/Matt-Cockayne/keele-greenhpc-llm}
+\end{itemize}
+
+\textbf{Turing Network Development Research Associate} \hfill 2021-2022
+\begin{itemize}
+\item Developed educational materials, organised networking events, and set-up hackathons to foster interdisciplinary research across the university as part of a grant from the Alan Turing Institute.
+\end{itemize}
+
+\section{Education}
+
+\textbf{PhD in Computer Science} \hfill 2023-2026 (Expected)\\
+Keele University, Keele, UK\\
+\textit{Thesis:} Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition\\[2pt]
+\textit{Viva:} Scheduled 3rd July 2026\\[2pt]
+\textit{Funding:} Competition-funded Department Studentship\\[2pt]
+Published 2 first-author papers (Pattern Analysis and Applications journal, AIIH 2025 conference, oral presentation) and 1 first-author paper early accepted (top 9\%) at MICCAI 2026. One additional first-author paper under-review at Image and Vision Computing. Co-author on an accepted Discover Computing journal paper, an accepted AIiH 2026 paper and a Machine Vision and Applications paper under review. Developed open-source toolkits MedXAI, SkinCBM, and FairCBM for reproducible research. PGR Representative for 3 consecutive years.
+
+\textbf{MSc in Artificial Intelligence and Data Science, Distinction} \hfill 2021-2022\\
+Keele University, Keele, UK\\[2pt]
+Touchscreen Talent Data Analyst Internship: Developed explainable AI methods for CV-based sentiment analysis in recruitment.
+
+\textbf{BSc in Physics, First Class Honours} \hfill 2018-2021\\
+Keele University, Keele, UK\\
+Undergraduate student representative for 3 years.\\
+
+\section{Publications}
+
+\subsection{Journal Articles}
+\textbf{Cockayne, M. J.}, Ortolani, M., Al-Bander, B. (2025). ``DermFormer: Nested Multi-modal Vision Transformers for Robust Skin Cancer Detection.'' \textit{Pattern Analysis and Applications}, Springer Nature, Volume 28, Article 194. \href{https://doi.org/10.1007/s10044-025-01572-0}{DOI: 10.1007/s10044-025-01572-0}
+
+\textbf{Cockayne, M. J.}, Ortolani, M., Al-Bander, B. ``Sparse Concept Absence Network for Concept Bottleneck Models.'' \textit{Image and Vision Computing}, Elsevier. Status: Under Review.
+
+Al-Bander, B., Ortolani, M., Dafaalla, M., \textbf{Cockayne, M. J.}, Pergola, G., Mamas, M. A. ``Investigating and Mitigating Bias in Cardiovascular Disease Mortality Predictors for Scaling-up AI Fairness.'' \textit{Discover Computing}, Springer Nature. Status: Accepted.
+
+Guo, S., \textbf{Cockayne, M. J.}, Ortolani, M., Al-Hamd, R., Al-Bander, B. ``Zero-Shot Crack Segmentation for Structural Health Monitoring Using Class Activation Map Guided Segment Anything Model.'' \textit{Machine Vision and Applications}. Status: Under Review.
+
+\subsection{Conference Papers}
+\textbf{Cockayne, M. J.}, Ortolani, M., Al-Bander, B. (2025). ``Classification-to-Segmentation: Class Activation Mapping for Zero-Shot Skin Lesion Segmentation.'' \textit{AIIH 2025}, University of Cambridge. \textbf{[Oral Presentation]} \href{https://doi.org/10.1007/978-3-032-00656-1_24}{DOI: 10.1007/978-3-032-00656-1\_24}
+
+\textbf{Cockayne, M. J.}, Ortolani, M., Al-Bander, B. ``Fair Curriculum Learning for Concept Bottleneck Models in Dermatology.'' \textit{MICCAI 2026}. Status: Early Accepted (Top 9\%). Code: \href{https://github.com/Matt-Cockayne/FairCBM}{github.com/Matt-Cockayne/FairCBM}
+
+Raza, A., \textbf{Cockayne, M. J.}, Ortolani, M., Hill, J., Al-Bander, B. ``ClinAuditAI: Agentic AI for Clinical Guideline Adherence Auditing.'' \textit{AIiH 2026: Explainability to Accountability}. Status: Accepted.
+
+\section{Teaching Experience}
+
+\textbf{Module Lead - Level 7 Apprenticeship, Image Processing (NHS Partnership)} \hfill 2026-Present\\
+Keele University, School of Chemical and Physical Sciences
+\begin{itemize}
+\item Leading delivery of the image processing module on Keele's Level 7 technical leadership apprenticeship programme, delivered in partnership with the NHS for practising healthcare and technology professionals
+\end{itemize}
+
+\textbf{Laboratory Demonstrator} \hfill 2022-Present\\
+Keele University, School of Computer Science and Mathematics
+\begin{itemize}
+\item Supported undergraduate and master's students across computer science modules for 4 years
+\item Delivered guest lectures on deep learning, computer vision, and responsible AI
+\item Mentored students on machine learning and AI ethics research projects
+\end{itemize}
+
+\section{Professional Service}
+
+\textbf{Programme Committee:} International Conference on AI in Healthcare (AIiH) 2026
+
+\textbf{Special Session Organiser:} Co-organising a special session on explainability and accountability at AIiH 2026
+
+\textbf{Peer Review:} 1st International Workshop on AI Safety and Security (AI-SS) 2026, Engineering Applications of Artificial Intelligence journal (2024-present)
+
+\textbf{Leadership:} Postgraduate Research Representative, Keele University (2022-2025, 3 years). Student Representative, Physics Programme (2018-2021, 3 years)
+
+\textbf{Mentorship:} Supervised student research on ML and AI ethics, responsible AI and fairness evaluation
+
+\textbf{Outreach:} Data Science Content Creator Internship (2021-2022) - developed AI/data science educational resources.
+
+\textbf{Dissemination:} Departmental research seminars and guest lectures on safe and responsible AI, robustness, fairness-aware learning, and interpretability (2022-present)
+
+\end{document}

@@ -39,7 +39,7 @@ layout: null
       <a href="#hero" class="nav__logo" aria-label="Back to top">Matthew J. Cockayne</a>
       <ul class="nav__links" id="nav-links">
         <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#research" class="nav__link">Research</a></li>
+        <li><a href="/cv" class="nav__link">CV</a></li>
         <li><a href="#publications" class="nav__link">Publications</a></li>
         <li><a href="#projects" class="nav__link">Projects</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
@@ -109,7 +109,7 @@ layout: null
           <div class="about__text">
             <p>I am a final-year PhD researcher in the {{ site.department }} at {{ site.institution }}, working on safe and responsible AI. My research aim is to ensure AI systems are interpretable, robust, and equitable, developing methods for bias detection and mitigation, systematic robustness evaluation under distribution shift, and interpretable-by-design architectures that enable human oversight and intervention. Applied through medical imaging, where deployment failures carry direct real-world harm, this work produces domain-agnostic frameworks transferable to broader safe and responsible AI challenges.</p>
 
-            <p>My thesis, <em>Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition</em>, has produced 2 first-author publications including Pattern Analysis and Applications (Springer Nature) and the International Conference on AI in Healthcare 2025 at the University of Cambridge, with two additional papers submitted to MICCAI 2026 and Image and Vision Computing (Elsevier). I have developed open-source toolkits, MedXAI (6 explainability methods) and SkinCBM (concept bottleneck models), enabling reproducible research in explainable medical AI, accompanied by tutorial notebooks.</p>
+            <p>My thesis, <em>Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition</em>, has produced 2 first-author publications including Pattern Analysis and Applications (Springer Nature) and the International Conference on AI in Healthcare 2025 at the University of Cambridge, with a further first-author paper early accepted (top 9%) at MICCAI 2026 and one additional first-author paper under review at Image and Vision Computing (Elsevier). I have developed open-source toolkits, MedXAI (6 explainability methods), SkinCBM (concept bottleneck models), and FairCBM (fairness-aware curriculum learning), enabling reproducible research in explainable and equitable medical AI, accompanied by tutorial notebooks.</p>
 
             <h3>Education</h3>
             <div class="education">
@@ -131,9 +131,10 @@ layout: null
             <h3>Professional Service</h3>
             <ul>
               <li><strong>Programme Committee:</strong> International Conference on AI in Healthcare (AIiH) 2026</li>
+              <li><strong>Special Session Organiser:</strong> Co-organising session on Explainability &amp; Accountability at AIiH 2026</li>
               <li><strong>Peer Review:</strong> Engineering Applications of Artificial Intelligence; 1st International Workshop on AI Safety and Security (AI-SS) 2026</li>
               <li><strong>Leadership:</strong> PGR Representative (3 years), Student Representative (3 years)</li>
-              <li><strong>Teaching:</strong> Laboratory Demonstrator (4 years), Guest Lecturer on Deep Learning &amp; Responsible AI</li>
+              <li><strong>Teaching:</strong> Module Lead — Level 7 Apprenticeship (NHS Partnership), Image Processing (2026–Present); Laboratory Demonstrator (4 years); Guest Lecturer on Deep Learning &amp; Responsible AI</li>
             </ul>
           </div>
 
@@ -166,60 +167,8 @@ layout: null
               </div>
             </div>
 
-            <a href="{{ site.cv_pdf }}" class="btn btn--solid btn--block" target="_blank" rel="noopener">Download CV (PDF)</a>
+            <a href="/cv" class="btn btn--solid btn--block">View CV</a>
           </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ RESEARCH ═══════════════════════ -->
-    <section class="section" id="research">
-      <div class="section__inner">
-        <span class="section__label">Research</span>
-        <h2 class="section__heading">Research Interests</h2>
-        <p class="section__subtitle">Advancing safe and responsible AI through interpretable, robust, and fair deep learning systems.</p>
-
-        <div class="research-grid">
-          <!-- Card 1: AI -->
-          <div class="research-card reveal">
-            <div class="research-card__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8 6a4 4 0 0 1 8 0"/><circle cx="12" cy="17" r="3"/><path d="M12 14V10"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 7.76l2.83-2.83"/><path d="M19 12h2"/><path d="M3 12h2"/><path d="M12 19v2"/></svg>
-            </div>
-            <h3 class="research-card__title">Artificial Intelligence</h3>
-            <p class="research-card__desc">{{ site.research_descriptions[0] }}</p>
-          </div>
-
-          <!-- Card 2: Computer Vision -->
-          <div class="research-card reveal">
-            <div class="research-card__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3 class="research-card__title">Computer Vision</h3>
-            <p class="research-card__desc">{{ site.research_descriptions[1] }}</p>
-          </div>
-
-          <!-- Card 3: Responsible AI -->
-          <div class="research-card reveal">
-            <div class="research-card__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3 class="research-card__title">Safe &amp; Responsible AI</h3>
-            <p class="research-card__desc">{{ site.research_descriptions[2] }}</p>
-          </div>
-
-          <!-- Card 4: Foundation Models -->
-          <div class="research-card reveal">
-            <div class="research-card__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M12 10v6"/><path d="M9 13h6"/></svg>
-            </div>
-            <h3 class="research-card__title">Foundation Model Reliability</h3>
-            <p class="research-card__desc">{{ site.research_descriptions[3] }}</p>
-          </div>
-        </div>
-
-        <div class="research-statement reveal">
-          <h3>Current Research Focus (Year 3)</h3>
-          <p>Developing interpretable-by-design AI systems through concept bottleneck models with human-in-the-loop oversight, information-theoretic analysis of model completeness and concept synergy, and fairness-aware training methodologies that reduce demographic disparities while improving overall system performance.</p>
         </div>
       </div>
     </section>
@@ -237,11 +186,14 @@ layout: null
         <article class="pub reveal">
           <h3 class="pub__title">Fair Curriculum Learning for Concept Bottleneck Models in Dermatology</h3>
           <p class="pub__authors"><span class="pub__highlight">M.J. Cockayne</span>, M. Ortolani, B. Al-Bander</p>
-          <p class="pub__venue"><em>MICCAI 2026</em> — <strong>Submitted</strong></p>
+          <p class="pub__venue"><em>MICCAI 2026</em> — <strong>Early Accepted (Top 9%)</strong></p>
           <p class="pub__abstract">A four-phase curriculum learning approach for in-training bias mitigation in Concept Bottleneck Models. Orders training by fairness objectives rather than concept difficulty, improving lowest-group F1 by 63% and reducing performance gaps by 44% on SkinCon across 6 Fitzpatrick skin types, with simultaneous 5.3% overall F1 gain.</p>
           <div class="pub__links">
-            <span class="pub__status">Submitted</span>
-            <span class="pub__status">Code to Follow</span>
+            <span class="pub__status pub__status--accepted">Early Accepted · Top 9%</span>
+            <a href="https://github.com/Matt-Cockayne/FairCBM" target="_blank" rel="noopener" aria-label="GitHub repository">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
           </div>
         </article>
 
@@ -253,6 +205,16 @@ layout: null
           <div class="pub__links">
             <span class="pub__status">Submitted</span>
             <span class="pub__status">Code to Follow</span>
+          </div>
+        </article>
+
+        <article class="pub reveal">
+          <h3 class="pub__title">ClinAuditAI: Agentic AI for Clinical Guideline Adherence Auditing</h3>
+          <p class="pub__authors">A. Raza, <span class="pub__highlight">M.J. Cockayne</span>, M. Ortolani, J. Hill, B. Al-Bander</p>
+          <p class="pub__venue"><em>Proceedings of the International Conference on AI in Healthcare (AIiH 2026): Explainability to Accountability</em>, Springer — <strong>Accepted</strong></p>
+          <p class="pub__abstract">An agentic AI framework for automated auditing of clinical guideline adherence, combining large language models with structured clinical knowledge to identify deviations from evidence-based practice at scale.</p>
+          <div class="pub__links">
+            <span class="pub__status pub__status--accepted">Accepted</span>
           </div>
         </article>
 
@@ -300,10 +262,10 @@ layout: null
         <article class="pub reveal">
           <h3 class="pub__title">Investigating and Mitigating Bias in Cardiovascular Disease Mortality Predictors for Scaling-up AI Fairness</h3>
           <p class="pub__authors">B. Al-Bander, M. Ortolani, M. Dafaalla, <span class="pub__highlight">M.J. Cockayne</span>, G. Pergola, M.A. Mamas</p>
-          <p class="pub__venue"><em>Discover Computing</em>, Springer Nature — <strong>Under Review</strong>, 2025</p>
+          <p class="pub__venue"><em>Discover Computing</em>, Springer Nature — <strong>Accepted</strong>, 2025</p>
           <p class="pub__abstract">Investigation of bias in cardiovascular disease mortality prediction models with focus on fairness and ethical AI deployment in healthcare settings.</p>
           <div class="pub__links">
-            <span class="pub__status">Under Review</span>
+            <span class="pub__status pub__status--accepted">Accepted</span>
           </div>
         </article>
 
@@ -341,6 +303,22 @@ layout: null
         <p class="section__subtitle">Current and completed projects in AI research, medical imaging, and interpretable machine learning.</p>
 
         <div class="project-grid">
+          
+          <!-- Fair Curriculum CBM -->
+          <div class="project-card project-card--clickable reveal">
+            <h3 class="project-card__title"><a href="/projects/fair-curriculum-cbm" class="project-card__overlay-link">Fair Curriculum CBM: Fairness-Aware Curriculum Learning</a></h3>
+            <p class="project-card__meta">Early Accepted (Top 9%) · MICCAI 2026</p>
+            <p class="project-card__desc">Four-phase curriculum learning approach for bias mitigation in Concept Bottleneck Models. Orders training by fairness objectives to reduce performance disparities across skin types, improving lowest-group F1 by 63% without constraining overall performance.</p>
+            <div class="project-card__tags">
+              <span class="tag">Fairness</span>
+              <span class="tag">Concept Learning</span>
+              <span class="tag">Medical AI</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Matt-Cockayne/FairCBM"" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub</a>
+            </div>
+          </div>
 
           <!-- DermFormer -->
           <div class="project-card project-card--clickable reveal">
@@ -405,22 +383,6 @@ layout: null
             </div>
             <div class="project-card__links">
               <a href="https://github.com/Matt-Cockayne/MedXAI" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub</a>
-            </div>
-          </div>
-
-          <!-- Fair Curriculum CBM -->
-          <div class="project-card project-card--clickable reveal">
-            <h3 class="project-card__title"><a href="/projects/fair-curriculum-cbm" class="project-card__overlay-link">Fair Curriculum CBM: Fairness-Aware Curriculum Learning</a></h3>
-            <p class="project-card__meta">Submitted · MICCAI 2026</p>
-            <p class="project-card__desc">Four-phase curriculum learning approach for bias mitigation in Concept Bottleneck Models. Orders training by fairness objectives to reduce performance disparities across skin types, improving lowest-group F1 by 63% without constraining overall performance.</p>
-            <div class="project-card__tags">
-              <span class="tag">Fairness</span>
-              <span class="tag">Concept Learning</span>
-              <span class="tag">Medical AI</span>
-              <span class="tag">PyTorch</span>
-            </div>
-            <div class="project-card__links">
-              <span class="pub__status">Code to Follow</span>
             </div>
           </div>
 

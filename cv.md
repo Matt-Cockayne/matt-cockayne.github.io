@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Curriculum Vitae"
-description: "Comprehensive CV of Matthew Cockayne including education, research experience, publications, and achievements."
+description: "CV of Matthew Cockayne including education, research experience, publications, and achievements."
 ---
 
 <div class="cv-embed">
@@ -33,8 +33,9 @@ Responsible AI methodologies for healthcare with applications in medical image a
 ### Education
 - **PhD in Computer Science** (2023-2026 Expected)  
   *{{ site.institution }}* - Competition-funded Department Studentship  
-  Thesis: *Responsible AI for Dermatological Prediction*  
-  2 first-author publications, 1 co-authored paper in minor revisions, 2 manuscripts in preparation
+  Thesis: *Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition*  
+  Viva: Scheduled 3rd July 2026  
+  2 first-author publications (PAA 2025, AIiH 2025 Oral), 1 first-author paper early accepted (Top 9%) at MICCAI 2026, 1 first-author paper under review (Image and Vision Computing), 2 co-authored accepted papers
   
 - **MSc in Artificial Intelligence and Data Science** (2021-2022)  
   *{{ site.institution }}* - **Distinction**  
@@ -45,29 +46,36 @@ Responsible AI methodologies for healthcare with applications in medical image a
 
 ### Key Research Projects
 - **DermFormer**: Transformer-based multi-modal architecture for robust skin cancer detection with state-of-the-art performance on Derm7pt dataset
+- **FairCBM**: Fairness-aware curriculum learning for Concept Bottleneck Models, reducing demographic performance disparities by 44% and improving lowest-group outcomes by 63% (Early Accepted, MICCAI 2026)
+- **SCAN-CBM**: Sparse pairwise polynomial classifier capturing concept absence patterns for interpretable diagnostic reasoning (Under Review, Image and Vision Computing)
 - **Zero-Shot Segmentation**: CAM-guided foundation models (SAM/MedSAM) for automated dermoscopy analysis on ISIC datasets (35k+ images)
-- **Fairness-Aware Learning**: Curriculum learning reducing performance disparities across Fitzpatrick skin types for equitable melanoma detection
-- **Concept Bottleneck Models**: Information-theoretic analysis and interpretable non-linear classifiers for clinical transparency
-- **Bias Mitigation**: Cardiovascular disease mortality prediction using multi-center MINAP dataset (400k+ patients)
+- **SimDrift**: Educational platform for visualising ML model drift across 24+ pre-trained models and 15+ realistic drift scenarios on MedMNIST
+- **Bias Mitigation**: Cardiovascular disease mortality prediction fairness analysis using multi-center MINAP dataset (400k+ patients)
 
 ### Publications
-- **2 First-Author Papers**: Pattern Analysis and Applications (2025), AIIH 2025 Conference (Oral Presentation)
-- **1 Co-Authored Paper**: AI & Ethics (Minor Revisions)
-- **2 Manuscripts in Preparation**: Concept bottleneck models, fairness-aware curriculum learning
+- **2 Published First-Author Papers**: Pattern Analysis and Applications (2025), AIiH 2025 Conference (Oral Presentation)
+- **1 First-Author Paper**: Early Accepted (Top 9%) at MICCAI 2026 — Fair Curriculum Learning for CBMs in Dermatology
+- **1 First-Author Paper**: Under Review — Image and Vision Computing (SCAN-CBM)
+- **2 Co-Authored Accepted Papers**: Discover Computing, Springer Nature; AIiH 2026 (ClinAuditAI)
+- **1 Co-Authored Paper Under Review**: Machine Vision and Applications (Zero-Shot Crack Segmentation)
 
 ### Technical Skills
 - **Programming**: Python, LaTeX, R, SQL
-- **ML Frameworks**: PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face Transformers
-- **Computer Vision**: OpenCV, torchvision, TIMM, Segment Anything Model (SAM)
-- **Explainable AI**: CAM, GradCAM, integrated gradients, attention visualization, SHAP
-- **Fairness & Bias**: Aequitas, Fairlearn, demographic parity, equalized odds, adversarial debiasing
+- **ML Frameworks**: PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face
+- **Frontier Models**: Segment Anything Model (SAM/MedSAM), vision-language models (VLMs), zero-shot transfer evaluation
+- **Computer Vision**: OpenCV, torchvision, TIMM
+- **Explainable AI**: CAM, GradCAM, Integrated Gradients, attention visualisation, SHAP, concept bottleneck models
+- **Fairness & Bias**: Aequitas, Fairlearn, demographic parity, equalized odds, adversarial debiasing, fairness benchmarking
 - **Medical Imaging**: MONAI, SimpleITK, dermoscopy analysis, clinical validation
 - **Development**: Git/GitHub, Jupyter, Weights & Biases, HPC cluster management, SLURM
+- **Certifications**: BlueDot Technical AI Safety Course
 
 ### Professional Service
-- **Peer Review**: Engineering Applications of Artificial Intelligence (4 reviews, 2024-2025)
+- **Programme Committee**: International Conference on AI in Healthcare (AIiH) 2026
+- **Special Session Organiser**: Co-organising session on Explainability & Accountability at AIiH 2026
+- **Peer Review**: Engineering Applications of Artificial Intelligence (2024–Present); 1st International Workshop on AI Safety and Security (AI-SS) 2026
 - **Leadership**: PGR Representative (3 years), Student Representative (3 years)
-- **Teaching**: Laboratory Demonstrator (4 years), Guest Lecturer on Deep Learning & Responsible AI
+- **Teaching**: Module Lead — Level 7 NHS Apprenticeship, Image Processing (2026–Present); Laboratory Demonstrator (4 years); Guest Lecturer on Deep Learning & Responsible AI
 
 ---
 
