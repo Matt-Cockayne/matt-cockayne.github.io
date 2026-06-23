@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Curriculum Vitae - Matthew Cockayne"
-description: "For specific inquiries about my background or experience, feel free to [contact me](/#contact)."
+description: "For specific inquiries about my background or experience, feel free to contact me."
 full_width: true
 ---
 
