@@ -1307,3 +1307,10 @@ ul { list-style: none; }
   border-radius: 8px;
   background: #fff;
 }
+
+/* Constrained content below the full-width PDF viewer */
+.cv-overview {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Curriculum Vitae"
-description: "CV of Matthew Cockayne including education, research experience, publications, and achievements."
+title: "Curriculum Vitae - Matthew Cockayne"
+description: "For specific inquiries about my background or experience, feel free to [contact me](/#contact)."
 full_width: true
 ---
 
@@ -25,6 +25,8 @@ full_width: true
     <p>Your browser does not support PDF viewing. Please <a href="{{ site.cv_pdf }}">download the CV</a> to view it.</p>
   </iframe>
 </div>
+
+<div class="cv-overview" markdown="1">
 
 ## Quick Overview
 PhD researcher in safe and responsible AI, working on making AI systems interpretable, robust, and equitable. My work includes detecting and mitigating bias, stress-testing models under real-world distribution shift, and building interpretable-by-design architectures that are human-in-the-loop. Applied primarily to skin cancer detection, my methods have delivered state-of-the-art, fairness-improved, and clinically auditable models, published across journals and conferences including an early-accepted (top 9%) MICCAI 2026 paper. I am currently extending this work to cardiac vision-language models and validating clinically. I bring hands-on experience translating research into reproducible, well-documented tools and training materials for interdisciplinary researchers.
@@ -80,3 +82,5 @@ PhD researcher in safe and responsible AI, working on making AI systems interpre
 ---
 
 *For the most up-to-date version of my CV, please download the PDF above. For specific inquiries about my background or experience, feel free to [contact me](/#contact).*
+
+</div>
