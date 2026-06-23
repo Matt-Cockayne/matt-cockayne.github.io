@@ -41,17 +41,19 @@ keele-greenhpc-llm/
 ├── LLM/
 │   ├── inference.py              # Single-prompt text inference
 │   ├── multi-prompt.py           # Batch inference from a JSON prompts file
-│   ├── inference-job.slurm       # SLURM job: single prompt
-│   ├── multi-prompt-job.slurm    # SLURM job: batch prompts
+│   ├── inference-job.slurm       # Slurm job: single prompt
+│   ├── multi-prompt-job.slurm    # Slurm job: batch prompts
 │   └── prompts/
 │       ├── single.json           # Example single-prompt input
 │       └── multi.json            # Example multi-prompt batch input
 ├── VLM/
 │   ├── inference.py              # Single-prompt vision-language inference
-│   ├── multi-prompt.py           # Batch VLM inference
-│   ├── inference-job.slurm
-│   ├── multi-prompt-job.slurm
+│   ├── multi-prompt.py           # Batch VLM inference from a JSON prompts file
+│   ├── inference-job.slurm       # Slurm job: single prompt
+│   ├── multi-prompt-job.slurm    # Slurm job: batch prompts
 │   └── prompts/
+│       ├── single.json           # Example single-prompt input
+│       └── multi.json            # Example multi-prompt batch input
 ├── data/
 │   ├── llm_results/              # LLM output JSON files (auto-created)
 │   └── vlm_results/              # VLM output JSON files (auto-created)
@@ -82,7 +84,32 @@ tail -f logs/llm_multi_<JOB_ID>.out
 
 ## Prompt Format
 
-Prompts are supplied as JSON — no code edits required to change inputs. For batch runs the model loads once and answers every prompt in sequence.
+Prompts are supplied as JSON files — no code edits are required to change inputs.
+
+### Single prompt (`--prompt-file`)
+
+```json
+{
+  "prompt": "What are the main causes of heart failure?",
+  "system": "You are a helpful medical assistant."
+}
+```
+
+`system` sets the model's persona and is optional. For VLM, add `image_path` to include an image:
+
+```json
+{
+  "prompt": "Describe the key findings in this chest X-ray.",
+  "image_path": "/absolute/path/to/image.png",
+  "system": "You are an expert radiologist."
+}
+```
+
+Omit `image_path` for text-only VLM inference.
+
+### Multi-prompt batch (`--prompts-file`)
+
+A JSON array — the model loads once and answers every prompt in order:
 
 ```json
 [
@@ -99,7 +126,7 @@ Prompts are supplied as JSON — no code edits required to change inputs. For ba
 ]
 ```
 
-`system` sets the model persona (optional). `image_path` enables visual grounding for VLM runs.
+`id` is an optional label that appears in the output JSON. See `LLM/prompts/multi.json` and `VLM/prompts/multi.json` for ready-to-run examples.
 
 ---
 
@@ -196,48 +223,6 @@ Compute nodes have **no internet access**, so all model weights must be download
 
 ---
 
-## Repository Structure
-
-```
-keele-greenhpc-llm/
-├── LLM/
-│   ├── inference.py              # Single-prompt text inference
-│   ├── multi-prompt.py           # Batch inference from a JSON prompts file
-│   ├── inference-job.slurm       # Slurm job: single prompt
-│   ├── multi-prompt-job.slurm    # Slurm job: batch prompts
-│   └── prompts/
-│       ├── single.json           # Example single-prompt input
-│       └── multi.json            # Example multi-prompt batch input
-├── VLM/
-│   ├── inference.py              # Single-prompt vision-language inference
-│   ├── multi-prompt.py           # Batch VLM inference from a JSON prompts file
-│   ├── inference-job.slurm       # Slurm job: single prompt
-│   ├── multi-prompt-job.slurm    # Slurm job: batch prompts
-│   └── prompts/
-│       ├── single.json           # Example single-prompt input
-│       └── multi.json            # Example multi-prompt batch input
-├── data/
-│   ├── llm_results/              # LLM output JSON files (auto-created)
-│   └── vlm_results/              # VLM output JSON files (auto-created)
-└── README.md
-```
-
----
-
-## Supported Models
-
-The following models are already downloaded to the shared project space:
-
-| Model | Path | Type |
-|---|---|---|
-| Meta Llama 3.1 8B Instruct | `/home/xrai/models/Meta-Llama-3.1-8B-Intstruct` | LLM (text only) |
-| MedGemma 4B-IT | `/home/xrai/models/medgemma-4b-it` | VLM (text + image) |
-| LLaVA-Med v1.5 Mistral 7B | `/home/xrai/models/llava-med-v1.5-mistral-7b` | VLM (text + image) |
-
-The VLM scripts auto-detect which model family is being used from its `config.json` — no code changes are needed to switch between MedGemma and LLaVA-Med.
-
----
-
 ## Step 1 — SSH into the Head Node
 
 ```bash
@@ -314,55 +299,7 @@ hf download <org/model-name> --local-dir /home/xrai/models/<model-name>
 
 ---
 
-## Step 6 — Prompt File Formats
-
-The scripts accept prompts from JSON files, which makes it easy to run the same experiment repeatedly or submit batches without editing code.
-
-### Single prompt (`--prompt-file`)
-
-```json
-{
-  "prompt": "What are the main causes of heart failure?",
-  "system": "You are a helpful medical assistant."
-}
-```
-
-`system` sets the model's persona and is optional. For VLM, add `image_path` to include an image:
-
-```json
-{
-  "prompt": "Describe the key findings in this chest X-ray.",
-  "image_path": "/absolute/path/to/image.png",
-  "system": "You are an expert radiologist."
-}
-```
-
-Omit `image_path` for text-only VLM inference.
-
-### Multi-prompt batch (`--prompts-file`)
-
-A JSON array — the model loads once and answers every prompt in order:
-
-```json
-[
-  {
-    "id": "q1",
-    "prompt": "Explain transformer encoder vs decoder architectures."
-  },
-  {
-    "id": "cxr_report",
-    "prompt": "Describe the findings in this chest X-ray.",
-    "image_path": "/data/images/cxr_001.png",
-    "system": "You are an expert radiologist."
-  }
-]
-```
-
-`id` is an optional label that appears in the output JSON. See `LLM/prompts/multi.json` and `VLM/prompts/multi.json` for ready-to-run examples.
-
----
-
-## Step 7 — Running Inference
+## Step 6 — Running Inference
 
 You can run the scripts directly for quick tests (don't do this), or submit them to the cluster via Slurm (do this).
 
@@ -420,7 +357,7 @@ sbatch VLM/multi-prompt-job.slurm
 
 ---
 
-## Step 8 — Monitoring Jobs
+## Step 7 — Monitoring Jobs
 
 After submitting, Slurm prints a job ID, e.g. `Submitted batch job 12345`.
 
@@ -445,7 +382,7 @@ tail -f logs/vlm_multi_12345.out
 
 ---
 
-## Step 9 — Viewing Results
+## Step 8 — Viewing Results
 
 Each run writes a timestamped JSON file to `data/`:
 
@@ -465,20 +402,6 @@ cat $(ls -t data/vlm_results/vlm_multi_*.json | head -1) | python -m json.tool
 ```
 
 The batch output contains an `aggregate_metrics` block and a `results` array with one entry per prompt (including the `id` you set, the full response, and per-prompt latency).
-
----
-
-## Performance Reference
-
-Typical figures on a single A100 40 GB (bfloat16, greedy decoding):
-
-| Model | Load time | Throughput |
-|---|---|---|
-| MedGemma 4B | ~30 s | ~60 tokens/s |
-| Llama 3.1 8B | ~45 s | ~40 tokens/s |
-| LLaVA-Med 7B | ~60 s | ~30 tokens/s |
-
-For batch jobs, the model loads once and all subsequent prompts run at full throughput.
 
 ---
 
