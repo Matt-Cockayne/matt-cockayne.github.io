@@ -79,4 +79,4 @@ Responsible AI methodologies for healthcare with applications in medical image a
 
 ---
 
-*For the most up-to-date version of my CV, please download the PDF above. For specific inquiries about my background or experience, feel free to [contact me](/contact).*
+*For the most up-to-date version of my CV, please download the PDF above. For specific inquiries about my background or experience, feel free to [contact me](/#contact).*
