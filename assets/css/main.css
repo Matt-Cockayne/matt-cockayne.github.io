@@ -1273,11 +1273,22 @@ ul { list-style: none; }
 
 /* ═══════════════════════ CV PAGE ═══════════════════════ */
 
-/* Break the embed out of the page-content max-width constraint */
+/* Wide layout variant — removes max-width so full-width children work */
+.page-content--wide {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Re-constrain the page title/subtitle inside wide layouts */
+.page-content--wide .page-content__header {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
 .cv-embed {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   padding: 0 2rem 3rem;
   box-sizing: border-box;
 }
