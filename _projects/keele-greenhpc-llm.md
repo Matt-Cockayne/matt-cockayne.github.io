@@ -80,6 +80,8 @@ squeue -u $USER
 tail -f logs/llm_multi_<JOB_ID>.out
 ```
 
+See [Step-by-Step Guide](#step-by-step-guide) below for full setup detail, model downloads, and troubleshooting.
+
 ---
 
 ## Prompt Format
@@ -201,16 +203,9 @@ For batch jobs the model loads once; all subsequent prompts run at full throughp
 
 ---
 
-## Key Notes for GreenHPC Users
+## Step-by-Step Guide
 
-- **Download weights on the head node** — compute nodes have no internet access
-- **Use the shared model path** `/home/xrai/models/` — avoids duplicating 10–40 GB weights per user
-- Set `HF_HOME=/home/xrai/.cache/huggingface` (done automatically by the SLURM scripts)
-- Use `conda install pytorch` from conda-forge causes an `iJIT_NotifyEvent` crash — always install via the official pip wheel with `--index-url https://download.pytorch.org/whl/cu121`
-
----
-
-## How a HPC Cluster Works (Quick Primer)
+### How a HPC Cluster Works (Quick Primer)
 
 A cluster has two types of nodes (servers):
 

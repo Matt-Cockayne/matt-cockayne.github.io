@@ -5,26 +5,30 @@
 
 /* ─── Custom Properties ─── */
 :root {
-  /* Backgrounds — layered navy blues */
-  --color-bg:           #0b1120;
-  --color-bg-mid:       #0f1a2e;
-  --color-bg-card:      #132040;
-  --color-bg-card-hover:#162448;
-  --color-bg-nav:       rgba(11, 17, 32, 0.85);
+  /* Backgrounds — brand navy palette */
+  --color-bg:           #03031b;
+  --color-bg-mid:       #040a38;
+  --color-bg-card:      #081859;
+  --color-bg-card-hover:#0d2070;
+  --color-bg-nav:       rgba(4, 10, 56, 0.92);
 
   /* Borders */
-  --color-border:       rgba(99, 143, 217, 0.15);
-  --color-border-hover: rgba(99, 143, 217, 0.35);
+  --color-border:       rgba(30, 104, 189, 0.2);
+  --color-border-hover: rgba(30, 104, 189, 0.45);
 
   /* Text */
   --color-text:         #e8edf5;
   --color-text-muted:   #7b93bb;
   --color-text-faint:   #4a6080;
 
-  /* Accent — academic gold */
-  --color-accent:       #c9a84c;
-  --color-accent-hover: #e0be70;
-  --color-accent-glow:  rgba(201, 168, 76, 0.12);
+  /* Accent — brand blue */
+  --color-accent:       #1e68bd;
+  --color-accent-hover: #3d87d4;
+  --color-accent-glow:  rgba(30, 104, 189, 0.15);
+
+  /* Accent helpers — used for tag borders/fills */
+  --color-accent-border: rgba(30, 104, 189, 0.3);
+  --color-accent-bg:     rgba(30, 104, 189, 0.12);
 
   /* Links */
   --color-link:         #7eb8f7;
@@ -63,7 +67,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 30%, rgba(30, 60, 120, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 30%, rgba(16, 53, 135, 0.12) 0%, transparent 70%);
   pointer-events: none;
   z-index: -1;
 }
@@ -103,12 +107,12 @@ ul { list-style: none; }
 }
 .btn--solid {
   background: var(--color-accent);
-  color: #0b1120;
+  color: #ffffff;
   border-color: var(--color-accent);
 }
 .btn--solid:hover {
   background: var(--color-accent-hover);
-  color: #0b1120;
+  color: #ffffff;
   border-color: var(--color-accent-hover);
 }
 .btn--ghost {
@@ -147,6 +151,9 @@ ul { list-style: none; }
 }
 
 .nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.3rem;
@@ -155,6 +162,14 @@ ul { list-style: none; }
   text-decoration: none;
 }
 .nav__logo:hover { color: var(--color-accent); }
+
+.nav__logo-mark {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.92;
+}
 
 .nav__links {
   display: flex;
@@ -234,14 +249,14 @@ ul { list-style: none; }
   min-height: 100vh;
   padding: 120px 24px 80px;
   overflow: hidden;
-  background-image: radial-gradient(circle, rgba(224, 190, 112, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(30, 104, 189, 0.18) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .hero__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 60, 120, 0.5) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(16, 53, 135, 0.6) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -298,7 +313,7 @@ ul { list-style: none; }
   object-position: center top;
   border: 2px solid var(--color-accent);
   box-shadow:
-    0 0 0 6px rgba(201, 168, 76, 0.08),
+    0 0 0 6px rgba(30, 104, 189, 0.12),
     0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
@@ -308,7 +323,7 @@ ul { list-style: none; }
 .hero__photo:hover {
   transform: scale(1.03);
   box-shadow:
-    0 0 0 8px rgba(201, 168, 76, 0.14),
+    0 0 0 8px rgba(30, 104, 189, 0.22),
     0 24px 70px rgba(0, 0, 0, 0.6);
 }
 
@@ -375,7 +390,7 @@ ul { list-style: none; }
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.1);
+  box-shadow: 0 4px 16px rgba(30, 104, 189, 0.2);
 }
 
 .hero__social-btn svg {
@@ -384,6 +399,22 @@ ul { list-style: none; }
 
 .hero__social-btn span {
   line-height: 1;
+}
+
+/* Brand logo mark — top-right of hero, echoes the LinkedIn banner */
+.hero__logo-mark {
+  position: absolute;
+  top: 30px;
+  right: clamp(16px, 3vw, 60px);
+  width: clamp(80px, 10vw, 140px);
+  opacity: 0.82;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__logo-mark img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ═══════════════════════ SECTIONS ═══════════════════════ */
@@ -713,10 +744,10 @@ ul { list-style: none; }
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-accent);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  border: 1px solid var(--color-accent-border);
   border-radius: 4px;
   padding: 3px 10px;
-  background: rgba(201, 168, 76, 0.1);
+  background: var(--color-accent-bg);
 }
 
 .project-card__links {
@@ -1143,7 +1174,7 @@ ul { list-style: none; }
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(11, 17, 32, 0.97);
+    background: rgba(4, 10, 56, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1194,6 +1225,11 @@ ul { list-style: none; }
   .hero__tagline {
     margin-left: auto;
     margin-right: auto;
+  }
+  .hero__logo-mark {
+    width: 60px;
+    top: 16px;
+    right: 16px;
   }
 
   .contact-links {

@@ -257,7 +257,7 @@
 }
 
 .proj-content__inner thead {
-  background: rgba(201, 168, 76, 0.08);
+  background: rgba(30, 104, 189, 0.1);
 }
 
 .proj-content__inner th {
@@ -283,7 +283,7 @@
 }
 
 .proj-content__inner tbody tr:hover {
-  background: rgba(201, 168, 76, 0.04);
+  background: rgba(30, 104, 189, 0.06);
 }
 
 /* Images */

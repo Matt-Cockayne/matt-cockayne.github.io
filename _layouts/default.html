@@ -6,7 +6,7 @@
   <title>{{ page.title | default: site.name }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="author" content="{{ site.name }}">
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#03031b">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,10 @@
   <!-- Navigation -->
   <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="Home">Matthew J. Cockayne</a>
+      <a href="/" class="nav__logo" aria-label="Home">
+        <img src="/assets/images/brand/logo-no-background.png" alt="" class="nav__logo-mark" width="28" height="28">
+        Matthew J. Cockayne
+      </a>
       <ul class="nav__links" id="nav-links">
         <li><a href="/#about" class="nav__link">About</a></li>
         <li><a href="/cv" class="nav__link">CV</a></li>
