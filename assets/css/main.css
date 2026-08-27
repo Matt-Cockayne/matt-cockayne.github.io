@@ -249,20 +249,41 @@ ul { list-style: none; }
   min-height: 100vh;
   padding: 120px 24px 80px;
   overflow: hidden;
-  background-image: radial-gradient(circle, rgba(30, 104, 189, 0.18) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background: radial-gradient(
+    circle at 10% 90%,
+    #1e68bd 0%,
+    #103587 25%,
+    #081859 50%,
+    #040a38 75%,
+    #03031b 100%
+  );
+}
+
+/* Film-grain overlay — keeps the gradient from looking flat */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9Im4iPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjgiIG51bU9jdGF2ZXM9IjIiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=");
+  mix-blend-mode: overlay;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(16, 53, 135, 0.6) 0%, transparent 70%);
+  /* subtle top-centre brightening to lift headline text area */
+  background: radial-gradient(ellipse 70% 50% at 50% -5%, rgba(16, 53, 135, 0.35) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 1;
 }
 
 /* Hero grid: text left, photo right on desktop */
 .hero__inner {
   position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 4rem;
@@ -409,7 +430,7 @@ ul { list-style: none; }
   width: clamp(80px, 10vw, 140px);
   opacity: 0.82;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 .hero__logo-mark img {
   width: 100%;
