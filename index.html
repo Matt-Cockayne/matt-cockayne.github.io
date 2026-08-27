@@ -39,7 +39,7 @@ layout: null
     <div class="nav__inner">
       <a href="#hero" class="nav__logo" aria-label="Back to top">
         <img src="/assets/images/brand/logo-light.png" alt="" class="nav__logo-mark" width="28" height="28">
-        Matthew J. Cockayne
+        Home
       </a>
       <ul class="nav__links" id="nav-links">
         <li><a href="#about" class="nav__link">About</a></li>
@@ -62,17 +62,19 @@ layout: null
     <section class="hero" id="hero">
       <div class="swirl-container"></div>
 
-      <div class="hero-logo-mark" aria-hidden="true">
-        <img src="/assets/images/brand/logo-light.png" alt="" width="108" height="108">
+      <div class="hero-top">
+        <div class="identity-block">
+          <h2 class="identity-name">Matthew J. Cockayne</h2>
+          <p class="identity-title">Safe &amp; Responsible AI</p> 
+          <p class="identity-title">Researcher</p>
+        </div>
+        <div class="hero-logo-mark" aria-hidden="true">
+          <img src="/assets/images/brand/logo-light.png" alt="" width="130" height="130">
+        </div>
       </div>
 
       <div class="hero-content">
         <h1 class="hero-tagline">Making AI safer for<br>high-stakes decisions.</h1>
-
-        <div class="identity-block">
-          <h2 class="identity-name">Matthew J. Cockayne</h2>
-          <p class="identity-title">PhD Researcher &middot; Safe &amp; Responsible AI &middot; Interpretability &amp; Fairness in Medical Imaging</p>
-        </div>
 
         <div class="hero-actions">
           <div class="hero-actions__btns">
@@ -102,6 +104,68 @@ layout: null
               <span>Scholar</span>
             </a>
           </div>
+        </div>
+      </div>
+
+      <div class="hero-highlights">
+        <p class="hero-highlights__label">Recent Highlights</p>
+        <div class="highlights-track-wrapper">
+          <button class="highlights-arrow" id="highlights-prev" aria-label="Scroll left">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="highlights-track" id="highlights-track">
+            <article class="highlight-card">
+              <div class="highlight-card__badge">
+                <img src="/assets/images/MICCAI2026-logo-08.png" alt="MICCAI 2026 logo">
+              </div>
+              <p class="highlight-card__eyebrow">MICCAI 2026</p>
+              <h3 class="highlight-card__headline">Early Accepted &mdash; Top 9%</h3>
+              <p class="highlight-card__body">Paper on fairness-aware curriculum learning for concept bottleneck models accepted for oral presentation.</p>
+              <a href="https://github.com/Matt-Cockayne/FairCBM" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub</a>
+            </article>
+            <article class="highlight-card">
+              <div class="highlight-card__badge">
+                <img src="/assets/images/grad-cap.png" alt="Graduation cap">
+              </div>
+              <p class="highlight-card__eyebrow">PhD Viva</p>
+              <h3 class="highlight-card__headline">Passed with Minor Corrections</h3>
+              <p class="highlight-card__body">Successfully defended my thesis, Responsible AI for Healthcare: Robustness, Interpretability, and Fairness in Skin Lesion Recognition.</p>
+            </article>
+            <article class="highlight-card">
+              <div class="highlight-card__badge">
+                <img src="/assets/images/BlueDot_Impact_Logo_White.svg" alt="BlueDot Impact" style="height:40px;width:auto;">
+              </div>
+              <p class="highlight-card__eyebrow">BlueDot Impact</p>
+              <h3 class="highlight-card__headline">Technical AI Safety — Certified</h3>
+              <p class="highlight-card__body">Completed the BlueDot Impact Technical AI Safety course, covering alignment, interpretability, and governance of advanced AI systems.</p>
+              <a href="https://bluedot.org/certification?id=recqIlJ0ZNJxy3zWY" target="_blank" rel="noopener" class="highlight-card__link">View certificate &rarr;</a>
+            </article>
+            <article class="highlight-card">
+              <div class="highlight-card__badge">
+                <img src="/assets/images/aiih.v5.blue_.v3.bigMargin.png" alt="AIiH 2025 logo">
+              </div>
+              <p class="highlight-card__eyebrow">AIiH 2025 · University of Cambridge</p>
+              <h3 class="highlight-card__headline">Oral Presentation</h3>
+              <p class="highlight-card__body">Presented "Classification-to-Segmentation" at the International Conference on AI in Healthcare, University of Cambridge.</p>
+              <a href="/projects/classification-to-segmentation" class="highlight-card__link">View project &rarr;</a>
+            </article>
+            <article class="highlight-card highlight-card--no-badge">
+              <p class="highlight-card__eyebrow">Research Assistant Role · 2026</p>
+              <h3 class="highlight-card__headline">Validating VLMs in Radiology Reporting</h3>
+              <p class="highlight-card__body">Investigating whether vision-language models for cardiology reporting learn clinically valid representations.</p>
+            </article>
+            <article class="highlight-card highlight-card--fun">
+              <div class="highlight-card__badge">
+                <img src="/assets/images/Duolingo_Duoversary_Icon_January_2022.PNG.webp" alt="Duolingo icon">
+              </div>
+              <p class="highlight-card__eyebrow">Off Duty</p>
+              <h3 class="highlight-card__headline">Learning Greek 🇬🇷</h3>
+              <p class="highlight-card__body">Elementary proficiency, Duolingo streak in progress — Score 27, August 2026.</p>
+            </article>
+          </div>
+          <button class="highlights-arrow" id="highlights-next" aria-label="Scroll right">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -147,7 +211,7 @@ layout: null
           </div>
 
           <aside class="about__aside">
-            <img src="/assets/images/brand/profile-picture.jpg" alt="Matthew J. Cockayne" class="about-photo" width="160" height="160">
+            <img src="/assets/images/brand/profile-picture.jpg" alt="Matthew J. Cockayne" class="about-photo" width="100%">
             <div class="aside-card">
               <div class="aside-card__row">
                 <span class="aside-card__label">Institution</span>
@@ -507,6 +571,17 @@ layout: null
   </footer>
 
   <!-- Scripts -->
+  <script>
+    (function() {
+      var track = document.getElementById('highlights-track');
+      var prev  = document.getElementById('highlights-prev');
+      var next  = document.getElementById('highlights-next');
+      if (!track) return;
+      var step = 360;
+      prev.addEventListener('click', function() { track.scrollBy({ left: -step, behavior: 'smooth' }); });
+      next.addEventListener('click', function() { track.scrollBy({ left:  step, behavior: 'smooth' }); });
+    })();
+  </script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
