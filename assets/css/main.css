@@ -247,16 +247,18 @@ ul { list-style: none; }
     );
 }
 
-/* Film-grain overlay — fine high-frequency noise, uniform density */
+/* Film-grain overlay — screen blend adds brightness to dark base; overlay produces near-zero on #03031b */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9Im4iPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMTgiLz48L3N2Zz4=");
-  mix-blend-mode: overlay;
-  opacity: 0.5;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWx0ZXI9InVybCgjbikiLz48L3N2Zz4=");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  mix-blend-mode: screen;
+  opacity: 0.22;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* glow removed — gradient carries the full mood */
@@ -514,13 +516,12 @@ ul { list-style: none; }
 
 /* About photo — square crop, desaturated to match navy palette */
 .about-photo {
-  width: 160px;
-  height: 160px;
+  width: 300px;
+  height: 300px;
   border-radius: 6px;
   object-fit: cover;
   object-position: center top;
   border: none;
-  filter: grayscale(65%) brightness(0.88);
   margin-bottom: 1.5rem;
 }
 
