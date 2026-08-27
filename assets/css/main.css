@@ -250,8 +250,9 @@ ul { list-style: none; }
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxmZUNvbG9yTWF0cml4IHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+");
   background-repeat: repeat;
   background-size: 200px 200px;
-  mix-blend-mode: overlay;
-  opacity: 0.12;
+  /* screen blend adds grain brightness to the dark base — overlay produces near-zero on #03031b */
+  mix-blend-mode: screen;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 0;
 }
@@ -295,13 +296,7 @@ ul { list-style: none; }
 }
 
 .hero__photo-wrapper::before {
-  content: '';
-  position: absolute;
-  width: 110%;
-  height: 110%;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
-  z-index: 0;
+  content: none;
 }
 
 .hero__photo {
@@ -310,51 +305,48 @@ ul { list-style: none; }
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 2px solid var(--color-accent);
-  box-shadow:
-    0 0 0 6px rgba(30, 104, 189, 0.12),
-    0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
   position: relative;
   z-index: 1;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .hero__photo:hover {
-  transform: scale(1.03);
-  box-shadow:
-    0 0 0 8px rgba(30, 104, 189, 0.22),
-    0 24px 70px rgba(0, 0, 0, 0.6);
+  transform: scale(1.02);
 }
 
+/* Name — secondary beneath tagline */
 .hero__name {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
   letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-bottom: 0.25rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0.35rem;
 }
 
 .hero__title {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.38);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
 }
 
+/* Tagline — dominant, first-read, upright bold serif matching banner */
 .hero__tagline {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
-  max-width: 520px;
-  margin: 0 0 40px;
-  line-height: 1.55;
-  letter-spacing: 0.01em;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: #ffffff;
+  max-width: 680px;
+  margin: 0 0 1.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .hero__cta {
@@ -402,10 +394,10 @@ ul { list-style: none; }
   line-height: 1;
 }
 
-/* Brand logo mark — small, top-right, matches banner scale */
+/* Brand logo mark — small, top-right, clears the 56px fixed nav */
 .hero__logo-mark {
   position: absolute;
-  top: 28px;
+  top: 72px;
   right: 28px;
   width: 60px;
   opacity: 0.88;
