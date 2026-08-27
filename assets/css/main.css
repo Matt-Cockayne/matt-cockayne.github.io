@@ -286,10 +286,11 @@ ul { list-style: none; }
 
 .hero__split {
   display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 4rem;
+  grid-template-columns: 1fr 280px;
+  gap: 3rem;
   align-items: center;
   width: 100%;
+  max-width: 960px;
   opacity: 0;
   animation: fadeInUp 0.9s ease 0.1s forwards;
 }
@@ -347,14 +348,15 @@ ul { list-style: none; }
   transform: scale(1.02);
 }
 
-/* Name — secondary beneath tagline */
+/* Name — secondary, right-aligned, sized to wrap naturally like banner */
 .hero__name {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 0.35rem;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
 }
 
 .hero__title {
@@ -1231,7 +1233,8 @@ ul { list-style: none; }
 
   .hero__split {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    max-width: 100%;
   }
   .hero__right {
     align-items: center;
@@ -1239,8 +1242,6 @@ ul { list-style: none; }
   }
   .hero__tagline {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
   }
   .hero__logo-mark {
     width: 64px;
