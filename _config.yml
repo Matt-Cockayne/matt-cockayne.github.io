@@ -55,7 +55,7 @@ research_descriptions:
 # Site Assets
 photo: "/assets/images/profile.jpg"
 cv_pdf: "/assets/cv.pdf"
-favicon: "/assets/images/icons8-old-computer-50.png"
+favicon: "/assets/images/brand/logo-no-background.png"
 
 # Navigation
 nav:
