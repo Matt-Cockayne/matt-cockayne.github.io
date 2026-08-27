@@ -233,18 +233,27 @@ ul { list-style: none; }
   min-height: 100vh;
   padding: 120px 24px 80px;
   overflow: hidden;
-  /* vertical gradient with dark mid-band and dual bottom glows — matches banner */
+  background: #03031b;
+}
+
+/* Oversized blurred+transformed element creates organic, non-linear light sweeps */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   background:
-    radial-gradient(ellipse 60% 80% at 18% 100%, #1e68bd 0%, transparent 60%),
-    radial-gradient(ellipse 50% 70% at 80% 100%, #103587 0%, transparent 55%),
-    linear-gradient(
-      to bottom,
-      #03031b 0%,
-      #040a38 35%,
-      #03031b 55%,
-      #081859 75%,
-      #103587 100%
-    );
+    radial-gradient(ellipse at 70% 65%, #1e68bd 0%, transparent 40%),
+    radial-gradient(ellipse at 40% 60%, #103587 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 35%, #081859 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 25%, #040a38 0%, transparent 60%);
+  filter: blur(60px);
+  transform: rotate(-18deg) skewX(25deg) scale(1.2);
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Film-grain overlay — screen blend adds brightness to dark base; overlay produces near-zero on #03031b */
@@ -263,35 +272,49 @@ ul { list-style: none; }
 
 /* glow removed — gradient carries the full mood */
 
-/* Hero grid: centred single-column */
+/* Hero grid: banner split — tagline left, identity right */
 .hero__inner {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3.5rem;
   max-width: var(--max-w);
   width: 100%;
 }
 
-.hero__content {
-  position: relative;
+.hero__split {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInUp 0.9s ease 0.1s forwards;
+}
+
+.hero__left {
+  display: flex;
+  align-items: center;
+}
+
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.hero__lower {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 0.75rem;
   width: 100%;
-}
-
-.hero__content > * {
   opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.9s ease 0.45s forwards;
 }
-.hero__content > *:nth-child(1) { animation-delay: 0.1s; }
-.hero__content > *:nth-child(2) { animation-delay: 0.2s; }
-.hero__content > *:nth-child(3) { animation-delay: 0.3s; }
-.hero__content > *:nth-child(4) { animation-delay: 0.4s; }
-.hero__content > *:nth-child(5) { animation-delay: 0.55s; }
 
 /* Hero photo */
 .hero__photo-wrapper {
@@ -344,18 +367,18 @@ ul { list-style: none; }
   margin-bottom: 2.2rem;
 }
 
-/* Tagline — dominant, first-read, upright bold serif matching banner */
+/* Tagline — dominant headline, left-aligned to match banner */
 .hero__tagline {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(2.4rem, 5vw, 4rem);
   color: #ffffff;
-  max-width: 780px;
-  margin: 0 0 1.4rem;
+  max-width: 680px;
+  margin: 0;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  text-align: center;
+  text-align: left;
 }
 
 .hero__cta {
@@ -366,12 +389,13 @@ ul { list-style: none; }
 }
 
 /* Hero Social Buttons */
+/* hero__social already has its own animation at 0.65s — hero__lower inherits */
 .hero__social {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 0;
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.65s forwards;
 }
@@ -405,11 +429,11 @@ ul { list-style: none; }
   line-height: 1;
 }
 
-/* Brand logo mark — centred above tagline, inline in content flow */
+/* Brand logo mark — top of right identity column */
 .hero__logo-mark {
-  width: 96px;
+  width: 76px;
   opacity: 0.88;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   flex-shrink: 0;
 }
 .hero__logo-mark img {
@@ -1205,21 +1229,21 @@ ul { list-style: none; }
     grid-template-columns: 1fr;
   }
 
-  .hero__inner {
+  .hero__split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__right {
+    align-items: center;
     text-align: center;
   }
-  .hero__cta {
-    justify-content: center;
-  }
-  .hero__social {
-    justify-content: center;
-  }
   .hero__tagline {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
   .hero__logo-mark {
-    width: 72px;
+    width: 64px;
   }
 
   .contact-links {
