@@ -242,20 +242,20 @@ ul { list-style: none; }
   display: none;
 }
 
-/* tagline full-width centred, identity bottom-right aligned with actions */
+/* 1fr auto 1fr: empty left balances identity right, auto actions column = true centre */
 .hero-content {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "tagline tagline tagline"
-    "actions actions identity";
-  align-items: end;
-  gap: 3rem 1rem;
+    "tagline tagline  tagline"
+    ".       actions  identity";
+  align-items: center;
+  gap: 3rem 2rem;
   opacity: 0;
   animation: fadeInUp 0.9s ease 0.1s forwards;
 }
@@ -292,7 +292,7 @@ ul { list-style: none; }
 .identity-block {
   grid-area: identity;
   justify-self: end;
-  align-self: end;
+  align-self: center;
   text-align: right;
   display: flex;
   flex-direction: column;
