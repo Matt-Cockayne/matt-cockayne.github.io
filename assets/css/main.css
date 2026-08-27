@@ -242,7 +242,7 @@ ul { list-style: none; }
   display: none;
 }
 
-/* 3-col grid: tagline fills 2 cols (centred), identity occupies right col */
+/* tagline full-width centred, identity bottom-right aligned with actions */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -252,9 +252,9 @@ ul { list-style: none; }
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "tagline tagline identity"
-    "actions actions actions";
-  align-items: center;
+    "tagline tagline tagline"
+    "actions actions identity";
+  align-items: end;
   gap: 3rem 1rem;
   opacity: 0;
   animation: fadeInUp 0.9s ease 0.1s forwards;
@@ -273,27 +273,32 @@ ul { list-style: none; }
   margin: 0;
 }
 
+/* Logo — absolutely positioned top-right, clear of nav */
+.hero-logo-mark {
+  position: absolute;
+  top: 68px;
+  right: 5%;
+  width: 108px;
+  opacity: 0.9;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-logo-mark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .identity-block {
   grid-area: identity;
   justify-self: end;
+  align-self: end;
   text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   opacity: 0;
   animation: fadeInUp 0.9s ease 0.25s forwards;
-}
-
-.identity-logo {
-  width: 68px;
-  height: 68px;
-  margin-bottom: 1.25rem;
-  opacity: 0.88;
-}
-.identity-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .identity-name {
@@ -1162,23 +1167,26 @@ ul { list-style: none; }
   .hero-content {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "identity"
       "tagline"
-      "actions";
+      "actions"
+      "identity";
     justify-items: center;
+    align-items: center;
     text-align: center;
   }
   .identity-block {
     justify-self: center;
+    align-self: auto;
     text-align: center;
     align-items: center;
   }
   .hero-tagline {
     text-align: center;
   }
-  .identity-logo {
-    width: 56px;
-    height: 56px;
+  .hero-logo-mark {
+    width: 72px;
+    top: 60px;
+    right: 16px;
   }
 
   .contact-links {
