@@ -227,179 +227,120 @@ ul { list-style: none; }
 /* ═══════════════════════ HERO ═══════════════════════ */
 .hero {
   position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 120px 24px 80px;
+  padding: 100px 5% 80px;
   overflow: hidden;
-  background: #03031b;
+  background: url('/assets/images/brand/background.png') center center / cover no-repeat;
+  background-color: #03031b;
 }
 
-/* Oversized blurred+transformed element creates organic, non-linear light sweeps */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background:
-    radial-gradient(ellipse at 70% 65%, #1e68bd 0%, transparent 40%),
-    radial-gradient(ellipse at 40% 60%, #103587 0%, transparent 45%),
-    radial-gradient(ellipse at 25% 35%, #081859 0%, transparent 50%),
-    radial-gradient(ellipse at 60% 25%, #040a38 0%, transparent 60%);
-  filter: blur(60px);
-  transform: rotate(-18deg) skewX(25deg) scale(1.2);
-  transform-origin: center center;
-  pointer-events: none;
-  z-index: 0;
+/* swirl-container is kept in HTML but unused — background.png replaces all CSS gradients */
+.swirl-container {
+  display: none;
 }
 
-/* Film-grain overlay — screen blend adds brightness to dark base; overlay produces near-zero on #03031b */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWx0ZXI9InVybCgjbikiLz48L3N2Zz4=");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  mix-blend-mode: screen;
-  opacity: 0.22;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* glow removed — gradient carries the full mood */
-
-/* Hero grid: banner split — tagline left, identity right */
-.hero__inner {
+/* 3-col grid: tagline fills 2 cols (centred), identity occupies right col */
+.hero-content {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3.5rem;
-  max-width: var(--max-w);
   width: 100%;
-}
-
-.hero__split {
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "tagline tagline identity"
+    "actions actions actions";
   align-items: center;
-  width: 100%;
-  max-width: 960px;
+  gap: 3rem 1rem;
   opacity: 0;
   animation: fadeInUp 0.9s ease 0.1s forwards;
 }
 
-.hero__left {
-  display: flex;
-  align-items: center;
+.hero-tagline {
+  grid-area: tagline;
+  justify-self: center;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0;
 }
 
-.hero__right {
+.identity-block {
+  grid-area: identity;
+  justify-self: end;
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: right;
+  opacity: 0;
+  animation: fadeInUp 0.9s ease 0.25s forwards;
 }
 
-.hero__lower {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+.identity-logo {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 1.25rem;
+  opacity: 0.88;
+}
+.identity-logo img {
   width: 100%;
-  opacity: 0;
-  animation: fadeInUp 0.9s ease 0.45s forwards;
+  height: auto;
+  display: block;
 }
 
-/* Hero photo */
-.hero__photo-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.3s forwards;
-}
-
-.hero__photo-wrapper::before {
-  content: none;
-}
-
-.hero__photo {
-  width: clamp(180px, 28vw, 320px);
-  height: clamp(180px, 28vw, 320px);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-  position: relative;
-  z-index: 1;
-  transition: transform 0.4s ease;
-}
-
-.hero__photo:hover {
-  transform: scale(1.02);
-}
-
-/* Name — secondary, right-aligned, sized to wrap naturally like banner */
-.hero__name {
+.identity-name {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.4rem, 2vw, 1.9rem);
-  letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 0.4rem;
   line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 0.4rem 0;
 }
 
-.hero__title {
+.identity-title {
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.38);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 2.2rem;
-}
-
-/* Tagline — dominant headline, left-aligned to match banner */
-.hero__tagline {
-  font-family: var(--font-display);
-  font-style: normal;
-  font-weight: 700;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  color: #ffffff;
-  max-width: 680px;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  text-align: left;
+  line-height: 1.5;
 }
 
-.hero__cta {
+.hero-actions {
+  grid-area: actions;
+  justify-self: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: fadeInUp 0.9s ease 0.45s forwards;
+}
+
+.hero-actions__btns {
+  display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Hero Social Buttons */
-/* hero__social already has its own animation at 0.65s — hero__lower inherits */
+/* Social icon row */
 .hero__social {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 0;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.65s forwards;
 }
 
 .hero__social-btn {
@@ -429,19 +370,6 @@ ul { list-style: none; }
 
 .hero__social-btn span {
   line-height: 1;
-}
-
-/* Brand logo mark — top of right identity column */
-.hero__logo-mark {
-  width: 76px;
-  opacity: 0.88;
-  margin-bottom: 20px;
-  flex-shrink: 0;
-}
-.hero__logo-mark img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* ═══════════════════════ SECTIONS ═══════════════════════ */
@@ -1231,20 +1159,26 @@ ul { list-style: none; }
     grid-template-columns: 1fr;
   }
 
-  .hero__split {
+  .hero-content {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    max-width: 100%;
+    grid-template-areas:
+      "identity"
+      "tagline"
+      "actions";
+    justify-items: center;
+    text-align: center;
   }
-  .hero__right {
+  .identity-block {
+    justify-self: center;
+    text-align: center;
     align-items: center;
+  }
+  .hero-tagline {
     text-align: center;
   }
-  .hero__tagline {
-    text-align: center;
-  }
-  .hero__logo-mark {
-    width: 64px;
+  .identity-logo {
+    width: 56px;
+    height: 56px;
   }
 
   .contact-links {
