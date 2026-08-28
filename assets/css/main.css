@@ -235,13 +235,13 @@ ul { list-style: none; }
   position: relative;
   min-height: 100vh;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);   /* ← add this line */
   grid-template-rows: auto 1fr;
   padding: 56px 6% 0;
   overflow: hidden;
   background: url('/assets/images/brand/background.png') center center / cover no-repeat;
   background-color: #03031b;
 }
-
 /* swirl-container is kept in HTML but unused — background.png replaces all CSS gradients */
 .swirl-container {
   display: none;
